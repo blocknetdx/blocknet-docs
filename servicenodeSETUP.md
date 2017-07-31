@@ -86,7 +86,7 @@ The Blocknet’s Xbridge technology is available both as a standalone applicatio
 https://github.com/atcsecure/blocknet/branches 
 
 ## Setup xbridge.conf
- * To see the full list of coin .conf's see: https://github.com/blocknetdx/blockdx/blob/master/setup-docs/xbridgeCONF.md
+ * To see the full list of coin .conf's see: https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md
 
  * Download the following configuration file to the blocknet wallet folder in (for Windows) C:\Users\[yourusername]\AppData\Roaming\blocknet:
 http://builds.xcurrency.co/blocknet/Build/Official_Blocknet_Wallet/xbridgep2p.conf
