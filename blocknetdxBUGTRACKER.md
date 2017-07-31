@@ -254,7 +254,7 @@ Bug tracking will be constantly updated as re-tests are conducted and new coins 
 ## Decred [DCR]
 #### Issue #1:
 * Using CMD line wallet due to issues with Paymetheus
-  * See CMD line setup here: https://github.com/Aderks/master/blob/master/decredSETUP.md
+  * See CMD line setup here: https://github.com/BlocknetDX/blocknet-docs/blob/master/decredCMDSETUP.md
 
 * Achieve resp 200 on Decred but with errors:
 
