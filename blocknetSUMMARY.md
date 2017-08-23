@@ -14,6 +14,8 @@ The Internet Of Blockchains
   * [Reddit](https://www.reddit.com/r/theblocknet/)
   * [Facebook](https://www.facebook.com/theblocknet)
   * [Youtube](https://www.youtube.com/channel/UCCDBoR9fHb21bLH7FGvFrQg)
+  * [Medium](https://medium.com/@theblocknetchannel)
+  * [Steemit](https://steemit.com/@theblocknet)
   * [Github](https://github.com/BlocknetDX)
   * [FAQ](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetFAQ.md)
   * Wiki
