@@ -11,7 +11,7 @@
 
 ## Switch to service node
 - Edit blocknetdx.conf
-- ```servicenode=1
+```servicenode=1
 servicenodeaddr=PUBLIC_IP:41412
 servicenodeprivkey=OUTPUT_FROM_genkey_command_above```
 
