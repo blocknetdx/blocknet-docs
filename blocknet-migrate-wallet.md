@@ -5,7 +5,7 @@
 
 ## Download New Wallet
 - launch wallet
-- in debug console "importwallet filename.txt" replace filename.txt with that you used with the dumpwallet command
+- in debug console ```importwallet filename.txt``` replace filename.txt with that you used with the dumpwallet command
 - verify addresses
 - via debug console type
 ``` listreceivedbyaddress 0 true```
