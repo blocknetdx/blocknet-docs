@@ -23,7 +23,7 @@ servicenodeprivkey=OUTPUT_FROM_genkey_command_above
 - Restart service node
 
 ## Switch back to activation node
-- ```
+```
 servicenode start-alias snode1
 ```
 
