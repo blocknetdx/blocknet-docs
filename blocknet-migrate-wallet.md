@@ -10,4 +10,11 @@
 - via debug console type
 ``` listreceivedbyaddress 0 true```
 
-## Funds will arrive on Sept 1.
+## When to move your wallet.dat and start using the new wallet
+- it is not important when you download the new wallet, sync up, and move your wallet.dat to its directory.
+- however, your new wallet's balance will remain zero until the migration on 1 September.
+- a snapshot will be taken on 1 September, after the final block on the old chain. The first block to be created after 08:00 PDT (15:00 UTC) shall be the final block.
+- once the snapshot is applied to the new chain, your balance will reflect in the new wallet
+- you can expect (centralized) exchanges to re-enable trading once they have confirmed that the new chain is functioning as expected.
+
+## Funds will arrive on Sept 1
