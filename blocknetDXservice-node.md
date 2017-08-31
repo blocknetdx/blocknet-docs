@@ -88,7 +88,7 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    
    * Save the `servicenode.conf` and restart the wallet. Fully unlock the wallet.
    
-### SNODE Computer Wallet Setup
+### SNODE SERVER Computer Wallet Setup
 
 * Navigate to your Blocknet data directory (default is: `%appdata%/roaming/blocknetdx/`)
    * Create/edit the `blocknetdx.conf` file
