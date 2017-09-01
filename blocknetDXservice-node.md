@@ -60,7 +60,7 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 * Whichever wallet your funds are located in send exactly 5000 Block (tBlock if on testnet) to the public address you created on the previous step
    * The address needs to have EXACTLY 5000 Block (or tBLock) to work properly
    
-   * When you send the 5000 Block, ensure "Send as zero-fee transaction if possible" is checked off
+   * Under the "Send" option, click the "Choose..." button beside the Transaction Fee option. When you send the 5000 Block, ensure "Send as zero-fee transaction if possible" is checked off. 
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/send_5000.PNG "Logo Title Text 1")
    
@@ -267,15 +267,18 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
 ---
 
 ## Verify communication between wallets.
-In order to ensure that the xbridge client is communicating with your wallets and the .conf files are setup properly, on the Blocknet wallet, click the GUI “XBridge” tab  and then click the “Toggle to log” button.
+In order to ensure that the xbridge client is communicating with your wallets and the .conf files are setup properly, navigate to the Blocknet data dir: C:\Users\yourusername\AppData\Roaming\blocknetdx\
+
+   * Open the "log" folder. Open up the log file with the current date/time. Ex: `xbridgep2p_20170831T181856.log`
+   * Each log file will update until the client instance is close. If a new client instance is opened a new log file will be created.
 
 As the wallet starts up, you’ll see the DX initialise using the values you entered into your `xbridge.conf` file:
 
-![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/dx_start.PNG "Logo Title Text 1") 
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/dxstart.PNG "Logo Title Text 1") 
 
- * Wait until you see “HTTP: resp 200” messages on the console. This signifies that the wallets are communicating over RPC and setup has been successful. Ensure each wallet you are running displays a “HTTP: resp 200” and displays your labelled receive address name.
+ * Wait until you see “HTTP: resp 200” messages. This signifies that the wallets are communicating over RPC and setup has been successful. Ensure each wallet you are running displays a “HTTP: resp 200” and displays your labelled receive address name.
  
- ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/resp200.PNG "Logo Title Text 1") 
+ ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/resp_200.PNG "Logo Title Text 1") 
 
  * Note: If, amidst the “HTTP: resp 200” messages, you see a message similar to `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, then it is likely that at least one of your specified trading wallets have not been run.
 
