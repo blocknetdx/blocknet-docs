@@ -24,7 +24,7 @@ The Internet Of Blockchains
   * Max/Circulating Coin Supply: 3,910,516 BLOCK
   * Consensus Algorithm: Proof-of-Stake (PoS)
   * Codebase: PPC
-  * Wallet: http://blocknet.co/#downloads
+  * Wallet: https://github.com/BlocknetDX/BlockDX/releases
   * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/)
   * Explorer: [chainz](https://chainz.cryptoid.info/block/)
   * [ITO Burn Address](https://chainz.cryptoid.info/block/address.dws?1374) - 6,123,424 Block Burnt
@@ -141,14 +141,49 @@ The following is a list of coins which have been tested and are confirmed to be 
 * [Node Profitability Analysis](https://docs.google.com/spreadsheets/d/1SfuVWjo7s14arkzUbIt-lEUt9NJk7CT9Vu_jOk2wipQ/)
 
 ### Setup Guide's: 
-* [Lastest Builds](https://builds.xcurrency.co/release_builds/)
+* [Lastest Builds](https://github.com/BlocknetDX/BlockDX/releases)
 
 * [Linux Installation](https://github.com/atcsecure/blocknet/blob/xbridge-new-2/doc/build-ubuntu-debian-w-xbridge.md)
 
-* [Blocknet DX Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetdxSETUP.md)
+* [Blocknet DX Trader Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXtrader-setup.md)
 
-* [Blocknet Service Node Setup](https://docs.google.com/document/d/1M65hM03tX16FXN-X-30ETWq21WkWts1TxQXv-LR32AU/)  (Temporary Document)
-   * https://github.com/BlocknetDX/blocknet-docs/blob/master/servicenodeSETUP.md 
+* [Blocknet Service Node Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXservice-node.md)
 
 ## Roadmap
- * Link to roadmap upon release
+                           
+#### Done
+
+* __Oct Nov 2014:__ ITO ("initial token offering")
+* __Dec 2014:__ first messages sent across blockchains (data transport proof-of-concept)
+* __March 2015:__ partnership with Bitnation forged
+* __March 2015:__ Decentralized exchange UI/UX: business logic and mockups
+* __April 2015:__ Blocknet Think Tank launched; breadth of scope of the Blocknet seen to extend to the entire token ecosystem
+* __May 2015:__ Ethereum collaboration; commitment to integrate ETH
+* __October 2015:__ Decentralized exchange v.1 (proof-of-concept)
+* __December 2015:__ Blockchain router v.1
+* __March 2016:__ Decentralized exchange v.2 (TierNolan's algo, no CLTV)
+* __August 2016:__ Decentralized exchange v.3 (CLTV: nonmalleable design)
+* __Sept 2016:__ Debugging and testing; order book
+* __May 2017:__ Service node design: QoS provider concept
+* __June 2017:__ Decentralized exchange app: specification documentation complete (for UI/UX partner)
+* __July 2017:__ Production blockchain: work commences
+                              
+#### Coming Up
+
+__Note:__ upcoming milestones are subject to change, and some require new ground be broken in crypto, and thus are to be interpreted as intents, not commitments. Development is in an agile manner and so is not to deadlines; Rather, continual progress is to be expected.
+                              
+* Production blockchain launch
+* Service nodes launch on mainnet
+* Design specification document ("white paper")
+* Decentralized exchange app ("UI")
+* Decentralized exchange SPV multiwallet (no full blockchains)
+* Chain relay: trust-minimised data verification
+* Mobile Blocknet wallet app
+* Mobile decentralized exchange app
+* "Offline orders" feature (orders stay live after wallet is closed)
+* Decentralized leveraged trading (p2p loan swaps locked to longs/shorts)
+* Decentralized ICO dapp
+* Browser-based exchange
+* Modularisation of core components (network overlay, blockchain router and data transport)
+* Abstraction of core services into dedicated APIs (service lookup, inter-chain messaging, and decentralized exchange) 
+* Service delivery: proof-of-legitimacy (trustless exchange of non-currency)
