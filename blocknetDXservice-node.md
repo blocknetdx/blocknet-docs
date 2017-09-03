@@ -30,9 +30,9 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    * Computer #2 will be the client computer where the 5000 Block is locked. This doesn't need to run 24/7.
       * This guide will refer to this computer as the " CLIENT "
 
-* Your Public IP address or a VPS/VPN IP address
+* Your SNODE SERVER computer Public IP address. Or the Public IP address if you're using a VPS/VPN for the SNODE SERVER computer.
 
-* 5000 Block to be locked into a service node address (the 5000 Block cannot stake while it is locked)
+* 5000 Block to be locked into a service node address on the CLIENT computer (the 5000 Block cannot stake while it is locked)
 
 * The latest wallet of each currency you want to support on your service node (fully synced, encrypted)
 
@@ -71,9 +71,10 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    
    * Take note of these generated outputs as they will be needed in the configuration files
    
-* Go to Google and search "what's my ip". Your Public IP address will be displayed. Take note of this address as it will be needed in the configuration files
-   * Main-net users use PUBLIC_IP:41412
-   * Test-net users use PUBLIC_IP:41474
+* Now you need to retrieve your SNODE SERVER computer Public IP address. If you only use one Public IP address, go to Google and search "what's my ip". Your Public IP address will be displayed. Take note of this address as it will be needed in the configuration files
+   * If you're using a VPN or VPS for the SNODE SERVER computer, you need to retrieve that Public IP address.
+   * Main-net users use YOUR_PUBLIC_IP:41412
+   * Test-net users use YOUR_PUBLIC_IP:41474
    
 * Navigate to your Blocknet data directory (default is: `%appdata%/roaming/blocknetdx/`)
    * Create/edit the `servicenode.conf` file (`/blocknetdx/testnet4/` for testnet users)
@@ -94,9 +95,10 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    * Create/edit the `blocknetdx.conf` file
      * If you are using testnet, `blocknetdx.conf` needs to stay in `%appdata%/roaming/blocknetdx/` and NOT in the `/testnet4/` folder
      
-   * Type the following information into your `blocknetdx.conf` file:
+   * Type the following information into your `blocknetdx.conf` file: (use staking=1 if you want to stake on the SNODE SERVER client)
    
    ```
+   staking=1
    servicenode=1
    servicenodeaddr=YOUR_PUBLIC_IP:41412
    servicenodeprivkey=YOUR_SERVICENODE_PRIVATE_KEY
@@ -247,7 +249,7 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
  * Ensure the rest of the configuration matches [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) for each coin
 
  * Save the File (if you just edited the existing file, just click save, if you made a new file then click file, save as, and in the file name type: `xbridge.conf`
-    * Ensure the file is not `xbridgep2p.conf.txt`
+    * Ensure the file is not `xbridge.conf.txt`
 
  * Place this file into the Blocknet data directory folder: "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
 
