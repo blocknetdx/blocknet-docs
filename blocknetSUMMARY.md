@@ -167,13 +167,13 @@ The following is a list of coins which have been tested and are confirmed to be 
 * __May 2017:__ Service node design: QoS provider concept
 * __June 2017:__ Decentralized exchange app: specification documentation complete (for UI/UX partner)
 * __July 2017:__ Production blockchain: work commences
-                              
+* __September 2017:__ Production blockchain launched  
+* __September 2017:__ Service nodes launched on mainnet
+
 #### Coming Up
 
 __Note:__ upcoming milestones are subject to change, and some require new ground be broken in crypto, and thus are to be interpreted as intents, not commitments. Development is in an agile manner and so is not to deadlines; Rather, continual progress is to be expected.
-                              
-* Production blockchain launch
-* Service nodes launch on mainnet
+                             
 * Design specification document ("white paper")
 * Decentralized exchange app ("UI")
 * Decentralized exchange SPV multiwallet (no full blockchains)
