@@ -1,5 +1,6 @@
 #!/bin/bash
 # Don't unlock via cli as your password is stored in the history
+# # run this script from the folder containing the blocknetdx-cli executable
 set -e
 
 read -s -p 'blocknetdx wallet passphrase: ' passphrase 
