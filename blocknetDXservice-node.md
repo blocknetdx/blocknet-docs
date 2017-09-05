@@ -87,7 +87,11 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    snode01 <YOUR_PUBLIC_IP:41474> <YOUR_SERVICENODE_PRIVATE_KEY> <COLLATERAL_TX_OUTPUT> <TX_OUTPUT_INDEX>
    ```
    
-   * Save the `servicenode.conf` and restart the wallet. Fully unlock the wallet.
+   * Save `servicenode.conf` 
+   
+   * Create/edit `blocknetdx.conf`. Add `staking=0`. Save `blocknetdx.conf`
+  
+   * Restart the wallet. Fully unlock the wallet.
    
 ### SNODE SERVER Computer Wallet Setup
 
