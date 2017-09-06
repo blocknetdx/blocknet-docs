@@ -118,24 +118,12 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 
 * Navigate to `Tools > Debug console`
 
-* Type: `servicenode start-alias snode1`
+* Type: `servicenode start-alias <name>` Ex: `servicenode start-alias snode1`
 
-#### Activate via GUI Wallet Buttons
-
-* Navigate to the "Servicenodes" button on the GUI
-
-* Click your Alias (ex: snode01), and then at the bottom click "Start alias" on the GUI
-   * You should see a successful popup window
+* The status of your node(s) should be "ENABLED" and show an "Active time"
+   * It may take a moment to show enabled and/or an active time.
    
-   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/alias_single.png "Logo Title Text 1")
-   
-   * Click "Start all" if you have multiple service nodes and want to one-click auto-deploy
-   
-   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/alias_all.png "Logo Title Text 1")  
-   
-   * The status of your node(s) should be "ENABLED" and show an "Active time"
-   
-   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_alias.PNG "Logo Title Text 1")    
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_alias.PNG "Logo Title Text 1")    
    
 * Your Service Node(s) are running successfully. You can close off the CLIENT computer Blocknet wallet if you want.  
    
