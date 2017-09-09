@@ -9,10 +9,8 @@
   
 * Encrypt each wallet with a complex password. Wallets need to be unlocked for trading.
 
-* This document will be updated as coins are added. Anything under the 'DX COMPATIBLE COINS' section can be traded on the DX.
+* This document contains all of the successfully traded coin's currently on the Blocknet DX. As future coin's go through the testing phase and have successful swaps, they will be announced accordingly. After the announcement those configuration parameters will be released on this document.
 
-
-## DX COMPATIBLE COINS
 bitcoin.conf
 ```
 server=1
@@ -20,6 +18,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+
+txindex=1
 ```
 
 dash.conf
@@ -29,6 +29,9 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+paytxfee=0.00015
 ```
 
 digibyte.conf
@@ -38,8 +41,7 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
+mintxfee=.001
 ```
 
 dogecoin.conf
@@ -63,6 +65,13 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+```
+
+LBRY Credits LBC Command Line
+```
+lbrycrdd -server -listen -rpcuser= -rpcpassword= -rpcallowip=127.0.0.1
 ```
 
 litecoin.conf
@@ -82,12 +91,31 @@ rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
 enableaccounts=1
-staking=0
 paytxfee=0.001
 ```
 
 namecoin.conf
 ```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+paytxfee=0.001
+addnode=144.76.39.233
+addnode=198.15.127.242
+addnode=198.15.127.242
+addnode=176.9.113.75
+addnode=62.63.157.78
+addnode=195.154.188.50
+addnode=47.89.183.30
+addnode=108.62.19.130
+```
+
+pivx.conf
+```
+rpcport=51473
 server=1
 listen=1
 rpcuser=
@@ -137,87 +165,4 @@ rpcpassword=
 rpcallowip=127.0.0.1
 enableaccounts=1
 staking=0
-```
-
-
-## COMMUNICATED BUT TX FAILS
-bitbay.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-```
-
-blackcoin.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-```
-
-feathercoin.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-paytxfee=0.01
-```
-
-quarkcoin.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-```
-
-sequence.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-```
-
-stealthcoin.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-paytxfee=0.01
-```
-
-stratis.conf
-```
-server=1
-listen=1
-rpcuser=
-rpcpassword=
-rpcallowip=127.0.0.1
-rpcport=26174
-enableaccounts=1
-staking=0
-paytxfee=0.01
 ```
