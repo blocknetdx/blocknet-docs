@@ -22,13 +22,6 @@ FullLog=true
 LogPath=
 ExchangeTax=300
 
-[RPC]
-Enable=false
-UserName=rpc1
-Password=rpc1
-UseSSL=false
-Port=8080
-
 [BTC]
 Title=Bitcoin
 Address=
@@ -336,4 +329,11 @@ MinTxFee=200000
 BlockTime=150
 FeePerByte=200
 Confirmations=0
+
+[RPC]
+Enable=false
+UserName=rpc1
+Password=rpc1
+UseSSL=false
+Port=8080
 ```
