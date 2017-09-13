@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -350,6 +350,28 @@ ImportWithNoScanSupported=true
 MinTxFee=200000
 BlockTime=90
 FeePerByte=200
+Confirmations=0
+
+[BLOCK]
+Title=Blocknet
+Address=
+Ip=127.0.0.1
+Port=41414
+Username=
+Password=
+AddressPrefix=26
+ScriptPrefix=28
+SecretPrefix=154
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=10000
+BlockTime=60
+FeePerByte=10
 Confirmations=0
 
 [RPC]
