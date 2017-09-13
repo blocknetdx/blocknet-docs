@@ -94,6 +94,17 @@ rpcpassword=
 rpcallowip=127.0.0.1
 ```
 
+__monacoin.conf__
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+mintxfee=.002
+```
+
+
 __mue.conf__
 ```
 server=1
