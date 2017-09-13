@@ -18,6 +18,11 @@ Setup requires an integration between the Blocknet wallet and the wallets of coi
 
 Integration is via the wallets’ RPC APIs. For security reasons we recommend that wallets all run on a single box and communicate over localhost (127.0.0.1), though wallets may also be run on multiple machines and connect via IP address. General documentation on JSON RPC features is available at https://en.bitcoin.it/wiki/Running_Bitcoin.
 
+
+## Blocknet DX Exchange Tutorial Video
+ * [DX Exchange Tutorial](https://www.youtube.com/watch?v=DlYbDzG_l5w)
+
+
 ## Requirements
 
 * Latest Blocknet client installed, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
@@ -140,7 +145,7 @@ As the wallet starts up, you’ll see the DX initialise using the values you ent
  * Note: If, amidst the “HTTP: resp 200” messages, you see a message similar to `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, then it is likely that at least one of your specified trading wallets have not been run.
 
  * Note: If you fail to get “HTTP: resp 200” messages, it’s possible that the ports assigned to wallets differ from those specified in your .conf file. To check this, open Command Prompt, type `netstat -an`, and take a look which ports are being used over localhost (127.0.0.1), or sometimes over 0.0.0.0.
- 
+
 --- 
  
 ## Place an Order
