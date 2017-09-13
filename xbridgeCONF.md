@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -327,6 +327,28 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=200000
 BlockTime=150
+FeePerByte=200
+Confirmations=0
+
+[MONA]
+Title=Monacoin
+Address=
+Ip=127.0.0.1
+Port=9402
+Username=
+Password=
+AddressPrefix=50
+ScriptPrefix=55
+SecretPrefix=176
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=false
+ImportWithNoScanSupported=true
+MinTxFee=200000
+BlockTime=90
 FeePerByte=200
 Confirmations=0
 
