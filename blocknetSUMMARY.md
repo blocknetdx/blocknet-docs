@@ -92,44 +92,49 @@ The following is a list of coins which have been tested and are confirmed to be 
  * Vertcoin (VTC)
  * Viacoin (VIA)
 
-## Recordings of Live Decentralized Trades Across Blockchains on Blocknet DX
+## Videos
 
-### DASH Pairs
+### Blocknet DX Exchange Tutorial (MONA/LTC Trade)
+ * [DX Exchange Tutorial](https://www.youtube.com/watch?v=DlYbDzG_l5w)
+
+### Recordings of Live Decentralized Trades Across Blockchains on Blocknet DX
+
+#### DASH Pairs
  * [Blocknet DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc)
 
  * [Blocknet DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
 
-### DYN Pairs
+#### DYN Pairs
  * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
 
  * [Blocknet DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
 
-### LTC Pairs
+#### LTC Pairs
  * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
 
  * [Blocknet DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc)
- 
-### MUE Pairs
+
+#### MUE Pairs
  * [Blocknet MUE for DGB](https://www.youtube.com/watch?v=RMU4WyPTV4w)
  
-### NMC Pairs
+#### NMC Pairs
  * [Blocknet NMC for DOGE](https://www.youtube.com/watch?v=FGuLQNqcW9A)
  
-### PIVX Pairs
+#### PIVX Pairs
  * [Blocknet PIVX for DGB](https://www.youtube.com/watch?v=NQS6WU1CtFQ)
  
-### QTUM Pairs
+#### QTUM Pairs
  * [Blocknet QTUM for DGB](https://www.youtube.com/watch?v=btV4TMFnsCA)
 
-### SYS Pairs
+#### SYS Pairs
  * [Blocknet DASH for SYS](https://www.youtube.com/watch?v=d2yJTWvXHbA)
 
  * [Blocknet LTC for SYS](https://www.youtube.com/watch?v=n5cOS2evpFg)
  
-### VIA Pairs
+#### VIA Pairs
  * [Blocknet VIA for LTC](https://www.youtube.com/watch?v=grTea1VFg-o)
 
-### VTC Pairs
+#### VTC Pairs
  * [Blocknet VTC for SYS](https://www.youtube.com/watch?v=moy0-tfIpTI)
 
 ## Current Implementations
