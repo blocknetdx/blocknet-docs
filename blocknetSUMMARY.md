@@ -83,6 +83,7 @@ The following is a list of coins which have been tested and are confirmed to be 
  * Dynamic (DYN)
  * LBRY Credits (LBC)
  * Litecoin (LTC)
+ * Monacoin (MONA)
  * MonetaryUnit (MUE)
  * Namecoin (NMC)
  * PIVX (PIVX)
