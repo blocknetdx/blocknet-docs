@@ -82,6 +82,7 @@ The following is a list of coins which have been tested and are confirmed to be 
  * DigiByte (DGB)
  * Dogecoin (DOGE)
  * Dynamic (DYN)
+ * Faircoin (FAIR)
  * LBRY Credits (LBC)
  * Litecoin (LTC)
  * Monacoin (MONA)
@@ -109,6 +110,9 @@ The following is a list of coins which have been tested and are confirmed to be 
  * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
 
  * [Blocknet DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
+
+#### FAIR Pairs
+ * [Blocknet FAIR for MUE](https://www.youtube.com/watch?v=aYpYwofhqOI)
 
 #### LTC Pairs
  * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
