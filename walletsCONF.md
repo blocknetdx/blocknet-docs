@@ -69,6 +69,15 @@ enableaccounts=1
 staking=0
 ```
 
+__faircoin.conf__
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+```
+
 __LBRY Credits LBC Command Line__
 ```
 lbrycrdd -server -listen -rpcuser= -rpcpassword= -rpcallowip=127.0.0.1
