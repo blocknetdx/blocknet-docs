@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -372,6 +372,28 @@ ImportWithNoScanSupported=true
 MinTxFee=10000
 BlockTime=60
 FeePerByte=10
+Confirmations=0
+
+[FAIR]
+Title=Faircoin
+Address=
+Ip=127.0.0.1
+Port=40405
+Username=
+Password=
+AddressPrefix=95
+ScriptPrefix=36
+SecretPrefix=223
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=30000
+BlockTime=210
+FeePerByte=30
 Confirmations=0
 
 [RPC]
