@@ -25,7 +25,7 @@ The Internet Of Blockchains
   * Consensus Algorithm: Proof-of-Stake (PoS)
   * Codebase: PPC
   * Wallet: https://github.com/BlocknetDX/BlockDX/releases
-  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/)
+  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/) | Blocknet DX
   * Explorer: [chainz](https://chainz.cryptoid.info/block/)
   * [ITO Burn Address](https://chainz.cryptoid.info/block/address.dws?1374) - 6,123,424 Block Burnt
   * [Proof-of-Burn Method](https://bitcointalk.org/index.php?topic=831042.0)
@@ -149,7 +149,7 @@ The following is a list of coins which have been tested and are confirmed to be 
 * Stealthcoin
 
 ## Incentives
-* [Node Profitability Analysis](https://docs.google.com/spreadsheets/d/1SfuVWjo7s14arkzUbIt-lEUt9NJk7CT9Vu_jOk2wipQ/)
+* [Block ROI Analysis](http://bit.ly/block-roi)
 
 ### Setup Guide's: 
 * [Lastest Builds](https://github.com/BlocknetDX/BlockDX/releases)
