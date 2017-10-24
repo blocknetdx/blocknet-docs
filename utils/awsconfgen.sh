@@ -12,3 +12,8 @@ echo "rpcpassword=${myrpcpass}" >> /root/.blocknetdx/blocknetdx.conf
 echo "rpcuser=blocknetdxrpc" >> /root/.blocknetdx/blocknetdx.conf
 echo "servicenode=1" >> /root/.blocknetdx/blocknetdx.conf
 echo "servicenodeaddr=${mypublicip}:41412" >> /root/.blocknetdx/blocknetdx.conf
+
+# start daemon
+# TODO: fix so that the version is not hard-coded
+/root/dx/blocknetdx-3.7.36/bin/blocknetdxd
+
