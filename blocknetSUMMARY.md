@@ -25,7 +25,7 @@ The Internet Of Blockchains
   * Consensus Algorithm: Proof-of-Stake (PoS)
   * Codebase: PPC
   * Wallet: https://github.com/BlocknetDX/BlockDX/releases
-  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/) | Blocknet DX
+  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/) | Blocknet DX | [Upbit](https://upbit.com/exchange?code=CRIX.UPBIT.BTC-BLOCK)
   * Explorer: [chainz](https://chainz.cryptoid.info/block/)
   * [ITO Burn Address](https://chainz.cryptoid.info/block/address.dws?1374) - 6,123,424 Block Burnt
   * [Proof-of-Burn Method](https://bitcointalk.org/index.php?topic=831042.0)
