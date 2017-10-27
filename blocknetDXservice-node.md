@@ -256,10 +256,11 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
     * Ensure every wallet is fully sync'd and unlocked
     
 
- * Start the Blocknet wallet on the SNODE SERVER computer with `-enable-exchange`
-    * ex: blocknetdx-qt.exe -enable-exchange
+ * Start the Blocknet wallet on the SNODE SERVER computer with `-enableexchange`
+    * ex: blocknetdx-qt.exe -enableexchange
        * When you click the "BlocknetDX" tab on the wallet it should say "Exchange node".
        * In the console type: `dxGetCurrencyList` to show your list of wallets running on your xbridge
+       * In the console type: `servicenode list`, search for your SNODE, under `xwallets` it will show the wallets you are hosting
     * Ensure your servicenode is activated.
   
 ---
