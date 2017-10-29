@@ -89,23 +89,7 @@ Any coin that supports OP_CHECKLOCKTIMEVERIFY and has a stock JSON RPC interface
 
 The following is a list of coins which have been tested and are confirmed to be supported. Any two coins from this list are a valid coin pair and can be traded directly. 
 
- * Bitcoin (BTC)
- * Blocknet (BLOCK)
- * Dash (DASH)
- * DigiByte (DGB)
- * Dogecoin (DOGE)
- * Dynamic (DYN)
- * Faircoin (FAIR)
- * LBRY Credits (LBC)
- * Litecoin (LTC)
- * Monacoin (MONA)
- * MonetaryUnit (MUE)
- * Namecoin (NMC)
- * PIVX (PIVX)
- * Qtum (QTUM)
- * SysCoin (SYS)
- * Vertcoin (VTC)
- * Viacoin (VIA)
+ Bitcoin (BTC) | Blocknet (BLOCK) | Dash (DASH) | DigiByte (DGB) | Dogecoin (DOGE) | Dynamic (DYN) | Faircoin (FAIR) | LBRY Credits (LBC) | Litecoin (LTC) | Monacoin (MONA) | MonetaryUnit (MUE) | Namecoin (NMC) | PIVX (PIVX) | Qtum (QTUM) | SysCoin (SYS) | Vertcoin (VTC) | Viacoin (VIA)
 
 ## Videos
 
@@ -114,46 +98,27 @@ The following is a list of coins which have been tested and are confirmed to be 
 
 ### Recordings of Live Decentralized Trades Across Blockchains on Blocknet DX
 
-#### DASH Pairs
- * [Blocknet DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc)
+#### DASH Pairs: [DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc) | [DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
 
- * [Blocknet DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
+#### DYN Pairs: [LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8) | [DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
 
-#### DYN Pairs
- * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
+#### FAIR Pairs: [FAIR for MUE](https://www.youtube.com/watch?v=aYpYwofhqOI)
 
- * [Blocknet DASH for DYN](https://www.youtube.com/watch?v=1U6K1S1Za_Y)
+#### LTC Pairs: [LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8) | [DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc)
 
-#### FAIR Pairs
- * [Blocknet FAIR for MUE](https://www.youtube.com/watch?v=aYpYwofhqOI)
-
-#### LTC Pairs
- * [Blocknet LTC for DYN](https://www.youtube.com/watch?v=_0lsdyNM_e8)
-
- * [Blocknet DASH for LTC](https://www.youtube.com/watch?v=aG4z-oZ1-zc)
-
-#### MUE Pairs
- * [Blocknet MUE for DGB](https://www.youtube.com/watch?v=RMU4WyPTV4w)
+#### MUE Pairs: [MUE for DGB](https://www.youtube.com/watch?v=RMU4WyPTV4w)
  
-#### NMC Pairs
- * [Blocknet NMC for DOGE](https://www.youtube.com/watch?v=FGuLQNqcW9A)
+#### NMC Pairs: [NMC for DOGE](https://www.youtube.com/watch?v=FGuLQNqcW9A)
  
-#### PIVX Pairs
- * [Blocknet PIVX for DGB](https://www.youtube.com/watch?v=NQS6WU1CtFQ)
+#### PIVX Pairs: [PIVX for DGB](https://www.youtube.com/watch?v=NQS6WU1CtFQ)
  
-#### QTUM Pairs
- * [Blocknet QTUM for DGB](https://www.youtube.com/watch?v=btV4TMFnsCA)
+#### QTUM Pairs: [QTUM for DGB](https://www.youtube.com/watch?v=btV4TMFnsCA)
 
-#### SYS Pairs
- * [Blocknet DASH for SYS](https://www.youtube.com/watch?v=d2yJTWvXHbA)
-
- * [Blocknet LTC for SYS](https://www.youtube.com/watch?v=n5cOS2evpFg)
+#### SYS Pairs: [DASH for SYS](https://www.youtube.com/watch?v=d2yJTWvXHbA) | [LTC for SYS](https://www.youtube.com/watch?v=n5cOS2evpFg)
  
-#### VIA Pairs
- * [Blocknet VIA for LTC](https://www.youtube.com/watch?v=grTea1VFg-o)
+#### VIA Pairs: [VIA for LTC](https://www.youtube.com/watch?v=grTea1VFg-o)
 
-#### VTC Pairs
- * [Blocknet VTC for SYS](https://www.youtube.com/watch?v=moy0-tfIpTI)
+#### VTC Pairs: [VTC for SYS](https://www.youtube.com/watch?v=moy0-tfIpTI)
 
 
 ## Tools & Stats
