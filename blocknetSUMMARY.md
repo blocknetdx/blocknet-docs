@@ -156,8 +156,15 @@ The following is a list of coins which have been tested and are confirmed to be 
  * [Blocknet VTC for SYS](https://www.youtube.com/watch?v=moy0-tfIpTI)
 
 
-## Incentives
-* [Block ROI Analysis](http://bit.ly/block-roi) - Thanks @stormingj !
+## Tools & Stats
+* [Blocknet ROI Analysis](http://bit.ly/block-roi) - Thanks @stormingj !
+
+* [Blocknet Toolkit](https://block-node.info/index.php) - Thanks @ishkb1 !
+
+* [Servicenode Stats](https://masternodes.online/currencies/BLOCK/)
+
+* [Coin Market Cap](https://coinmarketcap.com/currencies/blocknet/) 
+
 
 ### Setup Guide's: 
 * [Lastest Builds](https://github.com/BlocknetDX/BlockDX/releases)
@@ -167,6 +174,8 @@ The following is a list of coins which have been tested and are confirmed to be 
 * [Blocknet DX Trader Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXtrader-setup.md)
 
 * [Blocknet Service Node Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXservice-node.md)
+
+* [Blocknet Staking Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknet-staking-guide.md)
 
 ## Roadmap
   
