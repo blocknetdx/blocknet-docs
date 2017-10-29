@@ -163,10 +163,10 @@ The following is a list of coins which have been tested and are confirmed to be 
 
 * [Servicenode Stats](https://masternodes.online/currencies/BLOCK/)
 
-* [Coin Market Cap](https://coinmarketcap.com/currencies/blocknet/) 
+* [Coin Market Cap](https://coinmarketcap.com/currencies/blocknet/)
 
 
-### Setup Guide's: 
+### Setup Guide's 
 * [Lastest Builds](https://github.com/BlocknetDX/BlockDX/releases)
 
 * [Linux Installation](https://github.com/atcsecure/blocknet/blob/xbridge-new-2/doc/build-ubuntu-debian-w-xbridge.md)
@@ -176,6 +176,10 @@ The following is a list of coins which have been tested and are confirmed to be 
 * [Blocknet Service Node Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXservice-node.md)
 
 * [Blocknet Staking Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknet-staking-guide.md)
+
+## Translations
+
+* [中文文件](https://github.com/BlocknetDX/blocknet-docs/tree/master/chinese-docs) | [Deutsche Dokumente](https://github.com/BlocknetDX/blocknet-docs/tree/master/german-docs) | [日本語の文書](https://github.com/BlocknetDX/blocknet-docs/tree/master/japanese-docs) | [한국어 문서](https://github.com/BlocknetDX/blocknet-docs/tree/master/korean-docs) | [Российские документы](https://github.com/BlocknetDX/blocknet-docs/tree/master/russian-docs) | [Español Docs](https://github.com/BlocknetDX/blocknet-docs/tree/master/spanish-docs)
 
 ## Roadmap
   
