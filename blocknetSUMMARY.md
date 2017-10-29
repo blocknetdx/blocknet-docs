@@ -7,8 +7,9 @@ The Internet Of Blockchains
 
 ## Hotlinks
   * [Home Website](http://blocknet.co/)
+  * [Explorer](https://chainz.cryptoid.info/block/)
   * [Bitcointalk](https://bitcointalk.org/index.php?topic=829576.0)
-  * [Slack](http://blocknet.herokuapp.com)
+  * [RocketChat](https://rocket.blocknet.co:8443)
   * [Twitter](https://twitter.com/The_Blocknet)
   * [Telegram](https://t.me/Blocknet)
   * [Reddit](https://www.reddit.com/r/theblocknet/)
@@ -17,15 +18,16 @@ The Internet Of Blockchains
   * [Medium](https://medium.com/@theblocknetchannel)
   * [Steemit](https://steemit.com/@theblocknet)
   * [Github](https://github.com/BlocknetDX)
+  * [Forum](http://blocknetdx.forumotion.com/)
   * [FAQ](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetFAQ.md)
   * Wiki
 
 ## Block Specs
-  * Max/Circulating Coin Supply: 3,910,516 BLOCK
+  * Max/Circulating Coin Supply: 4,858,000 BLOCK
   * Consensus Algorithm: Proof-of-Stake (PoS)
   * Codebase: PPC
   * Wallet: https://github.com/BlocknetDX/BlockDX/releases
-  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/) | Blocknet DX
+  * Exchanges: [Bittrex](https://bittrex.com/Market/Index?MarketName=BTC-BLOCK) | [Nova](https://novaexchange.com/market/BTC_BLOCK/) | Blocknet DX | [Upbit](https://upbit.com/exchange?code=CRIX.UPBIT.BTC-BLOCK)
   * Explorer: [chainz](https://chainz.cryptoid.info/block/)
   * [ITO Burn Address](https://chainz.cryptoid.info/block/address.dws?1374) - 6,123,424 Block Burnt
   * [Proof-of-Burn Method](https://bitcointalk.org/index.php?topic=831042.0)
@@ -33,7 +35,18 @@ The Internet Of Blockchains
 
 ## Core Team
  * Dan Metcalf (@atcsecure) - Main Developer and Co-Founder of Blocknet
- * Arlyn Culwick (@synechist) -  Coordinator, Architecture Contributor and Co-Founder of Blocknet
+ * Arlyn Culwick (@synechist) -  Generalist and Co-Founder of Blocknet
+ * Hanni Abu (@hanniabu) - Project Coordinator
+ * @philipmarshall - Social Coordinator
+ * Alexander Hemdorff Koch (@dungor) - Strategic Advisor
+ * Jeff Madgett (@86b) - User Acceptance Testing
+ * @aderks - User Acceptance Testing
+ * Michael Madgett (@michael) - Core Developer
+ * Steve Matyk (@sawtoothgeek) - Core Developer
+ * Ander Rackcheev (@arckcheev) - Project Manager of Euro Development Team
+ * @xenix - Euro Development Team
+ * @boa - Euro Development Team
+ * Community Contributors: @lautrer, @stormingj, @infinity7592, @cricket, @mushoz, @ishkb, @jrocket, @baron
  
 ## Core Team Interviews 
  * [Video interview with Dan](https://www.youtube.com/watch?v=bHNR7kbjYzg)
@@ -142,14 +155,9 @@ The following is a list of coins which have been tested and are confirmed to be 
 #### VTC Pairs
  * [Blocknet VTC for SYS](https://www.youtube.com/watch?v=moy0-tfIpTI)
 
-## Current Implementations
-* 0x
-* Bitshares
-* Duality Solutions
-* Stealthcoin
 
 ## Incentives
-* [Block ROI Analysis](http://bit.ly/block-roi)
+* [Block ROI Analysis](http://bit.ly/block-roi) - Thanks @stormingj !
 
 ### Setup Guide's: 
 * [Lastest Builds](https://github.com/BlocknetDX/BlockDX/releases)
@@ -161,7 +169,7 @@ The following is a list of coins which have been tested and are confirmed to be 
 * [Blocknet Service Node Setup](https://github.com/BlocknetDX/blocknet-docs/blob/master/blocknetDXservice-node.md)
 
 ## Roadmap
-                           
+  
 #### Done
 
 * __Oct Nov 2014:__ ITO ("initial token offering")
@@ -184,11 +192,20 @@ The following is a list of coins which have been tested and are confirmed to be 
 #### Coming Up
 
 __Note:__ upcoming milestones are subject to change, and some require new ground be broken in crypto, and thus are to be interpreted as intents, not commitments. Development is in an agile manner and so is not to deadlines; Rather, continual progress is to be expected.
-                        
-* Design specification document ("white paper")
+       
 * Decentralized exchange app ("UI")
+* UI TradingView integration (Core Team)
+* “Toolkit” site that lists supported coins, their config files, documentation, and other data (ishkb1)
+* Design specification document ("white paper")
+* New Blocknet website
+* New DX website
+* Analytics site (think bfxdata.com, but for a DX)
+* Bot “skeleton” in Python for easy DX bot building (infinity7592)
+* 0x integration (addition of Ethereum and all ERC20 tokens to the DX)
+* Ethfinex integration (Bitfinex’s order book on the DX)
 * Decentralized exchange SPV multiwallet (no full blockchains)
 * Chain relay: trust-minimised data verification
+* DX order book enhancements (Core Team)
 * Mobile Blocknet wallet app
 * Mobile decentralized exchange app
 * "Offline orders" feature (orders stay live after wallet is closed)
@@ -197,4 +214,4 @@ __Note:__ upcoming milestones are subject to change, and some require new ground
 * Browser-based exchange
 * Modularisation of core components (network overlay, blockchain router and data transport)
 * Abstraction of core services into dedicated APIs (service lookup, inter-chain messaging, and decentralized exchange) 
-* Service delivery: proof-of-legitimacy (trustless exchange of non-currency)
+* Service delivery: Proof-of-Legitimacy (trustless exchange of non-currency)
