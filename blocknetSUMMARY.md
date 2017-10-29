@@ -197,6 +197,8 @@ The following is a list of coins which have been tested and are confirmed to be 
 * __July 2017:__ Production blockchain: work commences
 * __September 2017:__ Production blockchain launched
 * __September 2017:__ Service nodes launch on mainnet
+* __October 2017:__ VSA Partners announced as the major design firm that is developing the UI/UX
+* __October 2017:__ Blocknet "Toolkit" website goes live (site that lists supported coins, config files, docs, other data) 
 
 #### Coming Up
 
@@ -204,7 +206,6 @@ __Note:__ upcoming milestones are subject to change, and some require new ground
        
 * Decentralized exchange app ("UI")
 * UI TradingView integration (Core Team)
-* “Toolkit” site that lists supported coins, their config files, documentation, and other data (ishkb1)
 * Design specification document ("white paper")
 * New Blocknet website
 * New DX website
