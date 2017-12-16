@@ -22,6 +22,19 @@ rpcallowip=127.0.0.1
 txindex=1
 ```
 
+__blocknetdx.conf__
+```
+listen=1
+server=1
+rpcallowip=127.0.0.1
+port=49901
+rpcport=41490
+rpcuser=
+rpcpassword=
+staking=0
+enableaccounts=1
+```
+
 __dash.conf__
 ```
 server=1
@@ -29,9 +42,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-paytxfee=0.00015
 ```
 
 __digibyte.conf__
@@ -41,7 +51,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-mintxfee=.001
 ```
 
 __dogecoin.conf__
@@ -51,22 +60,15 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
-paytxfee=1
 ```
 
 __dynamic.conf__
 ```
-rpcport=31350
-port=31300
 server=1
 listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
 ```
 
 __faircoin.conf__
@@ -110,7 +112,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-mintxfee=.002
 ```
 
 
@@ -121,8 +122,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-paytxfee=0.001
 ```
 
 __namecoin.conf__
@@ -132,28 +131,15 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-paytxfee=0.001
-addnode=144.76.39.233
-addnode=198.15.127.242
-addnode=198.15.127.242
-addnode=176.9.113.75
-addnode=62.63.157.78
-addnode=195.154.188.50
-addnode=47.89.183.30
-addnode=108.62.19.130
 ```
 
 __pivx.conf__
 ```
-rpcport=51473
 server=1
 listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-paytxfee=0.001
 ```
 
 __qtum.conf__
@@ -163,8 +149,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
 ```
 
 __syscoin.conf__
@@ -183,8 +167,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
 ```
 
 __viacoin.conf__
@@ -194,6 +176,4 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-enableaccounts=1
-staking=0
 ```
