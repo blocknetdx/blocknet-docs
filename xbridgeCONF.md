@@ -37,7 +37,7 @@ MinimumAmount=0
 TxVersion=2
 DustAmount=0
 CreateTxMethod=BTC
-MinTxFee=27000
+MinTxFee=0
 BlockTime=600
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
@@ -45,7 +45,7 @@ FeePerByte=105
 Confirmations=0
 
 [SYS]
-Title=SysCoin2
+Title=Syscoin
 Address=
 Ip=127.0.0.1
 Port=8370
@@ -59,11 +59,11 @@ MinimumAmount=0
 TxVersion=1
 DustAmount=0
 CreateTxMethod=BTC
-MinTxFee=60000
+MinTxFee=0
 BlockTime=60
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-FeePerByte=100
+FeePerByte=210
 Confirmations=0
 
 [LTC]
@@ -82,8 +82,8 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-FeePerByte=110
-MinTxFee=60000
+FeePerByte=200
+MinTxFee=0
 TxVersion=1
 BlockTime=60
 Confirmations=0
@@ -105,9 +105,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=15000
+MinTxFee=0
 BlockTime=150
-FeePerByte=15
+FeePerByte=200
 Confirmations=0
 
 [DGB]
@@ -127,16 +127,16 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=100000
+MinTxFee=0
 BlockTime=60
-FeePerByte=100
+FeePerByte=200
 Confirmations=0
 
 [DYN]
 Title=Dynamic
 Address=
 Ip=127.0.0.1
-Port=31350
+Port=33350
 Username=
 Password=
 AddressPrefix=30
@@ -149,9 +149,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-MinTxFee=40000
+MinTxFee=0
 BlockTime=128
-FeePerByte=80
+FeePerByte=25
 Confirmations=0
 
 [DOGE]
@@ -171,9 +171,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=100000000
+MinTxFee=0
 BlockTime=60
-FeePerByte=100000
+FeePerByte=500000
 Confirmations=0
 
 [PIVX]
@@ -193,7 +193,7 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=100000
+MinTxFee=0
 BlockTime=60
 FeePerByte=110
 Confirmations=0
@@ -214,8 +214,8 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-FeePerByte=110
-MinTxFee=60000
+FeePerByte=200
+MinTxFee=0
 TxVersion=1
 BlockTime=24
 Confirmations=0
@@ -237,9 +237,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-MinTxFee=100000
+MinTxFee=0
 BlockTime=150
-FeePerByte=200
+FeePerByte=110
 Confirmations=0
 
 [MUE]
@@ -259,9 +259,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=100000
+MinTxFee=0
 BlockTime=40
-FeePerByte=300
+FeePerByte=25
 Confirmations=0
 
 [NMC]
@@ -281,16 +281,16 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=100000
+MinTxFee=0
 BlockTime=600
-FeePerByte=100
+FeePerByte=115
 Confirmations=0
 
 [QTUM]
 Title=Qtum
 Address=
 Ip=127.0.0.1
-Port=3889  // Test-net port, Main-net port will be updated upon release
+Port=3889
 Username=
 Password=
 AddressPrefix=58
@@ -303,9 +303,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=20000
+MinTxFee=0
 BlockTime=150
-FeePerByte=20
+FeePerByte=450
 Confirmations=0
 
 [LBC]
@@ -325,9 +325,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=200000
+MinTxFee=0
 BlockTime=150
-FeePerByte=200
+FeePerByte=60
 Confirmations=0
 
 [MONA]
@@ -347,7 +347,7 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=true
-MinTxFee=200000
+MinTxFee=0
 BlockTime=90
 FeePerByte=200
 Confirmations=0
@@ -369,9 +369,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=true
 ImportWithNoScanSupported=true
-MinTxFee=10000
+MinTxFee=0
 BlockTime=60
-FeePerByte=10
+FeePerByte=20
 Confirmations=0
 
 [FAIR]
@@ -391,9 +391,9 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=true
 ImportWithNoScanSupported=true
-MinTxFee=30000
+MinTxFee=0
 BlockTime=210
-FeePerByte=30
+FeePerByte=1000
 Confirmations=0
 
 [RPC]
