@@ -1,19 +1,19 @@
 # xbridge.conf
 
-* Under the ```[Main]``` heading, edit the following to suit your requirements:
+* Unter der Überschrift ```[Main]``` passe die Werte nach deinen Bedürfnissen an:
 
-  * ```ExchangeWallets=``` Add/remove coin heading's here (only add the coin's you wish to host on your service node or trade with)
-  * ```LogPath=``` Change file path to desired location 
+  * ```ExchangeWallets=``` Füge hinzu oder entferne die coin´s Überschriften (nur die Coins, die du entweder als Service-Node unterstützen willst oder die du traden möchtest)
+  * ```LogPath=``` Lege hier den Dateipfad zum jeweiligen Speicherort fest 
 
-* Under each ```[COIN]``` heading, edit the following to suit your individual wallet's RPC configuration:
+* Unter jeder ```[COIN]``` Überschrift, editiere die nachfolgenden Werte mit deinen eigenen Wallet-RPC Konfigurationen:
 
-  * ```Address=``` Edit this field to match your labelled receive address
-  * ```Username=``` Edit this field to match RPCuser in the coin's .conf
-  * ```Password=``` Edit this field to match RPCpassword in the coin's .conf
+  * ```Address=``` Edititere dieses Feld mit deiner entsprechenden Empfangsadresse
+  * ```Username=``` Editiere dieses Feld mit deinem jeweiligen RPCUser aus den coin´s.conf
+  * ```Password=``` Editiere dieses Feld mit deinem jeweiligen RPCPassword aus den coin´s.conf
   
-  * https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md
+  * https://github.com/BlocknetDX/blocknet-docs/blob/master/german-docs/walletsCONF-ger.md
 
-* This master xbridge.conf contains all of the successfully traded coin's currently on the Blocknet DX. As future coin's go through the testing phase and have successful swaps, they will be announced accordingly. After the announcement those configuration parameters will be released on this document.
+* Diese Hauptdatei xbridge.conf enthält alle Coins, die bislang erfolgreich auf der Blocknet DX gehandelt wurden. Zukünftige Coins, die erfolgreich durch die Testphase gegangen sind werden entsprechend publiziert. Nach Bekanntgabe werden die jeweiligen Konfigurationen dieser Coins in diesem Dokument veröffentlicht.
 
 ```
 [Main]
