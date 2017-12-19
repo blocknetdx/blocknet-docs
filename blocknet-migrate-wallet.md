@@ -8,7 +8,7 @@
 
 ## Download new wallet
 - Launch wallet
-- Use the debug console and type ```importwallet filename.txt``` replace filename.txt with the file name used in the dumpwallet command above
+- Use the debug console and type ```importwallet filename.txt``` (replace filename.txt with the file name used in the dumpwallet command above)
 - Verify the old addresses were imported via debug console by typing ``` listreceivedbyaddress 0 true```
 
 ## When to move your wallet.dat and start using the new wallet
