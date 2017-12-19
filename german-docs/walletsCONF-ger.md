@@ -6,7 +6,7 @@
 
     * ```rpcpassword=``` füge ein kompliziertes Passwort ein
 
-    * Gehe sicher, daß Nutzername und Passwort für jeden Coin unterschiedlich ist
+    * Gehe sicher, daß die Nutzernamen und Passwörter für jeden Coin unterschiedlich sind
 
 * Sichere jede Wallet mit einem kompliziertem, einmaligem Passwort
 
