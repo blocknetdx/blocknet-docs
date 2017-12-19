@@ -1,16 +1,16 @@
 # BLOCKNET
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/block.PNG "Logo Title Text 1")
 
-The Internet Of Blockchains
+Das Internet der Blockchains
 
-## Blocknet Decentralised Exchange Service Node Setup
+## Blocknet dezentralisierte Börse Service-Node Setup
 
-**These instructions are to run as a service node for the Blocknet Decentralised Exchange.** 
+**Diese Anleitung erläutert die Konfiguration zur Betreibung einer Service-Node für die Blocknet DEX.** 
 
-* Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable users to exchange tokens and assets, and to utilise smart contracts between blockchains.
+* Blocknets DX benutzt die xbridgep2p™ Blockchain-Router-Technologie, um es Nutzer zu ermöglichen, Tokens und andere Werte auszutauschen, sowie Smart Contracts zwischen Blockchains zu nutzen.
 
-## Overview
-Setup requires an integration between the Blocknet wallet and the wallets of coins you want as currency pairs. At this stage, nothing is automated and the UI on the new Blocknet wallet will be used until the final UI is complete. Configuration is by manually creating (or editing) .conf files: 
+## Übersicht
+Die Konfiguration benötigt eine Verknüpfung zwischen der Blocknet Wallet sowie der Wallet derjenigen Coins, die man als Währungspaar handeln möchte. Zu diesem Zeitpunkt ist dieser Vorgang noch nicht automatisiert und es wird die grafische Benutzeroberfläche von Blocknet hierzu eingesetzt bis die endgültige Oberfläche fertig ist. Die Konfiguration benötigt manuelles Erstellen (oder Editieren) der .conf-Dateien: 
 
  * blocknetdx.conf
  
@@ -18,53 +18,53 @@ Setup requires an integration between the Blocknet wallet and the wallets of coi
 
  * xbridge.conf
 
- * configuration file for each currency you want to support
+ * Konfigurations-Datei für jede Währung, die unterstützt werden soll
 
-Integration is via the wallets’ RPC APIs. For security reasons we recommend that wallets all run on a single box and communicate over localhost (127.0.0.1), though wallets may also be run on multiple machines and connect via IP address. General documentation on JSON RPC features is available @ https://en.bitcoin.it/wiki/Running_Bitcoin.
+Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicherheitsgründen wird empfohlen, alle Wallets auf einem System laufen zu lassen, sowie über die IP-Adresse des localhost (127.0.0.1) zu verbinden, auch wenn es generell möglich ist, die Wallets auf unterschiedlichen Systemen zu hosten und über deren IP zu verbinden. Eine grundlegende Dokumentation rund uim die JSON-RPC-Schnittstelle kann man @ https://en.bitcoin.it/wiki/Running_Bitcoin nachlesen.
 
-## Requirements
-* Two computers with the latest Blocknet client installed, encrypted, fully synced
-   * Computer #1 will be the Service Node Server which will need to be running 24/7
-      * This guide will refer to this computer as the " SNODE SERVER "
+## Anforderungen
+* 2 Computer mit der aktuellen Software des Blocknet Clients, voll verschlüsselt und synchronisiert
+   * Computer #1stellt den Service-Node-Server da, der 24/7 laufen muss
+      * Diese Anleitung nennt diesen Computer nachfolgend " SNODE SERVER "
       
-   * Computer #2 will be the client computer where the 5000 Block is locked. This doesn't need to run 24/7.
-      * This guide will refer to this computer as the " CLIENT "
+   * Computer #2 ist der Client-Computer, in dem die 5000 Block gesichert sind. Dieser muss nicht 24/7 erreichbar sein.
+      * Diese Anleitung nennt diesen Computer im folgenden " CLIENT "
 
-* Your SNODE SERVER computer Public IP address. Or the Public IP address if you're using a VPS/VPN for the SNODE SERVER computer.
+* Die IP-Adresse des SNODE SERVER Computer. Oder die Public IP Adresse, sofern man den SNODE SERVER auf einem VPN/VPS-System laufen hat.
 
-* 5000 Block to be locked into a service node address on the CLIENT computer (the 5000 Block cannot stake while it is locked)
+* 5000 Block, die in einer Service-Node-Adresse auf dem CLIENT gesperrt sind (diese 5000 Block können nicht mehr zum Staken genutzt werden)
 
-* The latest wallet of each currency you want to support on your service node (fully synced, encrypted)
+* Die aktuellste Wallet-Version all jener Währungen, die man auf seiner Service-Node unterstützen will (voll synchronisiert und verschlüsselt)
 
-* Properly configured .conf files for each wallet
+* Passend konfigurierte .conf-Dateien für jede Wallet
 
 
 ## Service Node Setup
 
-* Download the latest wallet release on two computers or VPS 
+* Lade die aktuelleste Core-Version (nachfolgend Core-UI genannt) der Blocknet-Wallet auf 2 Computer oder VPN
    * [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
    
-* On each computer let the wallet fully sync. Once that is complete encrypt both wallets with a password of your choice
-   * If you are testing please use `testnet=1` or `-testnet` for `blocknetdx-qt.exe`
+* Die Core-UI muss auf beiden Systemen volständig synchronisieren. Sobald dies geschehen ist müssen beide Core-UI mit einem Passwort nach Wahl komplett verschlüsselt werden
+   * Für DX-Tests bitte `testnet=1` oder `-testnet` für `blocknetdx-qt.exe` nutzen
    
-### CLIENT Computer Wallet Setup   
+### CLIENT Computer Core-UI Setup   
    
-* Navigate the top toolbar to: `Tools > Debug console`
-   * Type `getaccountaddress <name>` (This generates a public address key for your service node. Create a unique service node name.)
-      * Ex: `getaccountaddress snode01`
+* Navigier in der oberen Menüleiste zu: `Tools > Debug console`
+   * Schreibe `getaccountaddress <name>` (Dies erstellt einen öffentlichen Schlüssel für die Service Node. Benutze dafür einen unverwechselbaren Service-Node-Namen.)
+      * Beispiel: `getaccountaddress snode01`
       
-   * Type `servicenode genkey` (This generates and outputs your service node private key)
+   * Schreibe `servicenode genkey` (Dies generiert und gibt den privaten Schlüssel der Service-Node aus)
    
-   * Take note of these generated outputs as they will be needed in the configuration files
+   * Merke oder notiere diese Ausgaben, da sie später in den Konfigurationsdateien benötigt werden
    
-* Whichever wallet your funds are located in send exactly 5000 Block (tBlock if on testnet) to the public address you created on the previous step
-   * The address needs to have EXACTLY 5000 Block (or tBLock) to work properly
+* Von dort, wo aktuell deine Coins sind, schicke exakt 5000 Blocks (oder im Testnet tBlocks) auf die soeben erstellte öffentliche Adresse
+   * Diese Adresse benötigt exakt 5000 Blocks (oder tBlocks), um später zu funktionieren
    
-   * Under the "Send" option, click the "Choose..." button beside the Transaction Fee option. When you send the 5000 Block, ensure "Send as zero-fee transaction if possible" is checked off. 
+   * Unter dem "Send"-Button, klicke auf "Choose..." neben der Transaction Fee Option. Wenn die die exakt 5000 Blocks sendest, gehe sicher, dass die Option "Send as zero-fee transaction if possible" an ist. 
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/send_5000.PNG "Logo Title Text 1")
    
-* Wait for the CLIENT computer to receive the 5000 Block and have at least 15 confirmations on the TX
+* Warte nun, bis der Client die 5000 Block erhalten hat und mindestens 15 TX-Bestätigungen angezeigt werden
 
 * Once the TX is fully confirmed navigate back to: `Tools > Debug console`
    * Type `servicenode outputs` (This outputs the servicenode TX information needed in the `servicenode.conf`)
