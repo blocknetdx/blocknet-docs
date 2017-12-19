@@ -1,12 +1,12 @@
 **Blocknet´s freigegebene spezifische coin.conf´s**
 
--   Bei jedem Coin editiere wie folgt für deinen Bedarf
+* Bei jedem Coin editiere wie folgt für deinen Bedarf
 
--   \`\`\`rpcuser=\`\`\` füge einen einmaligen Nutzernamen ein
+    *```rpcuser=``` füge einen einmaligen Nutzernamen ein
 
--   \`\`\`rpcpassword=\`\`\` füge ein kompliziertes Passwort ein
+    * ```rpcpassword=``` füge ein kompliziertes Passwort ein
 
--   Gehe sicher, daß Nutzername und Passwort für jeden Coin unterschiedlich ist
+    * Gehe sicher, daß Nutzername und Passwort für jeden Coin unterschiedlich ist
 
 -   Sichere jede Wallet mit einem kompliziertem, einmaligem Passwort
 
