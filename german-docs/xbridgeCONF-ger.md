@@ -2,7 +2,7 @@
 
 * Unter der Überschrift ```[Main]``` passe die Werte nach deinen Bedürfnissen an:
 
-  * ```ExchangeWallets=``` Füge hinzu oder entferne die coin´s Überschriften (nur die Coins, die du entweder als Service-Node unterstützen willst oder die du traden möchtest)
+  * ```ExchangeWallets=``` Füge hinzu oder entferne die jeweiligen Überschriften der Coin´s (nur die Coins, die du entweder als Service-Node unterstützen willst, oder die du traden möchtest)
   * ```LogPath=``` Lege hier den Dateipfad zum jeweiligen Speicherort fest 
 
 * Unter jeder ```[COIN]``` Überschrift, editiere die nachfolgenden Werte mit deinen eigenen Wallet-RPC Konfigurationen:
