@@ -15,7 +15,7 @@
     Blocknet-Clienten (im Hauptmenü, „Settings“ \> „Unlock Wallet“)
 
 -   Nutze nun die Debug-Konsole (im Hauptemü, „Tools“ \> „Debug Console“) und
-    schreibe dort \`\`\`dumpwallet filename.txt \`\`\` (ersetze „filename.txt“
+    schreibe dort ```dumpwallet filename.txt``` (ersetze „filename.txt“
     durch einen Namen deiner Wahl)
 
 -   Diese Datei wird nun in dem Verzeichnis erstellt, in dem auch das Start-Icon
@@ -25,12 +25,11 @@
 
 -   Starte den Blocknet-Client
 
--   Nutze die Debug-Konsole und schreibe dort \`\`\`importwallet filename.txt
-    \`\`\` (ersetze filename.txt durch den Dateinamen, den du im vorigen Schritt
+-   Nutze die Debug-Konsole und schreibe dort ```importwallet filename.txt``` (ersetze filename.txt durch den Dateinamen, den du im vorigen Schritt
     gewählt hast)
 
 -   Versichere dich, dass die alten Adressen korrekt importiert wurden, indem du
-    in der Debug-Konsole \`\`\`listreceivedbyaddress 0 true\`\`\` schreibst
+    in der Debug-Konsole ```listreceivedbyaddress 0 true``` schreibst
 
 **Wann soll man mit der wallet.dat umziehen und Grundlagen zur Nutzung des neuen
 Clienten**
