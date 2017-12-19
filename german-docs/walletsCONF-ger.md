@@ -15,6 +15,7 @@
     Testphase gegangen sind, wird entsprechend informiert. Nach der
     Bekanntmachung werden die entsprechenden Konffigurationen dieser Coins in
     diesem Dokument veröffentlicht.
+
 __bitcoin.conf__
 ```
 server=1
