@@ -13,7 +13,7 @@
 * Dieses Dokument beinhaltet alle Coins, die bereits erfolgreich auf der
     Blocknet DX gehandelt wurden. Über weitere Coins, die erfolgreich durch die
     Testphase gegangen sind, wird entsprechend informiert. Nach der
-    Bekanntmachung werden die entsprechenden Konffigurationen dieser Coins in
+    Bekanntmachung werden die entsprechenden Konfigurationen dieser Coins in
     diesem Dokument veröffentlicht.
 
 __bitcoin.conf__
