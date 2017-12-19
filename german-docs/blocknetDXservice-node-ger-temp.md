@@ -60,103 +60,103 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 * Von dort, wo aktuell deine Coins sind, schicke exakt 5000 Blocks (oder im Testnet tBlocks) auf die soeben erstellte öffentliche Adresse
    * Diese Adresse benötigt exakt 5000 Blocks (oder tBlocks), um später zu funktionieren
    
-   * Unter dem "Send"-Button, klicke auf "Choose..." neben der Transaction Fee Option. Wenn die die exakt 5000 Blocks sendest, gehe sicher, dass die Option "Send as zero-fee transaction if possible" an ist. 
+   * Unter dem "Send"-Button, klicke auf "Choose..." neben der Transaction Fee Option. Wenn du die exakt 5000 Blocks sendest, gehe sicher, dass die Option "Send as zero-fee transaction if possible" an ist. 
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/send_5000.PNG "Logo Title Text 1")
    
 * Warte nun, bis der Client die 5000 Block erhalten hat und mindestens 15 TX-Bestätigungen angezeigt werden
 
-* Once the TX is fully confirmed navigate back to: `Tools > Debug console`
-   * Type `servicenode outputs` (This outputs the servicenode TX information needed in the `servicenode.conf`)
+* Sobald der TX voll bestätigt ist navigiere zurück zu: `Tools > Debug console`
+   * Schreibe `servicenode outputs` (Dies gibt die Service-Node-TX-Information aus, die in der `servicenode.conf` gebraucht wird)
    
-   * Take note of these generated outputs as they will be needed in the configuration files
+   * Merke oder notiere dir diese Ausgabe, das sie später in der Konfigurationsdateie benötigt werden
    
-* Now you need to retrieve your SNODE SERVER computer Public IP address. If you only use one Public IP address, go to Google and search "what's my ip". Your Public IP address will be displayed. Take note of this address as it will be needed in the configuration files
-   * If you're using a VPN or VPS for the SNODE SERVER computer, you need to retrieve that Public IP address.
-   * Main-net users use YOUR_PUBLIC_IP:41412
-   * Test-net users use YOUR_PUBLIC_IP:41474
+* Jetzt brauchst du die öffentliche IP-Adresse des SNODE SERVER. Wenn du nur eine öffentliche Adresse benutzt, gehe zu Google und suche nach "was ist meine IP". Deine öffentliche IP wird damit angezeigt. Merke oder notiere diese Ausgaben, da sie später in den Konfigurationsdateien benötigt werden.
+   * Wenn du einen VPN oder VPS für den SNODE SERVER Computer nutzt, musst du dessen öffentliche IP nun zur Hand nehmen.
+   * Nutzer des Main-net nutzen YOUR_PUBLIC_IP:41412
+   * Nutzer des Test-net nutzen YOUR_PUBLIC_IP:41474
    
-* Navigate to your Blocknet data directory (default is: `%appdata%/roaming/blocknetdx/`)
-   * Create/edit the `servicenode.conf` file (`/blocknetdx/testnet4/` for testnet users)
+* Navigiere zu dem Verzeichnis von Blocknet (Standardverzeichnis ist: `%appdata%/roaming/blocknetdx/`)
+   * Erstelle/editiere nun die Datei `servicenode.conf` (`/blocknetdx/testnet4/` für Test-net-Users)
    
-   * There should be an example of how the configuration needs to be in this file: (You can delete this after yours is typed in)
+   * Es sollte sich in diesem Verzeichnis eine Beispieldatei zur Konfiguration befinden: (Diese kann anschliessend gelöscht werden)
    ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_conf_ex.PNG "Logo Title Text 1")
    
-   * Enter your generated information from above in the format shown in this example:
+   * Gib alle erstellten Information aus den Schritten zuvor im angezeigten Format des nachfolgenden Beispiels ein:
    ```
-   snode01 <YOUR_PUBLIC_IP:41474> <YOUR_SERVICENODE_PRIVATE_KEY> <COLLATERAL_TX_OUTPUT> <TX_OUTPUT_INDEX>
+   snode01 <DEINE_ÖFFENTLICHE_IP:41474> <DER_PRIVATE_SCHLÜSSEL_DER_SERVICENODE> <COLLATERAL_TX_OUTPUT> <TX_OUTPUT_INDEX>
    ```
    
-   * Save `servicenode.conf` 
+   * Speichere die Datei `servicenode.conf` 
    
-   * Create/edit `blocknetdx.conf`. Add `staking=0`. Save `blocknetdx.conf`
+   * Erstelle/editiere nun die Datei `blocknetdx.conf`. Füge `staking=0` hinzu und speichere die Datei `blocknetdx.conf`
   
-   * Restart the wallet. Fully unlock the wallet.
+   * Starte die Core-UI neu und entsperre diese komplett.
    
-### SNODE SERVER Computer Wallet Setup
+### SNODE SERVER Computer Core-UI Setup
 
-* Navigate to your Blocknet data directory (default is: `%appdata%/roaming/blocknetdx/`)
-   * Create/edit the `blocknetdx.conf` file
-     * If you are using testnet, `blocknetdx.conf` needs to stay in `%appdata%/roaming/blocknetdx/` and NOT in the `/testnet4/` folder
+* Navigiere zum Blocknet verzeichnis (Standardverzeichnis ist: `%appdata%/roaming/blocknetdx/`)
+   * Erstelle/editiere nun die Datei `blocknetdx.conf`
+     * Wenn du das Test-net nutzt muss die Datei `blocknetdx.conf` im Verzeichnis `%appdata%/roaming/blocknetdx/` und NICHT im Verzeichnis `/testnet4/` bleiben
      
-   * Type the following information into your `blocknetdx.conf` file: (use staking=1 if you want to stake on the SNODE SERVER client)
+   * Schreibe nun die nachfolgenden Informationen in die Datei `blocknetdx.conf`: (Benutze staking=1 sofern du mit dem SNODE SERVER Client weiter staken möchtest)
    
    ```
    staking=1
    servicenode=1
-   servicenodeaddr=YOUR_PUBLIC_IP:41412
-   servicenodeprivkey=YOUR_SERVICENODE_PRIVATE_KEY
+   servicenodeaddr=DEINE_ÖFFENTLICHE_IP:41412
+   servicenodeprivkey=DER_PRIVATE_SCHLÜSSEL_DER_SERVICENODE
    ```
    
-   * Save the `blocknetdx.conf` and restart the wallet. Fully unlock the wallet.
+   * Speichere die Datei `blocknetdx.conf` und starte die Core-UI neu. Entsperre nun die Wallet komplett.
    
-### Starting Service Node(s)
+### Der Start der Service Node(s)
 
-* On the CLIENT computer navigate to the "Servicenodes" button on the GUI. If the setups were done correctly you should see all of your "Aliases"
+* Auf dem CLIENT-Computer navigiere zu dem Button "Servicenodes". Sofern die Schritte vorher richtig gemacht wurden, sollte nun alle deine Node-"Aliases" zu sehen sein.
 
-#### Activate via Debug Console
+#### Aktivierung mit der Debug Console
 
-* Navigate to `Tools > Debug console`
+* Navigiere zu `Tools > Debug console`
 
-* Type: `servicenode start-alias <name>` Ex: `servicenode start-alias snode1`
+* Schreibe: `servicenode start-alias <name>` Beispiel: `servicenode start-alias snode1`
 
-* The status of your node(s) should be "ENABLED" and show an "Active time"
-   * It may take a moment to show enabled and/or an active time.
+* Der Status deiner Node(s) sollte nun "ENABLED" sein und eine "Active time" anzeigen
+   * Es kann unter Umständen einen Moment dauern bis "enabled" und "Active time" angezeigt werden.
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_alias.PNG "Logo Title Text 1")    
    
-* Your Service Node(s) are running successfully. You can close off the CLIENT computer Blocknet wallet if you want.  
+* Deine Service-Node(s) laufen nun erfolgreich. Du kannst nun, sofern gewünscht, die Core-UI des Client nun schließen.  
    
-* The CLIENT computer will receive the " Servicenode Rewards "
+* Der Client wird nun die " Servicenode Rewards " erhalten.
 
 
-### Status Checks
+### Status Überprüfungen
 
-* On the SNODE SERVER computer navigate the top toolbar to: `Tools > Debug console`
-   * Type `servicenode debug` (This will output a message "Servicenode successfully started")
+* Auf den SnODE SERVER Computer navigiere in der oberen Menüleiste zu: `Tools > Debug console`
+   * Schreibe `servicenode debug` (Dies wird die Nachricht "Servicenode successfully started" ausgeben)
    
-   * Type `servicenode status` (This will output your service node information and a successful message at the end of it)
+   * Schreibe `servicenode status` (Dies wird die Service-Node-Information und eine Nachricht zum Status ausgeben)
    
   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_status.PNG "Logo Title Text 1")    
    
-* If you did not receive "Servicenode successfully started" proceed to the next "Troubleshooting section"
+* Wenn du nicht die Ausgabe "Servicenode successfully started" erhälst, gehen weiter zum Abschnitt "Troubleshooting" hier im Text
 
-* If you received a "Servicenode successfully started" proceed to setup your .conf files for the wallets on your service node
+* Wenn du die Ausgabe "Servicenode successfully started" erhälst, kannst du nun die .conf-Dateien der Wallets auf der Service-Node erstellen.
    
    
 ### Troubleshooting
 
-* Ensure your `servicenode.conf` information is correct to your settings
+* Versichere dich, dass deine Einträge in der Datei `servicenode.conf` übereinstimmen mit deinen Einstellungen.
 
-* Ensure you don't have "< >" in any of the configuration files : (ex: `servicenodeaddr=<your_public_IP:41474>` should be `servicenodeaddr=127.0.0.1:41412`. "127.0.0.1 is an example IP address")
-   * Ensure you are using the correct P2P PORT #
+* Versichere dich, dass du nicht die "< >" in einer der Konfigurationsdateien übernommen hast: (ex: `servicenodeaddr=<deine_öffentliche_IP:41474>` sollte `servicenodeaddr=127.0.0.1:41412` sein. "127.0.0.1 ist hier nur eine Beispiel-IP")
+   * Versichere dich, dass du den korrekten P2P-Port nutzt #
      * Main-net=`41412` 
      * Test-net=`41474`
 
-* Ensure on the CLIENT computer you only have a `servicenode.conf`, the `blocknetdx.conf` is not needed on the CLIENT computer
-   * For testnet ensure `servicenode.conf` is located in `/testnet4/`
+* Versichere dich, dass du auf dem CLIENT Computer nur die Datei `servicenode.conf` hast, die Datei `blocknetdx.conf` wird hier nicht benötigt
+   * Für das Test-Net versichere dich, dass die Datei `servicenode.conf` im Ordner `/testnet4/` gespeichert ist
 
-* Ensure on the SNODE SERVER computer you only have a `blocknetdx.conf`, the `servicenode.conf` is not needed on the SNODE SERVER computer
+* Versichere dich, dass du auf dem Snode Server Computer nur die Datei `blocknetdx.conf` hast, die Datei `servicenode.conf` wird hier nicht benötigt
    * For testnet ensure `blocknetdx.conf` is located in `/blocknetdx/` and not `/testnet4/`
    * If you are a tester, there will be a CMD line startup guide so you don't have to edit this configuration when you switch from main-net and test-net
    
