@@ -212,60 +212,60 @@ Jede Wallet von jedem Coin, den du unterstützen möchtest, muss mit einem Nutze
 ---
 
 ## Einstellungen der Coin-Adressen
-In each hosted coin wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
+Erstelle in jeder unterstützen Wallet eine neue Adresse und benenne sie mit einem eindeutigen Namen (label), als Beispiel "DX Adress" (xbrdige benötigt eine Adresse mit Label)
 
- * To create a new address, go to your wallet’s “receive” tab and click “new address”
+ * Um eine neue Adresse zu erstellen, gehe in deiner Wallet auf "receive" und klicke auf "new address"
 
- * To label an address, you may either right-click on it or click the “label” field.
+ * Um eine Adresse mit einem spezifischen Namen (Label) zu versehen, klicke mit der rechten Maustaste auf diese Adresse oder klicke auf das Feld "label".
  
  ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/labelledaddress.PNG "Logo Title Text 1") 
 
- * This needs to be done for all wallets being used
+ * Dies muss für alle Adressen aller Wallets gemacht werden
 
 ---
 
-## Setup xbridge.conf
+## Einstellungen xbridge.conf
 
-The Blocknet’s Xbridge technology is integrated into the latest client release. See [GitHub](https://github.com/BlocknetDX/BlockDX) for the source code.
+DIe xbridge Technologie ist in der aktuellen Core-UI integriert. Der Source-Code kann hier [GitHub](https://github.com/BlocknetDX/BlockDX) eingesehen werden.
 
- * To see the full list of coin .conf's see: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md)
+ * Um eine Liste aller aktuell unterstützen Coins zu sehen, gehe zu: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md)
 
- * Create/edit an `xbridge.conf` file and place the following configuration file in the blocknet wallet data directory (for Windows) C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
+ * Erstelle/editiere die Datei `xbridge.conf` und speichere diese in den Datenordner von Blocknet. Dieser befindet sich bei Windows hier: C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
 
- * Note: to avoid crashes or failed trades, please edit your `xbridge.conf` to feature only and all the coins you wish to have on your service node
+ * Anmerkung: um einen Absturz oder fehlgeschlagene Trades zu vermeiden, sollte die Datei `xbridge.conf` nur mit den Daten ergänz werden, die für die Coins benötigt werden, die mit der Service-Node unterstützt werden sollen.
 
- * Paste the RPC usernames and passwords you created for each currency pair into the “Username” and “Password” fields
+ * Füge den RPC Nutzernamen und das entsprechende Passwort in die Felder “Username” und “Password”.
  
- * Paste the address of the "labelled receive address" you created for each currency pair
+ * Füge die Adresse der entsprechenden benannten (labelled) Adresse für jede Währung ein.
  
- * Ensure the rest of the configuration matches [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) for each coin
+ * Versichere dich, daß deine Einträge für jeden Coin mit den Vorgaben in der nachfolgenden Datei übereinstimmen: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md).
 
- * Save the File (if you just edited the existing file, just click save, if you made a new file then click file, save as, and in the file name type: `xbridge.conf`
-    * Ensure the file is not `xbridge.conf.txt`
+ * Sichere die Datei (wenn du die Datei nur editiert hast, klicke einfach speichern, wenn du sie neu erstellt hast, klicke auf speicher als und bennen sie mit: `xbridge.conf`
+    * Versichere dich anschließend, dass die Datei nicht als `xbridge.conf.txt` gespeichert wurde.
 
- * Place this file into the Blocknet data directory folder: "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
+ * Speichere dann diese Datei in dem Datenordner von Blocknet (Windows): "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
 
- * You will be coming back to this to edit it in the future to add future coins, and change `RPCusername` `RPCpassword` `Port` `Address` 
+ * Später wirst du diese Datei immer wieder benötigen und weitere zukünftig unterstütze Coins eintragen bzw. deren Einträge `RPCusername` `RPCpassword` `Port` `Address` ändern.
  
- * Do not change the other settings in the .conf file unless you are on testnet conducting tests.
+ * Ändere nichts an den anderen Einträgen in der .conf-Datei, außer dú möchtest im Testnet Tests machen.
  
 ---
 
-## Startup Sequence
- * Start the currency pair(s) you are running on your service node
-    * Ensure every wallet is fully sync'd and unlocked
+## Ablauf Starten
+ * Starte als erstes alle Wallets der Coins, die du auf deiner Service-Node unterstützt
+    * Versichere dich, daß jede Wallet voll synchronisiert und ungesperrt ist.
     
 
- * Start the Blocknet wallet on the SNODE SERVER computer with `-enableexchange`
-    * ex: blocknetdx-qt.exe -enableexchange
+ * Starte die Blocknet Core-UI deiner Service-Node mit `-enableexchange`
+    * als Beispiel: blocknetdx-qt.exe -enableexchange
 
- * If you want to always start in exchange mode, right click on desktop/folder icon of your node blocknetdx-qt. Then choose properties. Then change "...blocknetdx-qt.exe" to "...blocknetdx-qt.exe -enableexchange". Save. Now it always start with these attributes.
+ * Wenn du jedes Mal automatisch im Exchange-Modus starten möchtest, klicke mit der rechten Maustaste auf das Icon der Blocknet Core-UI. Wähle dann Eigenschaften aus und wechsle dn Eintrag "...blocknetdx-qt.exe" zu "...blocknetdx-qt.exe -enableexchange". Anschließend speichern. Jetzt startet es automatisch jedes Mal im Exchange-Modus.
  
-     * When you click the "BlocknetDX" tab on the wallet it should say "Exchange node".
-     * In the console type: `dxGetCurrencyList` to show your list of wallets running on your xbridge
-     * In the console type: `servicenode list`, search for your SNODE, under `xwallets` it will show the wallets you are hosting
+     * Wenn du auf den Reiter "BlocknetDX" klickst, sollte nun der Eintrag "Exchange node" angezeigt werden.
+     * Schreibe in der Konsole: `dxGetCurrencyList` um alle unterstützen Coins deiner xbridge anzuzeigen
+     * Schreibe in der Konsole: `servicenode list`, suche dann nach SNODE, unter `xwallets` wird es dir alle Wallets anzeigen, die du unterstützt.
        
- * Ensure your servicenode is activated.
+ * Versichere dich, daß deine Service-Noder aktiviert ist.
   
 ---
 
