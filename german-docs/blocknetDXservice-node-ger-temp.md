@@ -265,7 +265,7 @@ DIe xbridge Technologie ist in der aktuellen Core-UI integriert. Der Source-Code
      * Schreibe in der Konsole: `dxGetCurrencyList` um alle unterstützen Coins deiner xbridge anzuzeigen
      * Schreibe in der Konsole: `servicenode list`, suche dann nach SNODE, unter `xwallets` wird es dir alle Wallets anzeigen, die du unterstützt.
        
- * Versichere dich, daß deine Service-Noder aktiviert ist.
+ * Versichere dich, daß deine Service-Node aktiviert ist.
   
 ---
 
