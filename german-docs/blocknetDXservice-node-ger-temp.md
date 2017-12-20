@@ -157,32 +157,32 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
    * Für das Test-Net versichere dich, dass die Datei `servicenode.conf` im Ordner `/testnet4/` gespeichert ist
 
 * Versichere dich, dass du auf dem Snode Server Computer nur die Datei `blocknetdx.conf` hast, die Datei `servicenode.conf` wird hier nicht benötigt
-   * For testnet ensure `blocknetdx.conf` is located in `/blocknetdx/` and not `/testnet4/`
-   * If you are a tester, there will be a CMD line startup guide so you don't have to edit this configuration when you switch from main-net and test-net
+   *Im Testnet versichere dich, dass die Datei `blocknetdx.conf` im Ordner `/blocknetdx/` und nicht im Ordner `/testnet4/` ist
+   * Für Tester gibt es einen Kommandozeilen Startup Guide, man muss die Konfiguration nicht editieren, wenn man zwischen Mainnet und Testnet wechselt.
    
-* Ensure your configuration files are not `servicenode.conf.txt`
+* Versichere dich, dass deine Konfigurationsdatei nicht  `servicenode.conf.txt` genannt ist.
 
-* Ensure the 5000 Block is exactly 5000 Block, no more or no less and ensure it's confirmed
+* Versichere dich, dass du genau 5000 Block transferiert hast, nicht mehr und nicht weniger, und daß der Transfer bestätigt ist.
 
-* Ensure you have the latest wallet and that it's fully sync'd and fully unlocked   
+* Versichere dich, dass du die aktuellste Version des Core-UI installiert hast, und dieser vollständig synchronisiert und vollständig gesperrt ist.   
    
 ---
 
-## Setup  .conf Files for the Wallets on Your Service Node:
-The wallet of each coin you want to host needs to be configured with a username/password and an allow from IP, if you’re using only a local machine use IP:127.0.0.1
+## Setup  .conf Files für die Wallets in deiner Service-Node:
+Jede Wallet von jedem Coin, den du unterstützen möchtest, muss mit einem Nutzernamen und Nutzerpasswort konfiguriert werden, und eine IP erlauben, im Falle, dass du auf deinem lokalen Computer installierst, nutze dafür die IP:127.0.0.1
 
- * To see the full list of compatible wallet configurations go to: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
+ * Eine vollständige Liste der aktuell kompatiblen Wallet findest du hier: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
 
- * Download the latest wallet, let it sync up fully, then close the wallet
+ * Lade die aktuellste Core-UI, synchronisiere diese vollständig und schliesse die danach.
+ 
+ * Drücke den START Button auf deinem Desktop und suche nach “%appdata%”. Nun sollte der “Roaming”-Ordner angeboten werden. Drücke auf “Roaming” oder drücke Enter.
 
- * Click the START button on your desktop, where it says “Search program and files” then type “%appdata%” and the “Roaming” directory should pop up. Click on “Roaming” or hit enter
+ * Suche nach dem gewünschten Daten-Ordner, als Beispiel: Bitcoin
 
- * Find your wallet’s designated data directory folder, ex: Bitcoin
+ * Wenn du keine Datei .conf dort hast, musst du diese mit zB. Notepad erstellen.
 
- * If you don’t have a .conf file started you will need to open up Notepad to create one.
-
- * Navigate to [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) and copy/paste the configuration information for the wallet you are running. (this can be added to what is already present in file if you have “addnodes” or other configurations already):
-   * Ex: bitcoin.conf
+ * Navigiere zu [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) und kopiere und füge ein die Information für die Wallet, die du unterstützen willst. (dies kann hinzugefügt werden zu eventuellen Informationen, die bereits in diesem File stehen, als Beispiel sind vielleicht schon “addnodes” oder andere Konfigurationen eingetragen):
+   * Als Beispiel: bitcoin.conf
    
    ```
    server=1
@@ -192,26 +192,26 @@ The wallet of each coin you want to host needs to be configured with a username/
    rpcallowip=127.0.0.1
    ```
    
-   * Ensure the configuration is correct. Do not assume the configurations are the same for each wallet.
+   * versichere dich, dass alles korrekt eingetragen ist. Sei dir im Klaren darüber, dass diese Einträge nicht für alle Wallets gleich sind!
 
- * Change `rpcuser` and `rpcpassword` to something unique to you. For security reasons you should have a different RPC username and password for each wallet
+ * Wechsle `rpcuser` und `rpcpassword` zu Werten deiner Wahl. Aus Sicherheitsgründen solltest du für jede Wallet, die du unterstützen möchtest, unterschiedliche RPC Nutzernamen und Passwörter verwenden.
 
- * If you’re using a single machine use IP: `127.0.0.1`
+ * Wenn du nur ein Rechner für die Wallets verwendest, benutze die IP: `127.0.0.1`
 
- * When you are done, click File, Save as, Type in: `bitcoin.conf`
-    * Ensure the file is not `bitcoin.conf.txt`
+ * Wenn du das erledigt hast, speichere die Datei unter: `bitcoin.conf`
+    * Versichere dich, dass die Datei nicht versehentlich als `bitcoin.conf.txt` gespeichert wurde
 
- * Save it and then place the .conf into its corresponding wallet folder
-    * For this example: %Appdata%/Roaming/Bitcoin 
+ * Nach der Speicherung verschiebe gegebenenfalls die .conf-Datei noch in den entsprechenden Wallet-Ordner
+    * In diesem Beispiel: %Appdata%/Roaming/Bitcoin 
 
- * Remember what you wrote for the username, password, and IP
+ * Merke dir deine Einträge für Nutzername, Passwort und IP
 
- * Create .conf files for each wallet you are going to be using on the decentralised exchange.
-    * Ensure `rpcuser` and `rpcpassword` are different on each wallet for security purposes
+ * Erstelle diese .conf-Dateien für jede Wallet, die du auf der DEX unterstützen möchtest.
+    * Versichere dich, dass sicherheitshalber `rpcuser` und `rpcpassword` für jede Wallet unterschiedlich sind.
  
 ---
 
-## Configure Coin Addresses
+## Einstellungen der Coin-Adressen
 In each hosted coin wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
 
  * To create a new address, go to your wallet’s “receive” tab and click “new address”
