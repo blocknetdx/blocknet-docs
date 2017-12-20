@@ -1,6 +1,6 @@
 **Nötige Schritte zum Umziehen von der alten auf die neue Blocknet-Blockchain**
 
--   Als allererstes erstelle einen Backup von der Datei wallet.dat (mache 2
+-   Als erstes erstelle ein Backup von der Datei wallet.dat (mache 2
     unabhängige Sicherungen)
 
 -   In Windows findet man die Datei wallet.dat in dem Ordner
