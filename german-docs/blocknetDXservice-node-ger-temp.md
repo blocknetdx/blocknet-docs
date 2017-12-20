@@ -7,10 +7,10 @@ Das Internet der Blockchains
 
 **Diese Anleitung erläutert die Konfiguration zur Betreibung einer Service-Node für die Blocknet DEX.** 
 
-* Blocknets DX benutzt die xbridgep2p™ Blockchain-Router-Technologie, um es Nutzer zu ermöglichen, Tokens und andere Werte auszutauschen, sowie Smart Contracts zwischen Blockchains zu nutzen.
+* Blocknets DX benutzt die xbridgep2p™ Blockchain-Router-Technologie, um es Nutzer zu ermöglichen, Tokens und andere Werte auszutauschen, sowie Smart-Contracts zwischen Blockchains zu nutzen.
 
 ## Übersicht
-Die Konfiguration benötigt eine Verknüpfung zwischen der Blocknet Wallet sowie der Wallet derjenigen Coins, die man als Währungspaar handeln möchte. Zu diesem Zeitpunkt ist dieser Vorgang noch nicht automatisiert und es wird die grafische Benutzeroberfläche von Blocknet hierzu eingesetzt bis die endgültige Oberfläche fertig ist. Die Konfiguration benötigt manuelles Erstellen (oder Editieren) der .conf-Dateien: 
+Die Konfiguration benötigt eine Verknüpfung zwischen der Blocknet-Wallet sowie der Wallet derjenigen Coins, die man als Währungspaar handeln möchte. Zu diesem Zeitpunkt ist dieser Vorgang noch nicht automatisiert und es wird die grafische Benutzeroberfläche von Blocknet hierzu eingesetzt bis die endgültige Oberfläche fertig ist. Die Konfiguration benötigt manuelles Erstellen (oder Editieren) der .conf-Dateien: 
 
  * blocknetdx.conf
  
@@ -20,11 +20,11 @@ Die Konfiguration benötigt eine Verknüpfung zwischen der Blocknet Wallet sowie
 
  * Konfigurations-Datei für jede Währung, die unterstützt werden soll
 
-Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicherheitsgründen wird empfohlen, alle Wallets auf einem System laufen zu lassen, sowie über die IP-Adresse des localhost (127.0.0.1) zu verbinden, auch wenn es generell möglich ist, die Wallets auf unterschiedlichen Systemen zu hosten und über deren IP zu verbinden. Eine grundlegende Dokumentation rund uim die JSON-RPC-Schnittstelle kann man @ https://en.bitcoin.it/wiki/Running_Bitcoin nachlesen.
+Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicherheitsgründen wird empfohlen, alle Wallets auf einem System laufen zu lassen, sowie über die IP-Adresse des localhost (127.0.0.1) zu verbinden, auch wenn es generell möglich ist, die Wallets auf unterschiedlichen Systemen zu hosten und über deren IP zu verbinden. Eine grundlegende Dokumentation rund um die JSON-RPC-Schnittstelle kann man @ https://en.bitcoin.it/wiki/Running_Bitcoin nachlesen.
 
 ## Anforderungen
 * 2 Computer mit der aktuellen Software des Blocknet Clients, voll verschlüsselt und synchronisiert
-   * Computer #1stellt den Service-Node-Server da, der 24/7 laufen muss
+   * Computer #1 stellt den Service-Node-Server da, der 24/7 laufen muss
       * Diese Anleitung nennt diesen Computer nachfolgend " SNODE SERVER "
       
    * Computer #2 ist der Client-Computer, in dem die 5000 Block gesichert sind. Dieser muss nicht 24/7 erreichbar sein.
@@ -44,7 +44,7 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 * Lade die aktuelleste Core-Version (nachfolgend Core-UI genannt) der Blocknet-Wallet auf 2 Computer oder VPN
    * [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
    
-* Die Core-UI muss auf beiden Systemen volständig synchronisieren. Sobald dies geschehen ist müssen beide Core-UI mit einem Passwort nach Wahl komplett verschlüsselt werden
+* Die Core-UI muss auf beiden Systemen vollständig synchronisieren. Sobald dies geschehen ist müssen beide Core-UI mit einem Passwort nach Wahl komplett verschlüsselt werden
    * Für DX-Tests bitte `testnet=1` oder `-testnet` für `blocknetdx-qt.exe` nutzen
    
 ### CLIENT Computer Core-UI Setup   
@@ -69,20 +69,20 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 * Sobald der TX voll bestätigt ist navigiere zurück zu: `Tools > Debug console`
    * Schreibe `servicenode outputs` (Dies gibt die Service-Node-TX-Information aus, die in der `servicenode.conf` gebraucht wird)
    
-   * Merke oder notiere dir diese Ausgabe, das sie später in der Konfigurationsdateie benötigt werden
+   * Merke oder notiere dir diese Ausgabe, da sie später in der Konfigurationsdatei benötigt werden
    
 * Jetzt brauchst du die öffentliche IP-Adresse des SNODE SERVER. Wenn du nur eine öffentliche Adresse benutzt, gehe zu Google und suche nach "was ist meine IP". Deine öffentliche IP wird damit angezeigt. Merke oder notiere diese Ausgaben, da sie später in den Konfigurationsdateien benötigt werden.
    * Wenn du einen VPN oder VPS für den SNODE SERVER Computer nutzt, musst du dessen öffentliche IP nun zur Hand nehmen.
-   * Nutzer des Main-net nutzen YOUR_PUBLIC_IP:41412
-   * Nutzer des Test-net nutzen YOUR_PUBLIC_IP:41474
+   * Nutzer des Mainnet nutzen YOUR_PUBLIC_IP:41412
+   * Nutzer des Testnet nutzen YOUR_PUBLIC_IP:41474
    
 * Navigiere zu dem Verzeichnis von Blocknet (Standardverzeichnis ist: `%appdata%/roaming/blocknetdx/`)
-   * Erstelle/editiere nun die Datei `servicenode.conf` (`/blocknetdx/testnet4/` für Test-net-Users)
+   * Erstelle/editiere nun die Datei `servicenode.conf` (`/blocknetdx/testnet4/` für Testnet-User)
    
-   * Es sollte sich in diesem Verzeichnis eine Beispieldatei zur Konfiguration befinden: (Diese kann anschliessend gelöscht werden)
+   * Es sollte sich in diesem Verzeichnis eine Beispieldatei zur Konfiguration befinden: (Diese kann anschließend gelöscht werden)
    ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_conf_ex.PNG "Logo Title Text 1")
    
-   * Gib alle erstellten Information aus den Schritten zuvor im angezeigten Format des nachfolgenden Beispiels ein:
+   * Gib alle erstellten Informationen aus den Schritten zuvor im angezeigten Format des nachfolgenden Beispiels ein:
    ```
    snode01 <DEINE_ÖFFENTLICHE_IP:41474> <DER_PRIVATE_SCHLÜSSEL_DER_SERVICENODE> <COLLATERAL_TX_OUTPUT> <TX_OUTPUT_INDEX>
    ```
@@ -97,7 +97,7 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 
 * Navigiere zum Blocknet verzeichnis (Standardverzeichnis ist: `%appdata%/roaming/blocknetdx/`)
    * Erstelle/editiere nun die Datei `blocknetdx.conf`
-     * Wenn du das Test-net nutzt muss die Datei `blocknetdx.conf` im Verzeichnis `%appdata%/roaming/blocknetdx/` und NICHT im Verzeichnis `/testnet4/` bleiben
+     * Wenn du das Testnet nutzt muss die Datei `blocknetdx.conf` im Verzeichnis `%appdata%/roaming/blocknetdx/` und NICHT im Verzeichnis `/testnet4/` bleiben
      
    * Schreibe nun die nachfolgenden Informationen in die Datei `blocknetdx.conf`: (Benutze staking=1 sofern du mit dem SNODE SERVER Client weiter staken möchtest)
    
@@ -112,7 +112,7 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
    
 ### Der Start der Service Node(s)
 
-* Auf dem CLIENT-Computer navigiere zu dem Button "Servicenodes". Sofern die Schritte vorher richtig gemacht wurden, sollte nun alle deine Node-"Aliases" zu sehen sein.
+* Auf dem CLIENT-Computer navigiere zu dem Button "Servicenodes". Sofern die Schritte vorher richtiggemacht wurden, sollte nun alle deine Node-"Aliases" zu sehen sein.
 
 #### Aktivierung mit der Debug Console
 
@@ -125,21 +125,21 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_alias.PNG "Logo Title Text 1")    
    
-* Deine Service-Node(s) laufen nun erfolgreich. Du kannst nun, sofern gewünscht, die Core-UI des Client nun schließen.  
+* Deine Service-Node(s) laufen nun erfolgreich. Du kannst nun, sofern gewünscht, die Core-UI des Clients nun schließen.  
    
 * Der Client wird nun die " Servicenode Rewards " erhalten.
 
 
 ### Status Überprüfungen
 
-* Auf den SnODE SERVER Computer navigiere in der oberen Menüleiste zu: `Tools > Debug console`
+* Auf den SNODE SERVER Computer navigiere in der oberen Menüleiste zu: `Tools > Debug console`
    * Schreibe `servicenode debug` (Dies wird die Nachricht "Servicenode successfully started" ausgeben)
    
    * Schreibe `servicenode status` (Dies wird die Service-Node-Information und eine Nachricht zum Status ausgeben)
    
   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/snode_status.PNG "Logo Title Text 1")    
    
-* Wenn du nicht die Ausgabe "Servicenode successfully started" erhälst, gehen weiter zum Abschnitt "Troubleshooting" hier im Text
+* Wenn du nicht die Ausgabe "Servicenode successfully started" erhältst, gehen weiter zum Abschnitt "Troubleshooting" hier im Text
 
 * Wenn du die Ausgabe "Servicenode successfully started" erhälst, kannst du nun die .conf-Dateien der Wallets auf der Service-Node erstellen.
    
@@ -150,19 +150,19 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 
 * Versichere dich, dass du nicht die "< >" in einer der Konfigurationsdateien übernommen hast: (ex: `servicenodeaddr=<deine_öffentliche_IP:41474>` sollte `servicenodeaddr=127.0.0.1:41412` sein. "127.0.0.1 ist hier nur eine Beispiel-IP")
    * Versichere dich, dass du den korrekten P2P-Port nutzt #
-     * Main-net=`41412` 
-     * Test-net=`41474`
+     * Mainnet=`41412` 
+     * Testnet=`41474`
 
 * Versichere dich, dass du auf dem CLIENT Computer nur die Datei `servicenode.conf` hast, die Datei `blocknetdx.conf` wird hier nicht benötigt
-   * Für das Test-Net versichere dich, dass die Datei `servicenode.conf` im Ordner `/testnet4/` gespeichert ist
+   * Für das Testnet versichere dich, dass die Datei `servicenode.conf` im Ordner `/testnet4/` gespeichert ist
 
 * Versichere dich, dass du auf dem Snode Server Computer nur die Datei `blocknetdx.conf` hast, die Datei `servicenode.conf` wird hier nicht benötigt
    *Im Testnet versichere dich, dass die Datei `blocknetdx.conf` im Ordner `/blocknetdx/` und nicht im Ordner `/testnet4/` ist
    * Für Tester gibt es einen Kommandozeilen Startup Guide, man muss die Konfiguration nicht editieren, wenn man zwischen Mainnet und Testnet wechselt.
    
-* Versichere dich, dass deine Konfigurationsdatei nicht  `servicenode.conf.txt` genannt ist.
+* Versichere dich, dass deine Konfigurationsdatei nicht `servicenode.conf.txt` genannt ist.
 
-* Versichere dich, dass du genau 5000 Block transferiert hast, nicht mehr und nicht weniger, und daß der Transfer bestätigt ist.
+* Versichere dich, dass du genau 5000 Block transferiert hast, nicht mehr und nicht weniger, und das der Transfer bestätigt ist.
 
 * Versichere dich, dass du die aktuellste Version des Core-UI installiert hast, und dieser vollständig synchronisiert und vollständig gesperrt ist.   
    
@@ -259,44 +259,44 @@ DIe xbridge Technologie ist in der aktuellen Core-UI integriert. Der Source-Code
  * Starte die Blocknet Core-UI deiner Service-Node mit `-enableexchange`
     * als Beispiel: blocknetdx-qt.exe -enableexchange
 
- * Wenn du jedes Mal automatisch im Exchange-Modus starten möchtest, klicke mit der rechten Maustaste auf das Icon der Blocknet Core-UI. Wähle dann Eigenschaften aus und wechsle dn Eintrag "...blocknetdx-qt.exe" zu "...blocknetdx-qt.exe -enableexchange". Anschließend speichern. Jetzt startet es automatisch jedes Mal im Exchange-Modus.
+ * Wenn du jedes Mal automatisch im Exchange-Modus starten möchtest, klicke mit der rechten Maustaste auf das Icon der Blocknet Core-UI. Wähle dann Eigenschaften aus und wechsle den Eintrag "...blocknetdx-qt.exe" zu "...blocknetdx-qt.exe -enableexchange". Anschließend speichern. Jetzt startet es automatisch jedes Mal im Exchange-Modus.
  
      * Wenn du auf den Reiter "BlocknetDX" klickst, sollte nun der Eintrag "Exchange node" angezeigt werden.
      * Schreibe in der Konsole: `dxGetCurrencyList` um alle unterstützen Coins deiner xbridge anzuzeigen
      * Schreibe in der Konsole: `servicenode list`, suche dann nach SNODE, unter `xwallets` wird es dir alle Wallets anzeigen, die du unterstützt.
        
- * Versichere dich, daß deine Service-Node aktiviert ist.
+ * Versichere dich, dass deine Service-Node aktiviert ist.
   
 ---
 
 ## Überprüfe die Kommunikation zwischen den Wallets.
-Um sicherzugehen, daß der XBridge Klient mit den wallets und den -conf-Dateien richtig kommniziert, navigiere in das Daten-Verzeichnis von Blocknet (Windows): C:\Users\yourusername\AppData\Roaming\blocknetdx\
+Um sicherzugehen, dass der XBridge Client mit den wallets und den -conf-Dateien richtig kommuniziert, navigiere in das Daten-Verzeichnis von Blocknet (Windows): C:\Users\yourusername\AppData\Roaming\blocknetdx\
 
    * Öffne den "log"-Ordner. Öffne nun die Log-Datei mit dem aktuellsten Datum/Zeitstempel. Als Beispiel: `xbridgep2p_20170831T181856.log`
    * Jede Log-Datei wird solange aktualisiert bis der Core-UI geschlossen wird. Wenn der Core-UI neu gestartet wird, wird ein neue Log-Datei angelegt.
 
-Wenn du den Core-UI startest, wirst du die Initalisierung sehen mit den Werten aus der Datei `xbridge.conf`, die du erstellt hast:
+Wenn du den Core-UI startest, wirst du die Initialisierung sehen mit den Werten aus der Datei `xbridge.conf`, die du erstellt hast:
 
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/dxstart.PNG "Logo Title Text 1") 
 
- * Warte nun, bis du  Einträge des Typs “HTTP: resp 200” erhälst. Dies zeigt an, daß die Wallets über RPC miteinander kommunizieren und die Einstellungen erfolgreich waren. Versichere dich, daß jede unterstützte Wallet einen Eintrag “HTTP: resp 200” und den passenden Adressnamen (Label) hat.
+ * Warte nun, bis du Einträge des Typs “HTTP: resp 200” erhälst. Dies zeigt an, daß die Wallets über RPC miteinander kommunizieren und die Einstellungen erfolgreich waren. Versichere dich, dass jede unterstützte Wallet einen Eintrag “HTTP: resp 200” und den passenden Adressnamen (Label) hat.
  
  ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/resp_200.PNG "Logo Title Text 1") 
 
  * Anmerkung: Wenn du inmitten der “HTTP: resp 200” Nachrichten  einen Eintrag ähnlich des nachfolgenden siehst, `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, bedeutet dies, das zumindest einer der verknüpften Wallets nicht ordnungsgemäß läuft.
 
- * Anmerkung: Wenn du nicht den Eintrag “HTTP: resp 200” erhälst, ist zu überprüfen, ob der/die Ports, die in der conf.-Datei angegeben wurden, mit denen übereinstimmen, die für die jeweilige Wallet vorgegeben wurden. Um dies zu überprüfen, öffne die Windows-Kommandozeile uznd schreibe `netstat -an` hinein, und überprüfe dann, welche Ports über den localhost (127.0.0.1), oder manchmal über (0.0.0.0), genutzt werden.
+ * Anmerkung: Wenn du nicht den Eintrag “HTTP: resp 200” erhältst, ist zu überprüfen, ob der/die Ports, die in der conf.-Datei angegeben wurden, mit denen übereinstimmen, die für die jeweilige Wallet vorgegeben wurden. Um dies zu überprüfen, öffne die Windows-Kommandozeile und schreibe `netstat -an` hinein, und überprüfe dann, welche Ports über den localhost (127.0.0.1), oder manchmal über (0.0.0.0), genutzt werden.
  
 ---
 
 ## Diagnose von Problemen
-* Um sicherzugehen, dass jede Wallet mit der xbridge korrekt kommuniziert, überprüfe ob jede erstellte und benannte Empfangsadresse im Adressbuch hinterlegt ist. Sollte dies nicht der Fall sein, schliesse den Core-UI und überprüfe die Konfigurationsdateien.
+* Um sicherzugehen, dass jede Wallet mit der xbridge korrekt kommuniziert, überprüfe ob jede erstellte und benannte Empfangsadresse im Adressbuch hinterlegt ist. Sollte dies nicht der Fall sein, schließe den Core-UI und überprüfe die Konfigurationsdateien.
 
 * Wenn du Änderungen an den .conf-Dateien vornimmst musst du die jeweilige Wallet sowie anschließend auch die Blocknet Core-UI neu starten. 
 
-* Gehe sicher, daß die benutzen Ports im System auch offen sind. Dazu kannst du in der Windows-Kommadozeile den Befehl `netstat -an` eingeben und die Ausgabe durchschauen. Überprüfe hierbei genau die Ports, die in den .conf-Dateien angebenen sind, darauf ob sie für den localhost (127.0.0.1) offen sind, (als Beispiel Port 8332 for Bitcoin).
+* Gehe sicher, dass die benutzen Ports im System auch offen sind. Dazu kannst du in der Windows-Kommandozeile den Befehl `netstat -an` eingeben und die Ausgabe durchschauen. Überprüfe hierbei genau die Ports, die in den .conf-Dateien angegeben sind, darauf ob sie für den localhost (127.0.0.1) offen sind, (als Beispiel Port 8332 for Bitcoin).
 
-* Gehe sicher, daß alle .conf-Dateien ordnungsgemäß konfiguriert wurden. Diese Konfigurationen sind sehr sensibel. jede kleine falsche Eingabe wird einen Fehler verursachen.
+* Gehe sicher, dass alle .conf-Dateien ordnungsgemäß konfiguriert wurden. Diese Konfigurationen sind sehr sensibel. Jede kleine falsche Eingabe wird einen Fehler verursachen.
 
 * Gehe sicher, dass keine integrierte Firewall deines Betriebssystems die Kommunikation blockiert. Dies kannst du über das Interface deiner Firewall tun.
 
