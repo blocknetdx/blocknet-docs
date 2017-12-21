@@ -1,89 +1,89 @@
-# Decred CMD Line Setup For Blocknet DX
+# Decred Kommandozeilen Setup für Blocknets DX
 
-THANKS TO @86b (Slack) for spending countless hours on this setup!
+Danke an 86b (Slack) für unzählige Stunden Arbeit an diesem Setup!
 
-*This setup will gain a resp 200 on the Block DX w/ an error, this is being looked into.* 
+*Dieses Setup wird einen resp 200-Fehler auf der Blocknet Exchange ausgeben; es wird daran gearbeitet.* 
 
-* Go to: https://github.com/decred/decred-release/releases/tag/v1.0.5
+* Gehe zu: https://github.com/decred/decred-release/releases/tag/v1.0.5
 
-* Download: `dcrinstall-windows-amd64-v1.0.5.exe`
+* Lade herunter: `dcrinstall-windows-amd64-v1.0.5.exe`
 
-* Run the .exe
+* Starte die .exe-Datei
 
-* Find the directory, it should be: `C:\Users\<NAME>\decred\ `
+* Suche nach dem Hauptverzeichnis, welches standardmäßig hier sein sollte: `C:\Users\<NAME>\decred\ `
 
 ---
 
-* Open 3 cmd prompt windows
-  * On all 3, change the directory to the source directory:
+* Öffne 3 Kommandozeilen von Windows
+  * In allen 3, wechsle in das Hauptverzeichnis von Decred:
   
-	  `cd C:\Users\<NAME>\decred` or wherever it was installed
+	  `cd C:\Users\<NAME>\decred` oder wo es installiert wurde
     
-## 1ST CMD PROMPT WINDOW
+## In der ersten Windows-Kommandozeile
 
-* Type:
+* Schreibe:
 
   * `dcrd --notls --rpcuser=CHANGE --rpcpass=CHANGE --minrelaytxfee=0.01 --rpclisten=127.0.0.1`
   	* (change rpc user/pass)
 
-* It will then connect and download the blockchain. Leave this running in the background
+* Es wird sich nun verbinden und die Blockchain herunterladen. Lass diesen Prozess im Hintergrund weiterlaufen.
 
-## 2ND CMD PROMPT WINDOW
+## In der zweiten Windows-Kommandozeile
 
-* Type: `dcrwallet --create`
+* Schreibe: `dcrwallet --create`
 
-* Create and enter a password (it wont display anything when you type a password) 
+* Erstelle ein Passwort und gib es ein (es wird dir nicht beim Tippen angezeigt!) 
 
-* Type it again to confirm
+* Gib das Passwort zur Bestätigung erneut ein.
 
-* Type `n` on addition security
+* Schreibe `n` in der ergänzenden Sicherheit 
 
-* Type: `n` on an exisiting wallet
+* Schreibe: `n` auf einer existierenden Wallet
 
-* Copy your Seed and Hex into a document and save it
+* Kopiere deinen Seed und Hexcode in ein Dokument und speichere es
 
-* Type: `OK`  (capital letters)
+* Schreibe: `OK`  (Großbuchstaben)
 
-* Your wallet should be created successfully!
+* Deine Wallet sollte nun erfolgreich erstellt sein!
 
-## 3RD CMD PROMPT WINDOW
+## In der dritten Windows-Kommandozeile
 
-* Type:
+* Schreibe:
 
 	* `dcrwallet --username=CHANGE --password=CHANGE --noclienttls --noservertls --walletpass public --dcrdusername=CHANGE --dcrdpassword=CHANGE --txfee=0.01`
-		* (enter the same user/pass as the above RPC for both user/pass)
+		* (gib hier den selben Nutzername und das Passwort ein wie der RPC darüber für beide)
 
-* Enter your password, it should rescan blocks and eventually connect
+* Gib dein Passwort ein, der Rescan der Blocks sollte starten und gegebenfalls verbinden
   
-* Leave it running in the background
+* Lass diesen Prozess im Hintergrund weiterlaufen.
 
-## BACK TO 2ND CMD PROMPT WINDOW
+## Zurück zur zweiten Windows-Kommandozeile
 
-* Type: 
+* Schreibe: 
 
 	* `dcrctl -u CHANGE -P CHANGE --wallet --notls walletpassphrase <password> 1000000`
-		* (-u and -P is your user/pass from above)
-		* ("password" is your wallet password, but don’t use the <> symbols)
+		* (-u und -P ist dein Nutzername und das Passwort von vorher)
+		* ("password" ist dein Wallet-Passwort, gib aber nicht die <>-Symbole mit ein)
 
-* It should take you back to the directory
+* Dies sollte dich zurück in das Hauptverzeichnis bringen
 
-* Type: 
+* Schreibe: 
 
 	* `dcrctl -u CHANGE -P CHANGE --wallet --notls createnewaccount "testDECRED"`
-		* (“testDECRED” is what I am calling my labelled address, use the quotation marks and label it whatever you want)
+		* (“testDECRED” ist der Walletadressenname, den ich meiner Adresse gegeben habe, verwende die Anführungszeichen und bennen es wie immer du möchtest)
 
-* It should take you back to the directory
+* Dies sollte dich zurück in das Hauptverzeichnis bringen
 
-* Type:
+* Schreibe:
 
 	* `dcrctl -u CHANGE -P CHANGE --wallet --notls getnewaddress "testDECRED"`
-		* (getnewaddress " " is whatever you wrote on the above command for a label)
+		* (getnewaddress " " ist der Walletadressname, den du eben schon benannt hast)
 
-* This should output your labelled DCR address
+* Dies sollte die deine DCR-Adresse ausgeben
 
 ## XBRIDGE.conf
 
-* Go to your xbridge.conf and add this config for DCR:
+* Öffne die Datei xbridge.conf und ergänze nachfolgende Konfiguration für DCR:
 
 ```
 [DCR]
@@ -108,5 +108,5 @@ BlockTime=150
 FeePerByte=1000
 ```
 
-* Run xbridge
+* STarte die xbridge
 
