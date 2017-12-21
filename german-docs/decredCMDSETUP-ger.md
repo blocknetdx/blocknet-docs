@@ -24,7 +24,7 @@ Danke an 86b (Slack) für unzählige Stunden Arbeit an diesem Setup!
 * Schreibe:
 
   * `dcrd --notls --rpcuser=CHANGE --rpcpass=CHANGE --minrelaytxfee=0.01 --rpclisten=127.0.0.1`
-  	* (change rpc user/pass)
+  	* (Wechsle den RPC Nutzernamen und das Passwort)
 
 * Es wird sich nun verbinden und die Blockchain herunterladen. Lass diesen Prozess im Hintergrund weiterlaufen.
 
