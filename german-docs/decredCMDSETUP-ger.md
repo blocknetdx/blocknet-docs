@@ -38,7 +38,7 @@ Danke an 86b (Slack) für unzählige Stunden Arbeit an diesem Setup!
 
 * Schreibe `n` auf die Abfrage "addition security"
 
-* Schreibe: `n` auf die Abfrage "exisiting wallet"
+* Schreibe: `n` auf die Abfrage "existing wallet"
 
 * Kopiere deinen Seed und Hexcode in ein Dokument und speichere es
 
@@ -108,5 +108,5 @@ BlockTime=150
 FeePerByte=1000
 ```
 
-* STarte die xbridge
+* Starte die Xbridge.
 
