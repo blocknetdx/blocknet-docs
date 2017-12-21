@@ -38,7 +38,7 @@ THANKS TO @86b (Slack) for spending countless hours on this setup!
 
 * Type `n` on addition security
 
-* Type: `n` on an exisiting wallet
+* Type: `n` on an existing wallet
 
 * Copy your Seed and Hex into a document and save it
 
