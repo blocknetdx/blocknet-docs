@@ -1,35 +1,35 @@
-# How To Find .CONF Prefixes Instructions
+# Anleitung zum Finden der Präfixe der .conf-Dateien
 
-1. Address Prefix:
+1. Adress-Präfixe:
 
-    1. Go to: http://lenschulwitz.com/base58
-    2. Enter wallet address into Base 58 Decoder
-    3. First 2 digits of HEX copy into: http://www.binaryhexconverter.com/hex-to-decimal-converter
-    4. Decimal value = address prefix
+    1. Gehe zu: http://lenschulwitz.com/base58
+    2. Gib die Walletadresse in den Base 58 Decoder ein
+    3. Die ersten beiden Stellen der HEX-Ausgabe gib hier ein: http://www.binaryhexconverter.com/hex-to-decimal-converter
+    4. Der Dezimalwert = Adressen-Präfix
 
-2. Script Prefix:
+2. Script Präfix:
 
-    1. Go to wallet console
-    2. Type `validateaddress <wallet address>`
-    3. Copy `pubkey`
-    4. If it says something about locked wallet go `walletpassphrase <walletpassword> <pick a number in seconds>` example: `walletpassphrase password 10000`
-    5. Type `decodescript <enter copied pubkey from step iii>`
-    6. Take the p2sh output and decode that to HEX on the base58 website
-    7. Then convert first 2 digits of hex. decimal value = script prefix
+    1. Gehe zur Konsole der Wallet
+    2. Schreibe `validateaddress <wallet address>`
+    3. Kopiere den `pubkey`
+    4. Wenn du die Meldung bekommst, dass die Wallet gesperrt ist, schreibe `walletpassphrase <walletpassword> <pick a number in seconds>` als Beispiel: `walletpassphrase password 10000`
+    5. Schreibe nun `decodescript <enter copied pubkey from step iii>`
+    6. Nimm die Ausgabe für p2sh und dekodiere dies in den HEX-Code auf der Base58-Webseite
+    7. Danach wandle die ersten beiden Stellen des HEX-Codes um. Der Dezimalwert = Adressen-Präfix
 
-3. Secret Prefix:
+3. Geheimer Präfix:
 
-    1. Go to wallet console
-    2. Type `dumpprivkey <wallet address>`
-    3. Copy the `privkey` 
-    4. Decode the privkey to HEX on the base 58 website
-    5. Then convert first 2 digits of hex. decimal value = secret prefix
+    1. Gehe zur Konsole der Wallet
+    2. Schreibe `dumpprivkey <wallet address>`
+    3. Kopiere den `privkey` 
+    4. Dekodiere den privaten Schlüssel zu HEX-Code auf der Base58-Webseite
+    5. Anschließend wandle die ersten beiden Stellen des HEX-Codes um.Then convert first 2 digits of hex. Der Dezimalwert = Geheimer Adressen-Präfix
 
 4.  RPC Port:
 
-    1. Search wallet’s GitHub, official webpage, bitcointalk, general google searches
-    2. Try some of the website sources listed below on the next page
-    3. Under the wallets Debug or Tool menu, click the Peers tab. The IP address port is sometimes 1 below what is listed. This only works sometimes.
-    4. From command line (windows: `netstat -an` / linux: `netstat -anp`) That should show open ports (on windows it wont’ show the process, but there is a GUI that does)
+    1. Durchsuche Github nach Wallets, die offiziellen Homepages, Bitcontalk, und allgemeine Google-Suchen
+    2. Versuche einige der Homepages, die auf der nächsten Seite aufgelistet sind.
+    3. Im Debug-Menü oder dem Tool-Menü, klicke auf den Tab Peers. Der Port der IP-Adresse steht manchmal 1 Zeile unter der Auflistung- Dies funktioniert nur manchmal.
+    4. Gib in der Kommandozeile von Windows/Linux nachfolgendes ein: windows: `netstat -an` / linux: `netstat -anp`. Dies gibt die offenen Ports aus. (in Windows zeigt dies nicht den dazugehörigen Prozess, aber es gibt dafür ein Programm)
 
-Thanks @86b (Slack) for figuring this method out
+Danke für die Ausarbeitung der Methode an @86b
