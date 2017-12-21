@@ -36,9 +36,9 @@ Danke an 86b (Slack) für unzählige Stunden Arbeit an diesem Setup!
 
 * Gib das Passwort zur Bestätigung erneut ein.
 
-* Schreibe `n` in der ergänzenden Sicherheit 
+* Schreibe `n` auf die Abfrage "addition security"
 
-* Schreibe: `n` auf einer existierenden Wallet
+* Schreibe: `n` auf die Abfrage "on an exisiting wallet"
 
 * Kopiere deinen Seed und Hexcode in ein Dokument und speichere es
 
