@@ -37,9 +37,9 @@ Um die Blockchain-übergreifenden Dienste zu unterstützen, biete Blocknet 3 Kom
   
   
 ### Was ist eine dezentralisierte Börse?
-A decentralized exchange is a service enabling counterparties (which may be people or machines) to exchange one currency or token for another, without the involvement of any third party as an intermediary. 
+Eine dezentralisierte Börse ist ein Dienst, der es zwei Parteien (entweder Menschen oder auch Maschinen) erlaubt, eine Währung oder einen Token ohne einen Mittelsmann zu tauschen. 
 
-The term “decentralized” denotes matters of control rather than the distribution of processing; the ideal of a decentralized solution is for the parties to a given interaction to be self-sovereign actors, in the sense that no third party is required to act on their behalf in order for the interaction to take place.
+Der Begriff "dezentralisiert" umschreibt hierbei die volle Kontrolle des Handels im Gegensatz zur Verteilung des Prozesses auf mehrere Parteien; idealerweise ermöglicht die dezentrale Lösung die volle Souveränität der Parteien in dem Sinne, dass keine dritte Partei benötigt wird, um die Interaktion möglich zu machen.
 
 
 ### Wie funktioniert eine dezentralisierte Börse?
@@ -53,17 +53,17 @@ Börsen haben 4 Grundfunktionen:
 
   * Den Asutausch von Tokens
 
-Hence, in order to be a decentralized exchange, each of these core functions must be decentralized.
+Daher, um wirklich eine dezentralisierte Börse zu sein, müssen alle diese Kernfunktionen dezentral sein.
 
-The Blocknet decentralizes them in the following ways:
+Blocknet dezentralisiert diese auf folgende Weise:
 
-* Traders’ capital remains in their wallets, and is not entrusted to a third party at any stage.
+* Das Kapital des Traders verbleibt in dessen eigener Wallet, und er ist nicht darauf angewiesen, eine dritte Partei in irgendeinem Ablauf des Handels miteinzubeziehen.
 
-* Orders are broadcast directly from trader to trader over an inter-blockchain DHT network overlay. Traders’ apps compile an order book themselves instead of relying on a central order book service.
+* Orders werden direkt von Trader zu Trader über das DHT-Netzwerk Blockchainübergreifend veröffentlicht. Die Anwendung des Traders erstellt das Orderbuch eigenständig, anstatt sich auf einen zentralen Orderbuch-Service zu verlassen.
 
-* Orders are matched directly between traders. When one accepts another’s order, their apps communicate to set up the coin exchange process, and this is broadcast over the inter-chain network.
+* Orders werden zwischen den Tradern automatisch abgeglichen. Wenn eine Partei einen Handel akzeptiert, erstellt die Anwendung beider Trader den Tausch, und übermittelt diesen über das blockchainübergreifende Netzwerk.
 
-* The exchange of tokens is achieved without the involvement of an intermediary, in a manner that does not require counterparties to trust one another beforehand. An atomic protocol is utilised (meaning that either the exchange of both currencies takes place, or nothing takes place), which employs  OP_CHECKLOCKTIMEVERIFY to nullify transaction malleability-based attacks. More details on the protocol are available here: http://kaykurokawa.blogspot.co.za/2015/10/atomic-cross-chain-transfer-overview.html
+* Der Austausch von Tokens wird ohne einen Mittelsmann erreicht, in dem Sinne, dass die Gegenparteien sich nicht gegenseitig vertrauen müssen. Das "Atomic"-Protokoll wird dafür verwendet (dass bedeutet, entweder ist findet ein Handel statt, oder es passiert gar nichts), welches  das Protokoll OP_CHECKLOCKTIMEVERIFY, um Attacken während der Transaktion unmöglich zu machen. Weitere Informationen rund um dieses Protokoll findet man hier: http://kaykurokawa.blogspot.co.za/2015/10/atomic-cross-chain-transfer-overview.html
 
 
 ### Warum ist eine dezentralisierte Börse eine Grundvoraussetzung für das Token Ökosystem?
