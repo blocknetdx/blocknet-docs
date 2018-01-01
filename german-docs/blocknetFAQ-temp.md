@@ -85,15 +85,15 @@ Daraus folgte, dass Blocknet einen Großteil der existierenden Kryptowährungen 
 
 
 ### Wie schnell ist die dezentralisierte Börse?
-Instant.
+Direkt.
 
-However, note that once you have completed a trade and received coins, you will be dependent on their blockchain’s accepted confirmation time before your coins will be spendable again.
+Destotrotz sollte man sich im Klaren darüber sein, dass wenn ein Handel abgeschlossen wurde und man die Coins erhalten hat, diese erst wieder nutzbar sind, wenn die jeweilige Blockchain genügend Bestätigungen generiert hat.
 
-*Note: A future enhancement to the decentralized exchange may include a filter on the order book to enable traders to trade coins with less than the number of confirmations conventionally agreed upon as “safe.” This incurs a degree of risk for the benefit of supporting trading styles that require rapidly entering and exiting a position, such as scalping.*
+*Anmerkung: Eine zukünfige Verbesserung könnte einen Filter im Orderbuch vorsehen, damit Trader ihre Coins mit weniger als den notwendigen Bestätigungen bereits wieder handeln können, sofern diese als "safe" gesehen werden. Dies kommt dann Trading-T ypen entgegen, die ein stetigen Eingehen und Schließen einer Position benötigen, als Beispiel sei hier Scalping genannt.*
 
 
 ### Wie privat ist die dezentralisierte Börse?
-Because decentralized exchanges do not require traders to submit KYC information or divulge anything else about themselves to a third party, traders enjoy a naturally high degree of privacy.
+Da eine dezentralisierte Börse vom Trader nicht verlangt, private Informationen jedweder Art einer dritten Partei mitzuteilen, geniessen sie ein höchstmöglichen Grad an Privatspähre.
 
 However, for most wallets, aspects of transactions are linkable to IP addresses, so in order to obfuscate that, one might use TOR or I2P. The Blocknet’s DHT network overlay does not use IP addresses, however.
 
