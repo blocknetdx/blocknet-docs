@@ -51,7 +51,7 @@ Börsen haben 4 Grundfunktionen:
 
   * Abgleich von Aufträgen (Handel)
 
-  * Den Asutausch von Tokens
+  * Den Austausch von Tokens
 
 Daher, um wirklich eine dezentralisierte Börse zu sein, müssen alle diese Kernfunktionen dezentral sein.
 
@@ -67,21 +67,21 @@ Blocknet dezentralisiert diese auf folgende Weise:
 
 
 ### Warum ist eine dezentralisierte Börse eine Grundvoraussetzung für das Token Ökosystem?
-Decentralized exchange makes blockchain services intrinsically monetizable, removing the friction and high costs of traditional payment networks that have prevented the monetisation of the bulk of the API ecosystem.
+Dezentralisierte Börsen machen Blockchain Dienstleistungen an sich monetisierbar, unterbinden die Friktion und die hohen Kosten der traditionellen Zahlungsmethoden, welche die Wertschöpfung des ganzen API-Ökosystems unterbunden haben.
 
-Due to the decentralized exchange, consumers of a service may pay in their native token even if the service consumes a different token. In a world in which (a) there are already thousands of blockchains, and (b) blockchains bloat inexorably, and so it is advisable not to support many services per blockchain, monetising inter-chain services is both an operational necessity and an ecosystem-enabling service.
+Mithilfe der dezentralisierten Börse kann ein Nutzer einen Dienst in seiner gewünschten Währung bezahlen, auch wenn dieser Dienst an sich eine andere Währung benötigt. In einer Welt, in der (a) bereits tausende Blockchains existieren, und (b) das Aufblähen der Blockchains nicht aufzuhalten ist, und es deshalb ratsam ist, nicht zu viele Dienste auf einer Blockchain anzubieten, sind Zwischen-Blockchains-Dienste eine Notwendigkeit und ein Dienst, der das Ökosystem erst möglich macht.
 
 
 ### Welche Coins unterstützt die dezentralisierte Börse?
-The Blocknet was designed to maximise interoperability, and so most blockchain tokens may be integrated with no coding required.
+Blocknet wurde mit maximaler Interoperabilität aufgestellt, deshalb können die meisten Blockchain Tokens ohne weiteres Programmieren integriert werden.
 
-The current integration requirements are:
+Aktuelle Vorraussetzungen für die Integration sind:
 
-* Support for OP_CHECKLOCKTIMEVERIFY
+* Unterstützung von OP_CHECKLOCKTIMEVERIFY
 
-* A stock JSON RPC interface from Bitcoin Core
+* Ein JSON RPC Interface basierend auf dem Bitcoin Core
 
-As a result, the Blocknet supports the majority of cryptocurrencies in existence, and no permission from anyone is required for these to be traded on the exchange.
+Daraus folgte, dass Blocknet einen Großteil der existierenden Kryptowährungen unterstützt, und man keine Erlaubnis von irgendjemandem einzuholen braucht, um diese auf der Börse zu handeln.
 
 
 ### Wie schnell ist die dezentralisierte Börse?
