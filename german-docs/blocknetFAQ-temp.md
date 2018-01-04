@@ -100,28 +100,27 @@ Für die meisten Wallets gilt allerdings, daß Transaktionen in gewissen Bereich
 Zusammen mit einem stark privatsphäreschützenden Coin stellt eine solche IP-unabhängige Technik eine annähernd perfekte Lösung dar. Als Beipiel für eine schnelle "Verschleierung" kann man zB einen Handel von einem beliebigen Coin zu ZCash machen, welche man dann auf eine neue Adresse versendet, und von dort dann wieder zurückhandelt.
 
 ### Welche weiteren Anwendungen ermöglicht das XBridge-Protokoll neben der dezentralisierten Börse?
-The Blocknet is designed as infrastructure for the emerging token ecosystem. Any service or orchestrated sequence of microservices provided by dapps may be delivered over the Blocknet's infrastructure.
+Blocknet dient als systemübergreifende Infrastruktur für das entstehende Token-Ökosystem. Jeder Dienst oder feingliedrige, gut abgestimmte Mikrodienst, kann mit passenden DApps über die Infrastruktur von Blocknet abgewickelt werden.
 
-Using decentralized exchange, these services are intrinsically monetizable, removing the friction and high costs of traditional payment networks - friction which has prevented the monetisation of the bulk of the API ecosystem.
+Durch das Nutzen der dezentralisierten Börse werden diese Dienste letzlich wertschöpfend, und bieten ausschließlich Vorteile gegenüber den traditionellen Zahlungsnetzwerken, deren nicht spannungsfreien Systemen eine Wertschöpfung eines Großteils der API-Systeme verhindert hat.
 
-Due to the decentralized exchange, consumers of a service may pay in their native token even if the service consumes a different token.
- 
- 
+Mit und durch die dezentralisierte Börse kann ein Nutzer im Prinzip mit jeder beliebigen Währung/Token einen Dienst bezahlen unabhängig von dem eigentlichen zugrundeliegenden Wert.
+
 ### Welche Vorteile bringt es, eine Service-Node zu betreiben? Wie viele Blocks braucht man dazu?
-There are two types of node: a "service node" and a “trader node”. Service nodes do not handle or control any trader's coins. Their function is to collect and distribute trade fees. Typically a service node operator will run multiple full node wallets of whichever coins (s)he wants to support, in order to garner as many trade fees as possible. Trader nodes enable one to trade on the decentralized exchange.The amount of BLOCK currently needed to run a service node is 5,000 BLOCK. To use the exchange you will not need any BLOCK.
+Blocknet bietet zwei Typen von Nodes (Knotenpunkte im Netzwerk): ein "Service-Node" sowie eine "Trader-Node". Serviceknoten habe keinerlei Kontrolle über jedweden Coin des Handelnden. Ihre Funktion liegt einzig in der EInsammlung und Verteilung der Handelsgebühren. Ein typischer Service-Node-Operator wird voll synchronisierte Wallets jeder Kryptowährung laufen haben, die er unterstützen möchte, um idealerweise im Eigennutzen so viele Gebühren wie möglich einzuheimsen. Trader-Nodes ermöglichen den Handel auf der Börse durch ihre Präsenz. Für eine Service-Node braucht man aktuell 5000 Blocks, um auf der Exchange zu handeln braucht man prinzipiell keinerlei Blocks.
  
  
 ### Wird es Gebühren für das Traden auf der dezentralisierten Börse geben?
-Yes, there are fees, though they are significantly lower that centralised exchanges.
+Ja, Gebühren werden erhoben, allerdings weit unterhalb gängiger Gebühren zentralisierter Börsen.
 
-The fee structure is as follows:
-  * Transactions over the networks of each of your currency pairs will remain subject to their normal network fees for P2SH transactions
+Die Gebühren setzen sich strukturell dabei wie folgt zusammen:
+  * Transaktionen über die Netzwerke der austauschenden Währungen unterliegen den Gebühren, die das jeweilige Netzwerk für die P2SH-Transaktionen erhebt.
 
-  * A tiny trade fee is charged in BLOCK and the software takes care of securing some BLOCK to pay the fee.
+  * Eine zusätzliche geringe Gebühr, die in Block erhoben wird, wobei die Software dafür sorgt, daß beim Handel die benötigten Block fpr die Gebühren vorgehalten werden.
 
 
 ### Werden Blocks benötigt, um auf der Börse aktiv zu werden?
-No, to use the exchange you will NOT need any BLOCK. Only the service node operators will need BLOCK in order to collect and distribute trade fees. Additionally, the service nodes do not handle or control and trader’s coins. The sole purpose of the service node is to only collect and distribute trade fees.
+Nein, um die Börse zu nutzen, sind KEINE Block nötig. Ausschließlich die Service-Node-Operator benötigen die erwähnten Block, um die Gebühren einzusammeln und zu verteilen. Nichtsdestotrotz haben Service-Nodes keinerlei Kontrolle über die gehandelten Währungen. Einzig das Einsammeln und Verteilen der Gebühren ist die Aufgabe der Service-Nodes.
 
 ---
 Weitere Fragen und Antworten findet man auch auf Reddit: [Reddit Blocknet Q/A](https://www.reddit.com/r/theblocknet/comments/676buj/ask_anything_about_blocknet_qa/)
