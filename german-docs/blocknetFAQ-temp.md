@@ -95,9 +95,9 @@ Destotrotz sollte man sich im Klaren darüber sein, dass wenn ein Handel abgesch
 ### Wie privat ist die dezentralisierte Börse?
 Da eine dezentralisierte Börse vom Trader nicht verlangt, private Informationen jedweder Art einer dritten Partei mitzuteilen, geniessen sie ein höchstmöglichen Grad an Privatspähre.
 
-However, for most wallets, aspects of transactions are linkable to IP addresses, so in order to obfuscate that, one might use TOR or I2P. The Blocknet’s DHT network overlay does not use IP addresses, however.
+Für die meisten Wallets gilt allerdings, daß Transaktionen in gewissen Bereichen durchaus eine IP-Adresse zuzuordnen sind. Um dies zu umgehen, könnte man ein TOR- oder I2P-Netzwerk nutzen. Blocknets DHT-Netzwerktechnik bedient sich aber keiner IP-Adressen.
 
-Combined with any privacy-centric coin, a decentralized exchange run over IP-obfuscating tech is a near-perfect mixing solution. For example, one may trade some coins for Zcash, sends them to a different address, and then trade back again.
+Zusammen mit einem stark privatsphäreschützenden Coin stellt eine solche IP-unabhängige Technik eine annähernd perfekte Lösung dar. Als Beipiel für eine schnelle "Verschleierung" kann man zB einen Handel von einem beliebigen Coin zu ZCash machen, welche man dann auf eine neue Adresse versendet, und von dort dann wieder zurückhandelt.
 
 ### Welche weiteren Anwendungen ermöglicht das XBridge-Protokoll neben der dezentralisierten Börse?
 The Blocknet is designed as infrastructure for the emerging token ecosystem. Any service or orchestrated sequence of microservices provided by dapps may be delivered over the Blocknet's infrastructure.
