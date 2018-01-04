@@ -87,7 +87,7 @@ Daraus folgte, dass Blocknet einen Großteil der existierenden Kryptowährungen 
 ### Wie schnell ist die dezentralisierte Börse?
 Direkt.
 
-Destotrotz sollte man sich im Klaren darüber sein, dass wenn ein Handel abgeschlossen wurde und man die Coins erhalten hat, diese erst wieder nutzbar sind, wenn die jeweilige Blockchain genügend Bestätigungen generiert hat.
+Destotrotz sollte man sich im Klaren darüber sein, daß, wenn ein Handel abgeschlossen wurde und man die Coins erhalten hat, diese erst wieder nutzbar sind, wenn die jeweilige Blockchain genügend Bestätigungen generiert hat.
 
 *Anmerkung: Eine zukünfige Verbesserung könnte einen Filter im Orderbuch vorsehen, damit Trader ihre Coins mit weniger als den notwendigen Bestätigungen bereits wieder handeln können, sofern diese als "safe" gesehen werden. Dies kommt dann Trading-T ypen entgegen, die ein stetigen Eingehen und Schließen einer Position benötigen, als Beispiel sei hier Scalping genannt.*
 
@@ -107,7 +107,7 @@ Durch das Nutzen der dezentralisierten Börse werden diese Dienste letzlich wert
 Mit und durch die dezentralisierte Börse kann ein Nutzer im Prinzip mit jeder beliebigen Währung/Token einen Dienst bezahlen unabhängig von dem eigentlichen zugrundeliegenden Wert.
 
 ### Welche Vorteile bringt es, eine Service-Node zu betreiben? Wie viele Blocks braucht man dazu?
-Blocknet bietet zwei Typen von Nodes (Knotenpunkte im Netzwerk): ein "Service-Node" sowie eine "Trader-Node". Serviceknoten habe keinerlei Kontrolle über jedweden Coin des Handelnden. Ihre Funktion liegt einzig in der EInsammlung und Verteilung der Handelsgebühren. Ein typischer Service-Node-Operator wird voll synchronisierte Wallets jeder Kryptowährung laufen haben, die er unterstützen möchte, um idealerweise im Eigennutzen so viele Gebühren wie möglich einzuheimsen. Trader-Nodes ermöglichen den Handel auf der Börse durch ihre Präsenz. Für eine Service-Node braucht man aktuell 5000 Blocks, um auf der Exchange zu handeln braucht man prinzipiell keinerlei Blocks.
+Blocknet bietet zwei Typen von Nodes (Knotenpunkte im Netzwerk): ein "Service-Node" sowie eine "Trader-Node". Serviceknoten habe keinerlei Kontrolle über jedweden Coin des Handelnden. Ihre Funktion liegt einzig in der Einsammlung und Verteilung der Handelsgebühren. Ein typischer Service-Node-Operator wird voll synchronisierte Wallets jeder Kryptowährung laufen haben, die er unterstützen möchte, um idealerweise im Eigennutzen so viele Gebühren wie möglich einzuheimsen. Trader-Nodes ermöglichen den Handel auf der Börse durch ihre Präsenz. Für eine Service-Node braucht man aktuell 5000 Blocks, um auf der Exchange zu handeln braucht man prinzipiell keinerlei Blocks.
  
  
 ### Wird es Gebühren für das Traden auf der dezentralisierten Börse geben?
@@ -116,7 +116,7 @@ Ja, Gebühren werden erhoben, allerdings weit unterhalb gängiger Gebühren zent
 Die Gebühren setzen sich strukturell dabei wie folgt zusammen:
   * Transaktionen über die Netzwerke der austauschenden Währungen unterliegen den Gebühren, die das jeweilige Netzwerk für die P2SH-Transaktionen erhebt.
 
-  * Eine zusätzliche geringe Gebühr, die in Block erhoben wird, wobei die Software dafür sorgt, daß beim Handel die benötigten Block fpr die Gebühren vorgehalten werden.
+  * Eine zusätzliche geringe Gebühr, die in Block erhoben wird, wobei die Software dafür sorgt, daß beim Handel die benötigten Block für die Gebühren vorgehalten werden.
 
 
 ### Werden Blocks benötigt, um auf der Börse aktiv zu werden?
