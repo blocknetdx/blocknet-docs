@@ -120,31 +120,31 @@ Die XBridge-Technologie von Blocknet ist in der aktuellen Version integriert. Si
  
 ---
 
-## Startup Sequence
- * Start the currency pair(s) you are trading with
-    * Ensure every wallet is fully sync'd and unlocked
+## Ablauf Starten
+ * Starte als erstes alle Wallets der Coins, die du auf deiner Service-Node unterstützt
+    * Versichere dich, daß jede Wallet voll synchronisiert und ungesperrt ist.
 
- * Start the Blocknet wallet after starting the other wallets.
+ * Starte die Blocknet Wallet nachdem du alle anderen gewünschten Wallets gestartet hast.
      
 ---
 
-## Verify communication between wallets.
-In order to ensure that the xbridge client is communicating with your wallets and the .conf files are setup properly, navigate to the Blocknet data dir: C:\Users\yourusername\AppData\Roaming\blocknetdx\
+## Überprüfe die Kommunikation zwischen den Wallets.
+Um sicherzugehen, dass der XBridge Client mit den wallets und den -conf-Dateien richtig kommuniziert, navigiere in das Daten-Verzeichnis von Blocknet (Windows): C:\Users\yourusername\AppData\Roaming\blocknetdx\
 
-   * Open the "log" folder. Open up the log file with the current date/time. Ex: `xbridgep2p_20170831T181856.log`
-   * Each log file will update until the client instance is close. If a new client instance is opened a new log file will be created.
+   * Öffne den "log"-Ordner. Öffne nun die Log-Datei mit dem aktuellsten Datum/Zeitstempel. Als Beispiel: `xbridgep2p_20170831T181856.log`
+   * Jede Log-Datei wird solange aktualisiert bis der Core-UI geschlossen wird. Wenn der Core-UI neu gestartet wird, wird ein neue Log-Datei angelegt.
 
-As the wallet starts up, you’ll see the DX initialise using the values you entered into your `xbridge.conf` file:
+Wenn du den Core-UI startest, wirst du die Initialisierung sehen mit den Werten aus der Datei `xbridge.conf`, die du erstellt hast:
 
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/dxstart.PNG "Logo Title Text 1") 
 
- * Wait until you see “HTTP: resp 200” messages. This signifies that the wallets are communicating over RPC and setup has been successful. Ensure each wallet you are running displays a “HTTP: resp 200” and displays your labelled receive address name.
+ * Warte nun, bis du Einträge des Typs “HTTP: resp 200” erhälst. Dies zeigt an, daß die Wallets über RPC miteinander kommunizieren und die Einstellungen erfolgreich waren. Versichere dich, dass jede unterstützte Wallet einen Eintrag “HTTP: resp 200” und den passenden Adressnamen (Label) hat.
  
  ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/resp_200.PNG "Logo Title Text 1") 
 
- * Note: If, amidst the “HTTP: resp 200” messages, you see a message similar to `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, then it is likely that at least one of your specified trading wallets have not been run.
+ * Anmerkung: Wenn du inmitten der “HTTP: resp 200” Nachrichten  einen Eintrag ähnlich des nachfolgenden siehst, `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, bedeutet dies, das zumindest einer der verknüpften Wallets nicht ordnungsgemäß läuft.
 
- * Note: If you fail to get “HTTP: resp 200” messages, it’s possible that the ports assigned to wallets differ from those specified in your .conf file. To check this, open Command Prompt, type `netstat -an`, and take a look which ports are being used over localhost (127.0.0.1), or sometimes over 0.0.0.0.
+ * Anmerkung: Wenn du nicht den Eintrag “HTTP: resp 200” erhältst, ist zu überprüfen, ob der/die Ports, die in der conf.-Datei angegeben wurden, mit denen übereinstimmen, die für die jeweilige Wallet vorgegeben wurden. Um dies zu überprüfen, öffne die Windows-Kommandozeile und schreibe `netstat -an` hinein, und überprüfe dann, welche Ports über den localhost (127.0.0.1), oder manchmal über (0.0.0.0), genutzt werden.
 
 --- 
  
