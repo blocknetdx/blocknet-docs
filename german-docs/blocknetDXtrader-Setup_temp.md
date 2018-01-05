@@ -78,45 +78,45 @@ Jede Wallet all jener Coins, die man traden möchte, muss mit einem Nutzernamen 
  
 ---
 
-## Configure Coin Addresses
-In each wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
+## Konfiguration für die Coin-Adressen
+Erstelle in jeder Wallet eine neue Adresse und benenne sie (label) sie mit einem für dich eindeutigen spezifischen Namen, als Beispiel "DX address" (XBridge erwartet eine Adresse mit Label!!)
 
- * To create a new address, go to your wallet’s “receive” tab and click “new address”
+ * Um eine neue Adresse zu erstellen, gehe im Programm auf den “receive”-Tab und klicke auf “new address”
 
- * To label an address, you may either right-click on it or click the “label” field.
+ * Um eine Adresse mit einem Namen/Label zu versehen, klicke mit der rechten Maustaste auf die Adresse und klicke auf das “label”-Feld.
  
  ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/labelledaddress.PNG "Logo Title Text 1") 
 
- * Send the funds you want to trade with to the labelled address
+ * Sende anschließend die gewünschte Anzahl an Coins an diese Label-Adresse
  
- * This needs to be done for all the wallets you want to trade with
+ * Dies musst du in allen Wallets machen, die du für die DEX handelbar machen möchtest
  
 ---
 
-## Setup xbridge.conf
+## Konfiguration xbridge.conf
 
-The Blocknet’s Xbridge technology is integrated into the latest client release. See [GitHub](https://github.com/BlocknetDX/BlockDX) for the source code.
+Die XBridge-Technologie von Blocknet ist in der aktuellen Version integriert. Siehe hier [GitHub](https://github.com/BlocknetDX/BlockDX) für den Programm-Code.
 
- * To see the full list of coin .conf's see: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md)
+ * Um die komplette Liste der .conf-Dateien einzusehen, gehe zu: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md).
 
- * Create/edit an `xbridge.conf` file and place the following configuration file in the blocknet wallet data directory (for Windows) C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
+ * Erstelle/editiere die Datei `xbridge.conf` und speichere sie in das Datenverzeichnis von Blocknet, als Beispiel findest du dieses unter Windows hier: C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
 
- * Note: to avoid crashes or failed trades, please edit your `xbridge.conf` to feature only and all the coins you wish to trade with
+ * Anmerkung: um einen Crash oder Fehltrades zu vermeiden, editiere die Datei `xbridge.conf` nur mit den Werten, die du auch handeln möchtest.
 
- * Paste the RPC usernames and passwords you created for each currency pair into the “Username” and “Password” fields
+ * Füge den RPC Nutzernamen und das entsprechende Passwort für jede gewünschte Währung in die Felder “Username” und “Password”.
  
- * Paste the address of the "labelled receive address" you created for each currency pair
+ * Füge den Namen der entsprechenden Adresse und jeder gewünschten Währung, die du selbst benannt hast, in das Feld "labelled receive address"
  
- * Ensure the rest of the configuration matches [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) for each coin
+ * Versichere dich, dass der Rest der Konfiguration den Einträgen für jeden Coin verglichen mit der Datei [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) entspricht
 
- * Save the File (if you just edited the existing file, just click save, if you made a new file then click file, save as, and in the file name type: `xbridge.conf`
-    * Ensure the file is not `xbridge.conf.txt`
+ * Speichere die Datei (solltest du sie nur editiert habe, drücke einfach auf speichern, wenn du sie neu erstellt hast, drücke "speichern als" und sichere sie unter den Namen: `xbridge.conf`
+    * Versichere dich, dass die Datei nicht `xbridge.conf.txt` heisst danach.
 
- * Place this file into the Blocknet data directory folder: "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
+ * Speichere diese Datein in das Datenverzeichnis von Blocknet, als Beispiel für Windows: "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
 
- * You will be coming back to this to edit it in the future to add future coins, and change `RPCusername` `RPCpassword` `Port` `Address` 
+ * Du wirst in Zukunft von Zeit zu Zeit diese Datei wieder editieren, wenn du neue Coins hinzufügen willst, oder Änderungen vornehmen möchtest an `RPCusername` `RPCpassword` `Port` `Address` 
  
- * Do not change the other settings in the .conf file unless you are on testnet conducting tests.
+ * Ändere keine anderen Einträge in diese Datei, außer du bist im Testnet und leitest Testprozeduren.
  
 ---
 
