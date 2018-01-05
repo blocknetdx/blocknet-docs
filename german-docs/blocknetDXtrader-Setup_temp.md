@@ -29,27 +29,27 @@ Die Verknüpfung geschieht über die RPC-APIs der jeweiligen Wallets. Aus Sicher
 
 * Die aktuellste Wallet jeder Währung, die getraded werden soll, ebenso voll synchronisiert und verschlüsselt
 
-     * Die Währung, die gehandelt werden soll, muss nun auf eine eindeutig benannte Adresse dieser Wallet gesendet werden 
+     * Die Währung, die gehandelt werden soll, sollte nun auf eine eindeutig benannte Adresse dieser Wallet gesendet werden 
 
 * Richtig konfigurierte .conf-Dateien für jede Wallet
 
 ---
 
-## Setup  .conf Files for the Trading Wallets
-The wallet of each coin you want to trade with needs to be configured with a username/password and an allow from IP, if you’re using only a local machine use IP:127.0.0.1
+## Setup  .conf-Dateien der zu tradenden Wallets
+Jede Wallet all jener Coins, die man traden möchte, muss mit einem Nutzernamen und Passwort versehen werden und "eine" IP erlauben, als Beispiel wenn man alles auf dem lokalen Rechner installiert hat, ist die IP:127.0.0.1
 
- * To see the full list of compatible wallet configurations go to: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
+ * Eine vollständige Liste der Konfigurationen kompatibler Wallets findet man hier: [Wallet Konfigurationen](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
 
- * Download the latest wallet, let it sync up fully, then close the wallet
+ * Lade und installiere die aktuellste Wallet, lass sie voll synchronisieren, schließe dann die Wallet
 
- * Click the START button on your desktop, where it says “Search program and files” then type “%appdata%” and the “Roaming” directory should pop up. Click on “Roaming” or hit enter
+ * Klicke den Start-Button (Windows-Icon) auf dem Desktop, und schreibe in das Feld “Search program and files” den Begriff “%appdata%”, der “Roaming”-Ordner sollte nun angeboten werden. Klicke auf “Roaming” oder drücke Return/Enter.
 
- * Find your wallet’s designated data directory folder, ex: Bitcoin
+ * Lokalisiere den jeweilige Daten-Ordner der gewünschten Währung, als Beispiel: Bitcoin
 
- * If you don’t have a .conf file started you will need to open up Notepad to create one.
+ * Sollte in diesem Ordner keine .conf-Datei sein, musst du diese mit zB. Notepad erstellen.
 
- * Navigate to [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) and copy/paste the configuration information for the wallet you are running. (this can be added to what is already present in file if you have “addnodes” or other configurations already):
-   * Ex: bitcoin.conf
+ * Öffne [Wallet Konfigurationen](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) und kopiere die Konfigurationsinformationen der gewünschten Wallet in die erstellte oder bestehende conf-Datei. (dies kann in der conf-Datei einfach hinzugefügt werden zu den Informationen, die diese gegebenenfalls schon beinhaltet):
+   * Beispiel: bitcoin.conf
    
    ```
    server=1
@@ -59,22 +59,22 @@ The wallet of each coin you want to trade with needs to be configured with a use
    rpcallowip=127.0.0.1
    ```
    
-   * Ensure the configuration is correct. Do not assume the configurations are the same for each wallet.
+   * Gehe sicher, daß die Konfiguration korrekt ist. Sei dir im Klaren, dass nicht jede Währung/Wallet die gleiche Konfiguration hat.
 
- * Change `rpcuser` and `rpcpassword` to something unique to you. For security reasons you should have a different RPC username and password for each wallet
+ * Ändere `rpcuser` und `rpcpassword` nach deinen eigenen Wünschen. Aus Sicherheitsgründen solltest du für unterschiedliche einzigartige Nutzernamen und Passwörter für jede Wallet haben
 
- * If you’re using a single machine use IP: `127.0.0.1`
+ * Wenn du einen einzigen Rechner benutzt nutze die IP: `127.0.0.1`
 
- * When you are done, click File, Save as, Type in: `bitcoin.conf`
-    * Ensure the file is not `bitcoin.conf.txt`
+ * Wenn alles fertig eingegeben ist, drücke Datei, speichern als, und schreibe `bitcoin.conf` hinein.
+    * Versichere dich, dass die Datei nicht `bitcoin.conf.txt` ist
 
- * Save it and then place the .conf into its corresponding wallet folder
-    * For this example: %Appdata%/Roaming/Bitcoin 
+ * Speichere die Datei und sichere sie dann in dem entsprechenden Ordner der Wallet
+    * In diesem Beispiel: %Appdata%/Roaming/Bitcoin 
 
- * Remember what you wrote for the username, password, and IP
+ * Nicht vergessen, den Nutzername, das Passwort und die IP zu merken
 
- * Create .conf files for each wallet you are going to be using on the decentralised exchange.
-    * Ensure `rpcuser` and `rpcpassword` are different on each wallet for security purposes
+ * Erstelle entsprechende .conf-Dateien für jede Wallet, deren Währung du auf der DEX handeln möchtest.
+    * Versichere dich, dass `rpcuser` und `rpcpassword` aus Sicherheitsgründen für jede zu tradende Währung unterschiedlich sind
  
 ---
 
