@@ -148,63 +148,63 @@ Wenn du den Core-UI startest, wirst du die Initialisierung sehen mit den Werten 
 
 --- 
  
-## Place an Order
-Once you’ve confirmed that the wallets are communicating and setup has been successful, do the following:
+## Plaziere eine Order
+Sobald sicher gestellt ist, dass die Wallets korrekt miteinander kommunizieren und die Konfigurationen erfolgreich waren, gehe folgendermaßen vor:
 
-* In the “BlocknetDX” tab of the Blocknet wallet, click on the “New Transaction” button. A new window will open:
+* Im Tab “BlocknetDX” der Blocknet Wallet, klicke auf den Button “New Transaction”. Ein neues Fenster wird aufgehen:
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/newTX.PNG "Logo Title Text 1")   
 
-* Click on the “Address book” icon. This opens up a new window that displays the addresses you created in each currency pair wallet.
+* Klicke auf das Icon für das “Address book”. Damit wird sich nun ein neues Fenster öffnen, in dem die ganzen Adressen aufgelistet sind, die die für in den Wallets deiner Währungen erstellt hast.
    
    ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/address_book.PNG "Logo Title Text 1")   
 
-  * Notes: 
+  * Anmerkung: 
   
-    * If you do not see these addresses, it means that your wallets are not communicating over RPC
+    * Wenn du die Adressen nicht siehst, bedeutet dies, dass die Wallets nicht miteinander über RPC kommunizieren
     
-    * It may take up to about 30 seconds for xbridge to connect with your wallets, but once startup has completed it will populate your currency pair addresses
+    * Es kann bis zu 30 Sekunden dauern, bis XBridge mit den Wallets verbunden ist, sobald aber die Startsequenz vorrüber ist, sollten alle Währungen angezeigt werden
 
-    * Do not manually paste an address into the “from” and “to” fields. Select addresses that xbridge has been given by your currency pair wallets.
+    * Schreibe keine Adressen manuell in die Felder “from” und “to”. Wähle nur die Adressen aus, die dir XBridge aus den verknüpften Wallets deiner gewünschten Währungenzur Verfügung stellt.
       
-* On the "from" and "to" sides, click the "Address Book" and double-click the currency's you want to trade
+* Auf den Seiten "from" und "to", klicks das "Address Book" und doppelklicke auf die Währung, die du handeln möchtest.
     
-* Your address and account balance will populate for each currency
+* Deine Adresse sowie der passende Kontostand wird für jede Währung angezeigt.
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/btc_dyn_newtx.PNG "Logo Title Text 1")
     
-   * In this example we are trading Bitcoin for Dynamic
+   * In diesem Beispiel handeln wir Bitcoin gegen Dynamic
    
-* Choose the amount you wish to trade for and click "New Transaction"
+* Wähle die Menge, die du handeln möchtest und klicke auf "New Transaction".
    
-* The new TX will then be posted to the Blocknet DX for someone to accept.
+* Die neue TX-Nummer wird nun auf der Blocknet DX erscheinen und darauf warten, dass jemand dein Angebot annimmt.
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/btc_dyn_posted.PNG "Logo Title Text 1")
     
-   * In this example TX we are trading 0.0006 BTC for 1 DYN
+   * In diesem Beispiel möchten wir 0.0006 BTC für 1 DYN handeln-
    
-* To accept a trade, side click the posted TX and click accept
+* Um als Gegenpartei den Handel zu akzeptieren, klicke mit rechts auf die entsprechende TX-Nummer undd drücke dann auf "accept"
 
-* To cancel your TX post, side click your TX and click cancel
+* Um deinen TX-Handel abzubrechen, klicke mit rechts auf die entsprechende TX-Nummer und dann "cancel".
 
 ---
 
-## Problem Diagnosis
-* To verify that each wallet is communicating with xbridge make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review their configuration files.
+## Problemanalyse
+* Um sicherzugehen, dass jede Wallet über XBridge kommuniziert, überprüfe, dass jede deiner erstellten Adressen im Adressbuch der Blocknet Wallet auftaucht. Wenn dies nicht so ist, schließe die Wallets und überprüfe erneut die entsprechenden Konfigurationen fehlender Adressen.
 
-* Ensure you have sent the funds you wish to trade with to the labelled address. Ensure these are confirmed.
+* Versichere Dich, dass du die Anzahl an Coins, die du handeln möchtest, auch an die entsprechenden benannte Adresse, die in den Konfigurationen erstellt wurden, gesendet hast. Versichere dich darüber hinaus, dass dieser Transfer auch bereits bestätigt wurde.
 
-* If you made changes to any .conf file you need to close and restart that wallet, including Blocknet 
+* In dem Augenblick, wenn du weitere Änderungen an den .conf-Dateien vornimmst, musst du die entsprechende Wallet schließen und neu starten, ebenso AUCH die Blocknet Wallet. 
 
-* Verify the ports are actually open. You may use Command Prompt to do so by typing in `netstat -an` and reviewing the print. Check that the ports you specified in the .conf files (ex: 8332 for Bitcoin) are open over localhost (127.0.0.1).
+* Versichere Dich, dass die nötigen Port auch offen sind. Dafür kannst du (als Beispiel) die Windows Kommandozeile verwenden und dort `netstat -an` eingeben und die Ausgabe durchschauen. Überprüfe, dass die Ports, die du in den .conf-Dateien (als Beispiel: 8332 für Bitcoin) angegeben hast, für den localhost (127.0.0.1) offen sind.
 
-* Ensure all .conf files are configured properly. These configurations are very case-sensitive. Any wrong data entered in them could be causing the issues.
+* Versichere Dich, dass alle .conf-Dateien 100% richtig konfiguriert wurden. Diese Konfigurationen sind sehr spezifisch und erlauben keinerlei Fehleingabe. Jede falsch eingegebene Information (selbst ein falscher Buchstabe oder Zahl) wird Probleme hervorrufen.
 
-* Check that no OS-based firewall is blocking communication. You may do this through your firewall’s interface.
+* Versichere Dich, dass keine Firewall deines Betriebssystem die Kommunikation stört. Dies kannst du gegebenfalls in dem Interface deiner Firewall überprüfen.
 
-* Check the xbridge log for any errors in: C:\Users\yourusername\AppData\Roaming\blocknetdx\log
+* Überprüfe gegebenfalls die Logdatei von XBridge auf Fehlermeldungen: C:\Users\yourusername\AppData\Roaming\blocknetdx\log
 
-* Check on general wallet events in C:\Users\yourusername\AppData\Roaming\walletname\debug.log
+* Überprüfe gegebenfalls die Logdateien der einzelnen Wallets auf Fehlermeldungen: C:\Users\yourusername\AppData\Roaming\walletname\debug.log
 
 ---
 
