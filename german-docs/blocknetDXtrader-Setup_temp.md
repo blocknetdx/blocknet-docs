@@ -208,58 +208,59 @@ Sobald sicher gestellt ist, dass die Wallets korrekt miteinander kommunizieren u
 
 ---
 
-## Security Tips
-(With thanks to threepwood)
+## Tipps zur Sicherheit
+(Danke an threepwood)
 
-Since our technology essentially makes you your own exchange, here are some tips on how to keep your money safe.
+Da unsere Technologie eigentlich bedeutet, dass du deine eigene Börse/Exchange machst, sind hier noch ein paar Tipps, um deine Einlagen zu sichern.
 
-   * The Blocknet’s team will never ask for your private keys or coins. Do not get fooled by impersonators.
-Exchanges
-
-   * Always move your coins from exchange to your private wallet.
-
-   * Use long and random password.
-
-   * Set up 2FA on logins and any withdrawals.
-
-   * Disable password recovery via SMS/phone service. Disable all password recovery options for maximum security.
-
-   * Recovery passwords are fine but keep them printed and offline.
-
-   * Make sure your stored emails do not contain any extra information such as passwords or social security numbers.
-
-   * Use different email addresses where possible. This limits the ability for hackers to run their automated "Forgot my password" links. 
+   * Das team von Blocknet wird NIE nach deinen "Private Keys" fragen. Glaube diesbezüglich niemandem, der sich als ein Mitarbeiter von Blocknet ausgibt!
    
-   * Online Activity / Personal Information Disclosure. Do not promote your coin count etc online.
+Börsen
 
-   * Limit your online public persona. This can attract unwanted attention which can make you a target.
+   * Transferiere deine Coins von einer Börse zu deiner privaten Wallet.
 
-   * Disable any online accounts you no longer use.
+   * Benutze lange und zufällige Passwörter.
 
-   * Assume hacking groups are building up social profiles on yourself. Your interests, time you are usually online, who you interact with.
+   * Benutze für Logins und Abhebungen immer 2FA.
 
-   * Hacking groups use automated scripts so if those resources are exhausted they will try to social engineer your contacts.
+   * Schalte die Wiederherstellung von Passwörter über SMS/Telefondienste ab. Für maximale Sicherheit deaktiviere die Wiederherstellung von Passwörtern komplett.
 
-   * Hacking groups are experts at social engineering. They have done this thousands of times.
+   * Das Sichern von Passwörtern ist wichtig, aber mache dies nur offline und/oder als Ausdruck auf Papier.
 
-   * Do not open random links and files provided in Slack, etc.
+   * Versichere dich, dass deine gespeicherten emails nicht zusätzliche Informationen wie Passwörter oder Sicherheitsnummern enthalten. Lösche diese gegebenfalls nach dem offline-Speichern dieser Daten.
 
-   * Do not fall for sob stories (Boohoo I lost all my coins) without proper due diligence.
+   * Benutze immer verschiedene emails, sofern dies möglich ist. Dies behindert Hacker dabei, automatische "Forgot my password"-Links zu benutzen. 
+   
+   * Online-Aktivität/ Offenlegung persönlicher Daten. Sprich online niemals über die Menge deiner Coins oder dergleichen!
 
-   * Take multiple backups of your private keys regularly.
+   * Halte deine persönlichen Daten zur Person online weitgehend limitiert. Dies kann ansonsten die Aufmerksamkeit von Hackern auf dich ziehen, wenn du zuviele Informationen preisgibst.
 
-   * Verify backup by importing keys to the client.
+   * Deaktiviere jeden nicht mehr benutzten online-Account.
 
-   * Store your backups in M-DISC or in paper format.
+   * Gehe davon aus, dass Hacker sich einen Überblick über dein persönliches Profil zusammensuchen. Solange du online bist, schaue genau, mit wem du online zu tun hast.
 
-   * Use dedicated wallet / staking PC and make it your safe haven. DO NOT USE IT FOR ANY OTHER ONLINE ACTIVITIES.
+   * Hackergruppen benutzen automatische Scripte, sofern deren Möglichkeiten damit aber erschöpft sind, werden sie versuchen, über den sozialen persönlichen und direkten Kontakt Dinge herauszufinden.
 
-   * Encrypt your hard drives.
+   * Hackergruppen sind Profis in der Bewertung von Personen/Gruppen/Dingen des sozialen Netzlebens. Sie haben dies oft genug gemacht.
 
-   * Use open source where possible.
+   * Öffne keine Links oder Dateien, die ohne Grund in Slack & Co gepostet werden.
 
-   * Keep your software updated.
+   * Falle nicht auf Leute rein, die dir Geschichten erzählen wie z.B., sie haben alle Ihre Coins verloren, und um Hilfe bitten, ohne dies selbst nachzuprüfen.
 
-   * Do not install software from unknown 3rd party actors.
+   * Sichere deine privaten Schlüssel regelmässig und mehrfach ab.
 
-   * Use network level segmentation and mitigate attack surface against your wallet PC.
+   * Versichere dich, dass deine Backups korrekt sind, indem du sie in deinen Clienten importierst.
+
+   * Sichere deine Backups in M-DISC oder Papierformaten.
+
+   * Nutze zugehörige Wallets und mache deinen Staking PC zu einem sicheren PC. Nutze diesen idealerweise NICHT für andere Aktivitäten im Netz.
+
+   * Verschlüssele deine Festplatten.
+
+   * Nutze Open-Source-Programme sofern möglich.
+
+   * Halte deine Software immer auf neuestem Stand.
+
+   * Installiere keine Software von unbekannten Drittparteien.
+
+   * Nutze jede Möglichkeit, um dein Netzwerk zu sichern und schwäche damit die Möglichkeit von Attacken auf deinen Wallet-PC ab.
