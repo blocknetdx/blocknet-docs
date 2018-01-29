@@ -89,7 +89,7 @@ Any coin that supports OP_CHECKLOCKTIMEVERIFY and has a stock JSON RPC interface
 
 The following is a list of coins which have been tested and are confirmed to be supported. Any two coins from this list are a valid coin pair and can be traded directly. 
 
- Bitcoin (BTC) | Blocknet (BLOCK) | Dash (DASH) | DigiByte (DGB) | Dogecoin (DOGE) | Dynamic (DYN) | Faircoin (FAIR) | LBRY Credits (LBC) | Litecoin (LTC) | Monacoin (MONA) | MonetaryUnit (MUE) | Namecoin (NMC) | PIVX (PIVX) | Qtum (QTUM) | SysCoin (SYS) | Vertcoin (VTC) | Viacoin (VIA)
+ Bitcoin (BTC) | Blocknet (BLOCK) | Dash (DASH) | DigiByte (DGB) | Dogecoin (DOGE) | Dynamic (DYN) | Faircoin (FAIR) | LBRY Credits (LBC) | Litecoin (LTC) | Monacoin (MONA) | MonetaryUnit (MUE) | Namecoin (NMC) | PIVX (PIVX) | Qtum (QTUM) | SysCoin (SYS) | Vertcoin (VTC) | Viacoin (VIA) | XCurrency (XC)
 
 ## Videos
 
