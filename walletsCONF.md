@@ -177,3 +177,12 @@ rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
 ```
+
+__xcurrency.conf__
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+```
