@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR,XC
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -173,7 +173,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
-FeePerByte=500000
+FeePerByte=1000000
 Confirmations=0
 
 [PIVX]
@@ -195,7 +195,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
-FeePerByte=110
+FeePerByte=220
 Confirmations=0
 
 [VIA]
@@ -214,7 +214,7 @@ DustAmount=0
 CreateTxMethod=BTC
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-FeePerByte=200
+FeePerByte=230
 MinTxFee=0
 TxVersion=1
 BlockTime=24
@@ -239,7 +239,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=false
 MinTxFee=0
 BlockTime=150
-FeePerByte=110
+FeePerByte=220
 Confirmations=0
 
 [MUE]
@@ -261,7 +261,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=40
-FeePerByte=25
+FeePerByte=50
 Confirmations=0
 
 [NMC]
@@ -283,7 +283,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=600
-FeePerByte=115
+FeePerByte=230
 Confirmations=0
 
 [QTUM]
@@ -305,7 +305,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
-FeePerByte=450
+FeePerByte=660
 Confirmations=0
 
 [LBC]
@@ -327,7 +327,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
-FeePerByte=60
+FeePerByte=120
 Confirmations=0
 
 [MONA]
@@ -349,7 +349,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=90
-FeePerByte=200
+FeePerByte=400
 Confirmations=0
 
 [BLOCK]
@@ -393,7 +393,29 @@ GetNewKeySupported=true
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=210
-FeePerByte=1000
+FeePerByte=2000
+Confirmations=0
+
+[XC]
+Title=XCurrency
+Address=
+Ip=127.0.0.1
+Port=14332
+Username=
+Password=
+AddressPrefix=75
+ScriptPrefix=8
+SecretPrefix=203
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=20
 Confirmations=0
 
 [RPC]
