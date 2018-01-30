@@ -262,7 +262,7 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
  * If you want to always start in exchange mode, right click on desktop/folder icon of your node blocknetdx-qt. Then choose properties. Then change "...blocknetdx-qt.exe" to "...blocknetdx-qt.exe -enableexchange". Save. Now it always start with these attributes.
  
      * When you click the "BlocknetDX" tab on the wallet it should say "Exchange node".
-     * In the console type: `dxGetCurrencyList` to show your list of wallets running on your xbridge
+     * In the console type: `dxGetCurrencies` to show your list of wallets running on your xbridge
      * In the console type: `servicenode list`, search for your SNODE, under `xwallets` it will show the wallets you are hosting
        
  * Ensure your servicenode is activated.
