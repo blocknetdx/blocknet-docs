@@ -25,8 +25,6 @@ __blocknetdx.conf__
 listen=1
 server=1
 rpcallowip=127.0.0.1
-port=49901
-rpcport=41490
 rpcuser=
 rpcpassword=
 staking=0
