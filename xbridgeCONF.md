@@ -41,7 +41,7 @@ MinTxFee=0
 BlockTime=600
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
-FeePerByte=105
+FeePerByte=30
 Confirmations=0
 
 [SYS]
@@ -58,7 +58,7 @@ COIN=100000000
 MinimumAmount=0
 TxVersion=1
 DustAmount=0
-CreateTxMethod=BTC
+CreateTxMethod=SYS
 MinTxFee=0
 BlockTime=60
 GetNewKeySupported=false
@@ -107,7 +107,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
-FeePerByte=200
+FeePerByte=100
 Confirmations=0
 
 [DGB]
@@ -173,7 +173,7 @@ GetNewKeySupported=false
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
-FeePerByte=1000000
+FeePerByte=300000
 Confirmations=0
 
 [PIVX]
@@ -356,7 +356,7 @@ Confirmations=0
 Title=Blocknet
 Address=
 Ip=127.0.0.1
-Port=41490
+Port=41414
 Username=
 Password=
 AddressPrefix=26
