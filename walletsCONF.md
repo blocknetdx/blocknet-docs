@@ -18,8 +18,6 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
-
-txindex=1
 ```
 
 __blocknetdx.conf__
