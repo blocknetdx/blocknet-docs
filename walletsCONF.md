@@ -27,8 +27,6 @@ server=1
 rpcallowip=127.0.0.1
 rpcuser=
 rpcpassword=
-staking=0
-enableaccounts=1
 ```
 
 __dash.conf__
