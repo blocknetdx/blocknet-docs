@@ -85,7 +85,7 @@ ImportWithNoScanSupported=true
 FeePerByte=200
 MinTxFee=0
 TxVersion=1
-BlockTime=60
+BlockTime=150
 Confirmations=0
 
 [DASH]
@@ -418,10 +418,4 @@ BlockTime=60
 FeePerByte=20
 Confirmations=0
 
-[RPC]
-Enable=false
-UserName=rpc1
-Password=rpc1
-UseSSL=false
-Port=8080
 ```
