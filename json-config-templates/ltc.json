@@ -1,0 +1,24 @@
+{
+    "LTC": {
+        "Title": 100,
+        "Address": "",
+        "Ip": "127.0.0.1",
+        "Port": 9332,
+        "Username": "",
+        "Password": "",
+        "AddressPrefix": 0,
+        "ScriptPrefix": 5,
+        "SecretPrefix": 128,
+        "COIN": 100000000,
+        "MinimumAmount": 0,
+        "DustAmount": 0,
+        "CreateTxMethod": "BTC",
+        "GetNewKeySupported": false,
+        "ImportWithNoScanSupported": true,
+        "MinTxFee": 0,
+        "BlockTime": 180,
+        "TxVersion": 1,
+        "FeePerByte": 200,
+        "Confirmations": 0
+        }
+}
