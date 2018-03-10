@@ -5,35 +5,57 @@ The Internet Of Blockchains
 
 ## Blocknet Decentralised Exchange Trader Setup Guide
 
-**These instructions are to trade on the Blocknet Decentralised Exchange** 
+Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable users to exchange tokens and assets, and to utilise smart contracts between blockchains.
 
-* Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable users to exchange tokens and assets, and to utilise smart contracts between blockchains.
 
-## Overview
-Setup requires an integration between the Blocknet wallet and the wallets of coins you want to trade with. At this stage, nothing is automated and the UI on the new Blocknet wallet will be used until the final UI is complete. Configuration is by manually creating (or editing) .conf files: 
+## Summary
 
- * xbridge.conf
+* Download BlocknetDX v3.9.10+
 
- * configuration file for each currency you want to trade with
+  * Sync and encrypt wallet 
+  * Create/edit `xbridge.conf` & `blocknetdx.conf` files
+  
+* Download at minimum 2 trading wallets
+
+  * Sync and encrypt wallets   
+  * Create/edit `xwallet.conf` for each wallet   
+  * Label receiving addresses for each wallet
+  * Send funds to labelled addresses
+  
+* Initiate start up sequence
+
+  * Open all trader wallets, sync up, unlock   
+  * Open BlocknetDX, sync up, unlock   
+  * Ensure communication between wallets by checking the built-in DX address book
+  
+* Download current release of the Block DX UI app
+
+  * Open executable, configure settings to match `blocknetdx.conf`   
+  * Block DX app will restart
+   
+* To make/take an order, copy/paste your labelled address for each coin under the "ORDER FORM" section
+  * To cancel the open order, hit the "X" beside the order in the "OPEN ORDERS" section
 
 Integration is via the wallets’ RPC APIs. For security reasons we recommend that wallets all run on a single box and communicate over localhost (127.0.0.1), though wallets may also be run on multiple machines and connect via IP address. General documentation on JSON RPC features is available at https://en.bitcoin.it/wiki/Running_Bitcoin.
 
 
 ## Blocknet DX Exchange Tutorial Video
- * [DX Exchange Tutorial](https://www.youtube.com/watch?v=DlYbDzG_l5w)
+ * [Built-in UI DX Exchange Tutorial](https://www.youtube.com/watch?v=DlYbDzG_l5w)
+ * Block DX Beta Tutorial Video Coming soon
 
 
 ## Requirements
 
-* Latest Blocknet client installed, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
+* BlocknetDX v3.9.10+, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
+
+* Block DX Beta UI. [GitHub Releases](https://github.com/BlocknetDX/blockdx-ui/releases)
 
 * Latest wallet of each currency you want to trade with (fully synced, encrypted)
 
-     * Currency you want to trade with needs to be sent to a labelled receive address on each wallet 
+     * Coins you want to trade with need to be sent to a labelled receive address on each wallet 
 
 * Properly configured .conf files for each wallet
 
----
 
 ## Setup  .conf Files for the Trading Wallets
 The wallet of each coin you want to trade with needs to be configured with a username/password and an allow from IP, if you’re using only a local machine use IP:127.0.0.1
@@ -46,7 +68,7 @@ The wallet of each coin you want to trade with needs to be configured with a use
 
  * Find your wallet’s designated data directory folder, ex: Bitcoin
 
- * If you don’t have a .conf file started you will need to open up Notepad to create one.
+ * If you don’t have a .conf file started you will need to open up a text editor to create one.
 
  * Navigate to [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) and copy/paste the configuration information for the wallet you are running. (this can be added to what is already present in file if you have “addnodes” or other configurations already):
    * Ex: bitcoin.conf
@@ -65,18 +87,19 @@ The wallet of each coin you want to trade with needs to be configured with a use
 
  * If you’re using a single machine use IP: `127.0.0.1`
 
- * When you are done, click File, Save as, Type in: `bitcoin.conf`
+ * When you are done, click File, Save as, Type in: `bitcoin.conf`, and change the Save as type to "All Files"
     * Ensure the file is not `bitcoin.conf.txt`
 
- * Save it and then place the .conf into its corresponding wallet folder
+ * Save it and then place the .conf into its corresponding data directory
     * For this example: %Appdata%/Roaming/Bitcoin 
 
  * Remember what you wrote for the username, password, and IP
 
  * Create .conf files for each wallet you are going to be using on the decentralised exchange.
     * Ensure `rpcuser` and `rpcpassword` are different on each wallet for security purposes
- 
----
+    
+ * Once the .conf is saved, restart the wallet and proceed to the next section.
+
 
 ## Configure Coin Addresses
 In each wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
@@ -91,7 +114,6 @@ In each wallet, create a new address and label it something informative, like �
  
  * This needs to be done for all the wallets you want to trade with
  
----
 
 ## Setup xbridge.conf
 
@@ -99,14 +121,12 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
 
  * To see the full list of coin .conf's see: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md)
 
- * Create/edit an `xbridge.conf` file and place the following configuration file in the blocknet wallet data directory (for Windows) C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
+ * Create/edit an `xbridge.conf` file and place the following configuration file in the Blocknet wallet data directory (for Windows) C:\Users\[yourusername]\AppData\Roaming\blocknetdx\
 
- * Note: to avoid crashes or failed trades, please edit your `xbridge.conf` to feature only and all the coins you wish to trade with
+ * Note: to avoid crashes or failed trades, please edit your `xbridge.conf` to only have the wallets you are trading with
 
- * Paste the RPC usernames and passwords you created for each currency pair into the “Username” and “Password” fields
- 
- * Paste the address of the "labelled receive address" you created for each currency pair
- 
+ * Type in the RPC usernames and passwords you created for each currency pair into the “Username” and “Password” fields
+   
  * Ensure the rest of the configuration matches [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) for each coin
 
  * Save the File (if you just edited the existing file, just click save, if you made a new file then click file, save as, and in the file name type: `xbridge.conf`
@@ -114,83 +134,86 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
 
  * Place this file into the Blocknet data directory folder: "C:\Users\[yourusername]\AppData\Roaming\blocknetdx\"
 
- * You will be coming back to this to edit it in the future to add future coins, and change `RPCusername` `RPCpassword` `Port` `Address` 
+ * You will be coming back to this to edit it in the future to add future coins, and change `RPCusername` `RPCpassword` 
  
- * Do not change the other settings in the .conf file unless you are on testnet conducting tests.
+ * Do not change the other settings in the .conf file as this will most likely result in a failed trade.
  
----
+ 
+## Setup blocknetdx.conf
 
-## Startup Sequence
- * Start the currency pair(s) you are trading with
-    * Ensure every wallet is fully sync'd and unlocked
+In order for the BlocknetDX wallet to be used alongside the Block DX UI you need to edit the `blocknetdx.conf`.
+
+* Navigate to the BlocknetDX data directory folder.
+
+* Find the `blocknetdx.conf` and side click, edit.
+
+* Copy/Paste the following:
+
+```
+listen=1
+server=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+port=41412
+rpcport=41414
+```
+
+* Add a username/password beside the `rpcuser=` & `rpcpassword=` section, as this is how you'll gain access to the Block DX UI.
+
+* Save and close.
+
+## Wallet Start up Sequence
+ * Start the currency pair(s) you are trading with.
+    * Ensure every wallet is fully sync'd and unlocked.
 
  * Start the Blocknet wallet after starting the other wallets.
-     
----
-
-## Verify communication between wallets.
-In order to ensure that the xbridge client is communicating with your wallets and the .conf files are setup properly, navigate to the Blocknet data dir: C:\Users\yourusername\AppData\Roaming\blocknetdx\
-
-   * Open the "log" folder. Open up the log file with the current date/time. Ex: `xbridgep2p_20170831T181856.log`
-   * Each log file will update until the client instance is close. If a new client instance is opened a new log file will be created.
-
-As the wallet starts up, you’ll see the DX initialise using the values you entered into your `xbridge.conf` file:
-
-![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/dxstart.PNG "Logo Title Text 1") 
-
- * Wait until you see “HTTP: resp 200” messages. This signifies that the wallets are communicating over RPC and setup has been successful. Ensure each wallet you are running displays a “HTTP: resp 200” and displays your labelled receive address name.
- 
- ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/resp_200.PNG "Logo Title Text 1") 
-
- * Note: If, amidst the “HTTP: resp 200” messages, you see a message similar to `[I] 2017-Apr-19 17:48:31 [0x2],listaccounts exception couldn't connect to server`, then it is likely that at least one of your specified trading wallets have not been run.
-
- * Note: If you fail to get “HTTP: resp 200” messages, it’s possible that the ports assigned to wallets differ from those specified in your .conf file. To check this, open Command Prompt, type `netstat -an`, and take a look which ports are being used over localhost (127.0.0.1), or sometimes over 0.0.0.0.
-
---- 
- 
-## Place an Order
-Once you’ve confirmed that the wallets are communicating and setup has been successful, do the following:
-
-* In the “BlocknetDX” tab of the Blocknet wallet, click on the “New Transaction” button. A new window will open:
    
-![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/newTX.PNG "Logo Title Text 1")   
-
-* Click on the “Address book” icon. This opens up a new window that displays the addresses you created in each currency pair wallet.
    
-   ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/address_book.PNG "Logo Title Text 1")   
+## Verify communication between wallets
+In order to ensure that the BlocknetDX client is communicating with your wallets and the .conf files are setup properly follow the steps below:
 
-  * Notes: 
-  
-    * If you do not see these addresses, it means that your wallets are not communicating over RPC
+* Navigate to the "blocknet dx" tab in the BlocknetDX wallet
+
+* Click the "New Transactions" button
+
+* Click the address book button
+
+* If you're configured properly, your trader wallets will start to populate with your labelled addresses
+    * Note: It may take a minute to load all your wallets
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/address_book.PNG "Logo Title Text 1")
     
-    * It may take up to about 30 seconds for xbridge to connect with your wallets, but once startup has completed it will populate your currency pair addresses
+Now that your wallets are communicating with the BlocknetDX wallet you can proceed to starting the Block DX app.
 
-    * Do not manually paste an address into the “from” and “to” fields. Select addresses that xbridge has been given by your currency pair wallets.
-      
-* On the "from" and "to" sides, click the "Address Book" and double-click the currency's you want to trade
-    
-* Your address and account balance will populate for each currency
-   
-![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/btc_dyn_newtx.PNG "Logo Title Text 1")
-    
-   * In this example we are trading Bitcoin for Dynamic
-   
-* Choose the amount you wish to trade for and click "New Transaction"
-   
-* The new TX will then be posted to the Blocknet DX for someone to accept.
-   
-![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/btc_dyn_posted.PNG "Logo Title Text 1")
-    
-   * In this example TX we are trading 0.0006 BTC for 1 DYN
-   
-* To accept a trade, side click the posted TX and click accept
+If your wallets are not populating, head to the "Problem Diagnosis" section before proceeding to the next step. 
 
-* To cancel your TX post, side click your TX and click cancel
 
----
+## Block DX Start up
+
+When everything is configured and communicating you are now ready to open up the Block DX UI. Follow these last steps:
+
+* Run BLOCK DX.exe
+
+* A settings window will open up. This is where you will fill in your `rpcusername` & `rpcpassword` stated in your `blocknetdx.conf`. Main-net RPC port will be `41414`.
+
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/blockdxSETTINGS.PNG "Logo Title Text 1")
+
+* Click save changes, and the application will reset with these settings. After the reset, the Block DX UI will re-open.
+
+* Your trader wallet balances will show up under the "MY BALANCES" area.
+
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/balancesUI.PNG "Logo Title Text 1")
+
+* If you are going to make or take an order, you need to copy/paste both coins labelled addresses in the "ORDER FORM" area.
+
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/orderformUI.PNG "Logo Title Text 1")
+
+* To cancel an order, there will be a "X" beside your open order under the "OPEN ORDERS" area.
+
+![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/cancelUI.PNG "Logo Title Text 1")
 
 ## Problem Diagnosis
-* To verify that each wallet is communicating with xbridge make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review their configuration files.
+* To verify that each wallet is communicating with xbridge make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review the configuration files. Block DX UI will have issues starting if no labelled addresses are populated in the address book.
 
 * Ensure you have sent the funds you wish to trade with to the labelled address. Ensure these are confirmed.
 
@@ -206,7 +229,6 @@ Once you’ve confirmed that the wallets are communicating and setup has been su
 
 * Check on general wallet events in C:\Users\yourusername\AppData\Roaming\walletname\debug.log
 
----
 
 ## Security Tips
 (With thanks to threepwood)
