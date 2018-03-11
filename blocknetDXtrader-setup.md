@@ -10,7 +10,7 @@ Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable us
 
 ## Summary
 
-* Download BlocknetDX v3.9.10+
+* Download BlocknetDX wallet v3.9.10+
 
   * Sync and encrypt wallet 
   * Create/edit `xbridge.conf` & `blocknetdx.conf` files
@@ -25,7 +25,7 @@ Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable us
 * Initiate startup sequence
 
   * Open all trader wallets, sync up, unlock   
-  * Open BlocknetDX, sync up, unlock   
+  * Open the BlocknetDX wallet, sync up, unlock   
   * Ensure communication between wallets by checking the built-in DX address book
   
 * Download current release of the Block DX UI app
@@ -46,11 +46,11 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 
 ## Requirements
 
-* BlocknetDX v3.9.10+, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
+* BlocknetDX wallet v3.9.10+, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
 
 * Block DX Beta UI. [GitHub Releases](https://github.com/BlocknetDX/blockdx-ui/releases)
 
-* Latest wallet of each currency you want to trade with (fully synced, encrypted)
+* Confirmed wallet release of each coin you want to trade with (fully synced, encrypted)
 
      * Coins you want to trade with need to be sent to a labelled receive address on each wallet 
 
@@ -62,7 +62,7 @@ The wallet of each coin you want to trade with needs to be configured with a use
 
  * To see the full list of compatible wallet configurations go to: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
 
- * Download the latest wallet, let it sync up fully, then close the wallet
+ * Download a confirmed wallet release, let it sync up fully, then close the wallet
 
  * Navigate to the trading wallets data directory, eg. Bitcoin
  
@@ -74,7 +74,7 @@ The wallet of each coin you want to trade with needs to be configured with a use
 
  * If you don’t have a .conf file started you will need to open up a text editor to create one.
 
- * Navigate to [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) and copy/paste the configuration information for the wallet you are running. (this can be added to what is already present in file if you have “addnodes” or other configurations already):
+ * Navigate to [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md) and copy/paste the configuration information for the wallet you are running. (this can be added to what is already present in the file if you have “addnodes” or other configurations already):
    * Eg. bitcoin.conf
    
    ```
@@ -120,11 +120,11 @@ In each wallet, create a new address and label it something informative, like �
 
 ## Setup xbridge.conf
 
-The Blocknet’s Xbridge technology is integrated into the latest client release. See [GitHub](https://github.com/BlocknetDX/BlockDX) for the source code.
+The Blocknet’s Xbridge technology is integrated into the latest wallet release. See [GitHub](https://github.com/BlocknetDX/BlockDX) for the source code.
 
  * To see the full list of coin .conf's see: [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md)
 
- * Create/edit an `xbridge.conf` file and place the following configuration file in the Blocknet wallet data directory 
+ * Create/edit an `xbridge.conf` file and place the following configuration file in the BlocknetDX wallet data directory 
  
    * Windows data directroy location: `C:\Users\[yourusername]\AppData\Roaming\blocknetdx\`
  
@@ -141,7 +141,7 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
  * Save the File (if you just edited the existing file, just click save, if you made a new file then click file, save as, and in the file name type: `xbridge.conf`
     * Ensure the file is not xbridge.conf.**txt**
 
- * Place this file into the Blocknet data directory folder
+ * Place this file into the BlocknetDX wallet data directory folder
 
  * You will be coming back to this to edit it in the future to add future coins, as well as to change `rpcusername` `rpcpassword` 
  
@@ -152,7 +152,7 @@ The Blocknet’s Xbridge technology is integrated into the latest client release
 
 In order for the BlocknetDX wallet to be used alongside the Block DX UI you need to edit the `blocknetdx.conf`
 
-* Navigate to the BlocknetDX data directory folder
+* Navigate to the BlocknetDX wallet data directory folder
 
 * Find the `blocknetdx.conf` and side click, edit
 
@@ -173,14 +173,14 @@ rpcport=41414
 * Save and close
 
 ## Wallet Start up Sequence
- * Start the currency pair(s) you are trading with
+ * Start the coin pair(s) you are trading with
     * Ensure every wallet is fully sync'd and unlocked
 
- * Start the Blocknet wallet after starting the other wallets
+ * Start the BlocknetDX wallet after starting the other wallets
    
    
 ## Verify communication between wallets
-In order to ensure that the BlocknetDX client is communicating with your wallets and the .conf files are setup properly follow the steps below:
+In order to ensure that the BlocknetDX wallet is communicating with your trader wallets and the .conf files are setup properly follow the steps below:
 
 * Navigate to the "blocknet dx" tab in the BlocknetDX wallet
 
@@ -192,7 +192,7 @@ In order to ensure that the BlocknetDX client is communicating with your wallets
     * Note: It may take a minute to load all your wallets
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/address_book.PNG "Logo Title Text 1")
     
-Now that your wallets are communicating with the BlocknetDX wallet you can proceed to starting the Block DX app.
+Now that your wallets are communicating with the BlocknetDX wallet you can proceed to starting the Block DX UI app.
 
 If your wallets are not populating, head to the "Problem Diagnosis" section before proceeding to the next step. 
 
