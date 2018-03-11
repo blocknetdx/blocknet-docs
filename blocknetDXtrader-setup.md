@@ -174,7 +174,7 @@ rpcport=41414
 
 * Save and close
 
-## Wallet Start up Sequence
+## Wallet Startup Sequence
  * Start the coin pair(s) you are trading with
     * Ensure every wallet is fully sync'd and unlocked
 
@@ -194,9 +194,9 @@ In order to ensure that the BlocknetDX wallet is communicating with your trader 
     * Note: It may take a minute to load all your wallets
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/address_book.PNG "Logo Title Text 1")
     
-Now that your wallets are communicating with the BlocknetDX wallet you can proceed to starting the Block DX UI app.
+Now that your trader wallets are communicating with the BlocknetDX wallet you can proceed to starting the Block DX UI app.
 
-If your wallets are not populating, head to the "Problem Diagnosis" section before proceeding to the next step. 
+If your trader wallets are not populating, head to the "Problem Diagnosis" section before proceeding to the next step. 
 
 
 ## Block DX Start up
