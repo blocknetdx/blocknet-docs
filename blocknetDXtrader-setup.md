@@ -1,4 +1,4 @@
-# BLOCKNET DX
+# BLOCK DX
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/BlockDXlogo.png "Logo Title Text 1")
 
 ## Blocknet Decentralised Exchange Trader Setup Guide
