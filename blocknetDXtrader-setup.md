@@ -62,7 +62,9 @@ The wallet of each coin you want to trade with needs to be configured with a use
 
  * To see the full list of compatible wallet configurations go to: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
 
- * Download a confirmed wallet release, let it sync up fully, then close the wallet
+   * Download a confirmed wallet release. The wallet release you should use is designated beside the wallet .conf name
+ 
+   * Let the wallet sync up fully, then close the wallet
 
  * Navigate to the trading wallets data directory, eg. Bitcoin
  
@@ -135,6 +137,8 @@ The Blocknet’s Xbridge technology is integrated into the latest wallet release
  * Note: to avoid crashes or failed trades, please edit your `xbridge.conf` to only have the wallets you are trading with
 
  * Type in the RPC usernames and passwords you created for each currency pair into the “Username” and “Password” fields
+ 
+ * You can leave the `Address=` line empty as this function is not being utilized right now
    
  * Ensure the rest of the configuration matches [xbridge.conf](https://github.com/BlocknetDX/blocknet-docs/blob/master/xbridgeCONF.md) for each coin
 
