@@ -224,21 +224,21 @@ When everything is configured and communicating you are now ready to open up the
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/cancelUI.PNG "Logo Title Text 1")
 
 ## Problem Diagnosis
-* To verify that each wallet is communicating with xbridge make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review the configuration files. Block DX UI will have issues starting if no labelled addresses are populated in the address book.
+* To verify that each trader wallet is communicating with the BlocknetDX wallet make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review the configuration files. Block DX UI will have issues starting if no labelled addresses are populated in the address book.
 
 * Ensure you have sent the funds you wish to trade with to the labelled address. Ensure these are confirmed.
 
-* If you made changes to any .conf file you need to close and restart that wallet, including Blocknet 
+* If you made changes to any .conf file you need to close and restart that wallet, including BlocknetDX 
 
-* Verify the ports are actually open. You may use Command Prompt to do so by typing in `netstat -an` and reviewing the print. Check that the ports you specified in the .conf files (ex: 8332 for Bitcoin) are open over localhost (127.0.0.1).
+* Verify the ports are actually open. Open a command line program and type: `netstat -an` and review the output. Check that the ports you specified in the .conf files (Eg. 8332 for Bitcoin) are open over localhost (127.0.0.1).
 
 * Ensure all .conf files are configured properly. These configurations are very case-sensitive. Any wrong data entered in them could be causing the issues.
 
 * Check that no OS-based firewall is blocking communication. You may do this through your firewall’s interface.
 
-* Check the xbridge log for any errors in: C:\Users\yourusername\AppData\Roaming\blocknetdx\log
+* Check the xbridge log for any errors. This is located in the BlocknetDX data directory in the `log` folder.
 
-* Check on general wallet events in C:\Users\yourusername\AppData\Roaming\walletname\debug.log
+* Check on general wallet events. This log is located in the datadirectory of each wallet as `debug.log`. 
 
 
 ## Security Tips
