@@ -3,8 +3,8 @@
         "Title": "Bitcoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 8332,
-        "p2pPort": 8333,
+        "rpcPort": "{{ rpcPort|default(8332) }}",
+        "p2pPort": "{{ p2pPort|default(8333) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 0,
@@ -21,5 +21,5 @@
         "TxVersion": 2,
         "FeePerByte": 30,
         "Confirmations": 0
-        }
+    }
 }

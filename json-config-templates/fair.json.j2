@@ -3,8 +3,8 @@
         "Title": "Faircoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 40405,
-        "p2pPort": 40404,
+        "rpcPort": "{{ rpcPort|default(40405) }}",
+        "p2pPort": "{{ p2pPort|default(40404) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 95,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 2000,
         "Confirmations": 0
-        }
+    }
 }

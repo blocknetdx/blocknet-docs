@@ -3,8 +3,8 @@
         "Title": "Syscoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 8370,
-        "p2pPort": 8369,
+        "rpcPort": "{{ rpcPort|default(8370) }}",
+        "p2pPort": "{{ p2pPort|default(8369) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 0,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 210,
         "Confirmations": 0
-        }
+    }
 }

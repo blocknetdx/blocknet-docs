@@ -3,8 +3,8 @@
         "Title": "XCurrency",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 14332,
-        "p2pPort": 14333,
+        "rpcPort": "{{ rpcPort|default(14332) }}",
+        "p2pPort": "{{ p2pPort|default(14333) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 75,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 20,
         "Confirmations": 0
-        }
+    }
 }

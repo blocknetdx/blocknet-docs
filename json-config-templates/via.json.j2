@@ -3,8 +3,8 @@
         "Title": "Viacoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 5222,
-        "p2pPort": 5223,
+        "rpcPort": "{{ rpcPort|default(5222) }}",
+        "p2pPort": "{{ p2pPort|default(5223) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 71,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 230,
         "Confirmations": 0
-        }
+    }
 }

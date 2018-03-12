@@ -3,8 +3,8 @@
         "Title": "Vertcoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 5888,
-        "p2pPort": 5889,
+        "rpcPort": "{{ rpcPort|default(5888) }}",
+        "p2pPort": "{{ p2pPort|default(5889) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 71,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 220,
         "Confirmations": 0
-        }
+    }
 }

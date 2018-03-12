@@ -3,8 +3,8 @@
         "Title": "Digibyte",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 14022,
-        "p2pPort": 12024,
+        "rpcPort": "{{ rpcPort|default(14022) }}",
+        "p2pPort": "{{ p2pPort|default(12024) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 30,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 200,
         "Confirmations": 0
-        }
+    }
 }
