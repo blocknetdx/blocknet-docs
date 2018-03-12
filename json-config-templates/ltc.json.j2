@@ -3,8 +3,8 @@
         "Title": "Litecoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 9332,
-        "p2pPort": 9333,
+        "rpcPort": "{{ rpcPort|default(9332) }}",
+        "p2pPort": "{{ p2pPort|default(9333) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 48,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 200,
         "Confirmations": 0
-        }
+    }
 }

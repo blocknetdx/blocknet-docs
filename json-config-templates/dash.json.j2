@@ -3,8 +3,8 @@
         "Title": "Dash",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 9998,
-        "p2pPort": 9999,
+        "rpcPort": "{{ rpcPort|default(9998) }}",
+        "p2pPort": "{{ p2pPort|default(9999) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 76,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 100,
         "Confirmations": 0
-        }
+    }
 }

@@ -3,8 +3,8 @@
         "Title": "Namecoin",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 8336,
-        "p2pPort": 8334,
+        "rpcPort": "{{ rpcPort|default(8336) }}",
+        "p2pPort": "{{ p2pPort|default(8334) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 52,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 230,
         "Confirmations": 0
-        }
+    }
 }

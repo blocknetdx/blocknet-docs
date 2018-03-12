@@ -3,8 +3,8 @@
         "Title": "Qtum",
         "Address": "",
         "Ip": "127.0.0.1",
-        "rpcPort": 3889,
-        "p2pPort": 3888,
+        "rpcPort": "{{ rpcPort|default(3889) }}",
+        "p2pPort": "{{ p2pPort|default(3888) }}",
         "Username": "{{ rpcusername }}",
         "Password": "{{ rpcpassword }}",
         "AddressPrefix": 58,
@@ -21,5 +21,5 @@
         "TxVersion": 1,
         "FeePerByte": 660,
         "Confirmations": 0
-        }
+    }
 }
