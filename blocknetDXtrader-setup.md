@@ -8,7 +8,7 @@ Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable us
 
 ## Summary
 
-* Download BlocknetDX wallet v3.9.10+
+* Download/install latest release of the BlocknetDX wallet 
 
   * Sync and encrypt wallet 
   * Create/edit `xbridge.conf` & `blocknetdx.conf` files
@@ -26,7 +26,7 @@ Blocknet’s DX uses the xbridgep2p™ blockchain router technology to enable us
   * Open the BlocknetDX wallet, sync up, unlock   
   * Ensure communication between wallets by checking the built-in DX address book
   
-* Download current release of the Block DX UI app
+* Download/install latest release of the Block DX UI app
 
   * Open executable, configure settings to match `blocknetdx.conf`   
   * Restart Block DX app
@@ -44,9 +44,9 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 
 ## Requirements
 
-* BlocknetDX wallet v3.9.10+, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
+* Latest release of BlocknetDX wallet, encrypted, fully synced. [GitHub Releases](https://github.com/BlocknetDX/BlockDX/releases)
 
-* Block DX Beta UI. [GitHub Releases](https://github.com/BlocknetDX/blockdx-ui/releases)
+* Latest release of Block DX UI. [GitHub Releases](https://github.com/BlocknetDX/blockdx-ui/releases)
 
 * Confirmed wallet release of each coin you want to trade with (fully synced, encrypted)
 
@@ -56,7 +56,7 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 
 
 ## Setup .conf Files for the Trading Wallets
-The wallet of each coin you want to trade with needs to be configured with a username/password and allowed from IP, if you’re using only a local machine use IP:127.0.0.1
+The wallet of each coin you want to trade with needs to be configured with a username/password and allowed from IP, if you’re using only a local machine use `IP:127.0.0.1`
 
  * To see the full list of compatible wallet configurations go to: [Wallet Configurations](https://github.com/BlocknetDX/blocknet-docs/blob/master/walletsCONF.md)
 
