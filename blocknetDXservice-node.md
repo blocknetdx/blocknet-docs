@@ -58,7 +58,7 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    
 * Navigate the top toolbar to: `Tools > Debug console`
    * Type `getaccountaddress <name>` (Generates a public address key for the service node. Create a unique service node name.)
-      * Ex: `getaccountaddress snode01`
+      * Eg: `getaccountaddress snode01`
       
    * Type `servicenode genkey` (Outputs the service node private key)
    
@@ -71,16 +71,16 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
    
 ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/send_5000.PNG "Logo Title Text 1")
    
-* Wait for the CLIENT computer to receive the 5000 Block and have at least 15 confirmations on the TX
+* Wait for the CLIENT computer to receive the 5000 Block and have at least 15 confirmations on the transaction (TX)
 
-* Once the transaction (TX) is fully confirmed, navigate back to: `Tools > Debug console`
+* Once the TX is fully confirmed, navigate back to: `Tools > Debug console`
    * Type `servicenode outputs` (Outputs the service node TX information needed in the `servicenode.conf`)
    
    * Take note of these generated outputs as they will be needed in the configuration files
    
 * Retrieve your SNODE SERVER computer Public IP address. Go to Google and search "what's my ip". Take note of this address as it will be needed in the configuration files
    * If using a VPS for the SNODE SERVER computer, retrieve that Public IP address
-   * Main-net: YOUR_PUBLIC_IP:41412
+   * Main-Net: YOUR_PUBLIC_IP:41412
     
 * Navigate to the BlocknetDX data directory
 
@@ -109,7 +109,7 @@ Integration is via the wallets’ RPC APIs. For security reasons we recommend th
 * Navigate to your Blocknet data directory
    * Create/edit the `blocknetdx.conf` file
         
-   * Type the following information into the `blocknetdx.conf` file: (use `staking=1` if you want to stake on the SNODE SERVER client)
+   * Type the following information into the `blocknetdx.conf` file: (use `staking=1` if you want to stake on the SNODE SERVER computer)
    
    ```
    staking=1
@@ -137,9 +137,9 @@ On the CLIENT computer navigate to the "Servicenodes" button on the GUI. If the 
    
 * On the SNODE SERVER computer restart the BlocknetDX wallet with the service node credentials in the `blocknetdx.conf` 
 
-* Your Service Node(s) are running successfully. You can close off the CLIENT computer BlocknetDX wallet if you want.  
+* Your service node(s) are now running. Proceed to the next section to ensure the setup worked. You can close off the CLIENT computer BlocknetDX wallet if you want.  
    
-* The CLIENT computer will receive the "Servicenode Rewards". If you are hosting wallets on your service node, you will receive trading fees as well.
+* The CLIENT computer will receive the "Servicenode Rewards". If you are hosting wallets on your service node, you will also receive trading fees.
 
 
 ### Status Checks
@@ -158,7 +158,7 @@ On the CLIENT computer navigate to the "Servicenodes" button on the GUI. If the 
 
 * Ensure your `servicenode.conf` information is correct to your settings
 
-* Ensure you don't have "< >" in any of the configuration files : (ex: `servicenodeaddr=<your_public_IP:41474>` should be `servicenodeaddr=127.0.0.1:41412`)
+* Ensure you don't have "< >" in any of the configuration files : (Eg: `servicenodeaddr=<your_public_IP:41474>` should be `servicenodeaddr=127.0.0.1:41412`)
    * Ensure you are using the correct P2P PORT # `41412`
      
 * Ensure on the CLIENT computer you only have a `servicenode.conf`, the `blocknetdx.conf` is not needed on the CLIENT computer
@@ -171,7 +171,6 @@ On the CLIENT computer navigate to the "Servicenodes" button on the GUI. If the 
 
 * Ensure you have the latest wallet and that it's fully sync'd and fully unlocked   
    
----
 
 ## Setup  .conf Files for the Wallets on Your Service Node:
 The wallet of each coin you want to host with needs to be configured with a username/password and allowed from IP, if you’re using only a local machine use `IP:127.0.0.1`
@@ -221,7 +220,6 @@ The wallet of each coin you want to host with needs to be configured with a user
     
  * Once the .conf is saved, restart the wallet and proceed to the next section.
  
----
 
 ## Configure Coin Addresses
 In each hosted coin wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
@@ -234,7 +232,6 @@ In each hosted coin wallet, create a new address and label it something informat
 
  * This needs to be done for all wallets being hosted
 
----
 
 ## Setup xbridge.conf
 
@@ -267,7 +264,6 @@ The Blocknet’s Xbridge technology is integrated into the latest wallet release
  
  * Do not change the other settings in the .conf file
  
----
 
 ## Startup Sequence
  * Start the wallets you are hosting on your service node
@@ -282,9 +278,8 @@ The Blocknet’s Xbridge technology is integrated into the latest wallet release
     * In the console type: `servicenode list`, search for your SNODE, under `xwallets` it will show the wallets you are hosting
        
  * Ensure your servicenode is activated
-  
----
-
+ 
+ 
 ## Verify Communication Between Wallets
 In order to ensure that the BlocknetDX client is communicating with your hosted wallets and the .conf files are setup properly, navigate to the Blocknet data directory.
 
@@ -299,8 +294,6 @@ In order to ensure that the BlocknetDX client is communicating with your hosted 
 [I] 2018-Mar-19 23:21:23 [0x134c] exchange enabled
 [I] 2018-Mar-19 23:21:35 [0xc4c] read wallet BTC [Bitcoin] 127.0.0.1:8332
 ``` 
-
----
 
 ## Problem Diagnosis
 * To verify that each wallet is communicating with xbridge make sure the created receive addresses for each wallet is listed in the address book. If this part fails, close your wallets and review the configuration files.
