@@ -221,18 +221,6 @@ The wallet of each coin you want to host with needs to be configured with a user
  * Once the .conf is saved, restart the wallet and proceed to the next section.
  
 
-## Configure Coin Addresses
-In each hosted coin wallet, create a new address and label it something informative, like “DX address” (xbridge expects a labelled receive address)
-
- * To create a new address, go to your wallet’s “receive” tab and click “new address”
-
- * To label an address, you may either right-click on it or click the “label” field.
- 
- ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/labelledaddress.PNG "Logo Title Text 1") 
-
- * This needs to be done for all wallets being hosted
-
-
 ## Setup xbridge.conf
 
 The Blocknet’s Xbridge technology is integrated into the latest wallet release. See [GitHub](https://github.com/BlocknetDX/BlockDX) for the source code.
