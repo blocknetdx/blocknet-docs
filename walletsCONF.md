@@ -22,7 +22,7 @@ rpcpassword=
 rpcallowip=127.0.0.1
 ```
 
-__blocknetdx.conf__ `TBD`
+__blocknetdx.conf__ `v3.9.16`
 ```
 listen=1
 server=1
@@ -147,7 +147,7 @@ rpcpassword=
 rpcallowip=127.0.0.1
 ```
 
-__syscoin.conf__ `v2.1.6.0`
+__syscoin.conf__ `v3.0.3`
 ```
 server=1
 listen=1
