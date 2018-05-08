@@ -20,6 +20,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=8333
+rpcport=8332
 ```
 
 __blocknetdx.conf__ `v3.9.16`
@@ -29,6 +31,8 @@ server=1
 rpcallowip=127.0.0.1
 rpcuser=
 rpcpassword=
+port=41412
+rpcport=41414
 ```
 
 __dash.conf__ `v0.12.2.3`
@@ -38,6 +42,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=9999
+rpcport=9998
 ```
 
 __digibyte.conf__ `v6.14.2.0`
@@ -47,6 +53,7 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=12024
 rpcport=14022
 ```
 
@@ -57,6 +64,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=22556
+rpcport=22555
 ```
 
 __dynamic.conf__ `TBD`
@@ -66,6 +75,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=31300
+rpcport=33350
 ```
 
 __faircoin.conf__ `v2.0.0.0`
@@ -75,6 +86,8 @@ listen=1
 rpcallowip=127.0.0.1
 rpcuser=
 rpcpassword=
+port=40404
+rpcport=40405
 ```
 
 __LBRY Credits LBC Command Line__ `v0.12.1.0`
@@ -91,6 +104,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=9246
+rpcport=9245
 ```
 
 __litecoin.conf__ `v0.14.2`
@@ -100,6 +115,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=9333
+rpcport=9332
 ```
 
 __monacoin.conf__ `v0.15.1`
@@ -109,6 +126,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=9401
+rpcport=9402
 ```
 
 
@@ -119,6 +138,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=19683
+rpcport=29683
 ```
 
 __namecoin.conf__ `v0.13.99`
@@ -128,6 +149,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=8334
+rpcport=8336
 ```
 
 __pivx.conf__ `v3.0.6`
@@ -137,6 +160,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=51472
+rpcport=51473
 ```
 
 __qtum.conf__ `v0.14.15.1`
@@ -146,6 +171,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=3888
+rpcport=3889
 ```
 
 __syscoin.conf__ `v3.0.3`
@@ -155,6 +182,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=8369
+rpcport=8370
 ```
 
 __vertcoin.conf__ `v0.11.1.0`
@@ -164,6 +193,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=5889
+rpcport=5888
 ```
 
 __viacoin.conf__ `v0.13.3.7`
@@ -173,6 +204,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=5223
+rpcport=5222
 ```
 
 __xcurrency.conf__ `v3.0.04.0`
@@ -182,6 +215,8 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+port=14333
+rpcport=14332
 ```
 
 __zoin.conf__ `v0.13.1.6`
