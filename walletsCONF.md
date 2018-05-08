@@ -47,6 +47,7 @@ listen=1
 rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
+rpcport=14022
 ```
 
 __dogecoin.conf__ `v1.10.0.0`
