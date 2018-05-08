@@ -182,3 +182,14 @@ rpcuser=
 rpcpassword=
 rpcallowip=127.0.0.1
 ```
+
+__zoin.conf__ `v0.13.1.6`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8255
+rpcport=8822
+```
