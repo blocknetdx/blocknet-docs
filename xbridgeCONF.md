@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR,XC
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -418,4 +418,25 @@ BlockTime=60
 FeePerByte=20
 Confirmations=0
 
+[ZOI]
+Title=Zoin
+Address=
+Ip=127.0.0.1
+Port=8822
+Username=
+Password=
+AddressPrefix=80
+ScriptPrefix=7
+SecretPrefix=208
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=150
+FeePerByte=210
+Confirmations=0
 ```
