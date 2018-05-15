@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR,XC,ZOI
+ExchangeWallets=BTC,SYS,LTC,DASH,DGB,DYN,DOGE,PIVX,VIA,VTC,MUE,NMC,QTUM,LBC,MONA,BLOCK,FAIR,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -394,6 +394,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=210
 FeePerByte=2000
+Confirmations=0
+
+[WGR]
+Title=Wagerr
+Address=
+Ip=127.0.0.1
+Port=55003
+Username=
+Password=
+AddressPrefix=73
+ScriptPrefix=63
+SecretPrefix=199
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=64
+FeePerByte=30
 Confirmations=0
 
 [XC]
