@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,HXX,HTML,LBC,LTC,MONA,MUE,NMC,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -176,28 +176,6 @@ BlockTime=210
 FeePerByte=2000
 Confirmations=0
 
-[HXX]
-Title=Hexxcoin
-Address=
-Ip=127.0.0.1
-Port=29200
-Username=
-Password=
-AddressPrefix=40
-ScriptPrefix=10
-SecretPrefix=210
-COIN=100000000
-MinimumAmount=0
-DustAmount=0
-CreateTxMethod=BTC
-GetNewKeySupported=true
-ImportWithNoScanSupported=true
-FeePerByte=210
-MinTxFee=0
-TxVersion=1
-BlockTime=150
-Confirmations=0
-
 [HTML]
 Title=HTMLcoin
 Address=
@@ -218,6 +196,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=660
+Confirmations=0
+
+[HXX]
+Title=Hexxcoin
+Address=
+Ip=127.0.0.1
+Port=29200
+Username=
+Password=
+AddressPrefix=40
+ScriptPrefix=10
+SecretPrefix=210
+COIN=100000000
+MinimumAmount=0
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+FeePerByte=210
+MinTxFee=0
+TxVersion=1
+BlockTime=150
 Confirmations=0
 
 [LBC]
