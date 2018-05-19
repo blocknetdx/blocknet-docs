@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -328,6 +328,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=600
 FeePerByte=230
+Confirmations=0
+
+[PHR]
+Title=Phore
+Address=
+Ip=127.0.0.1
+Port=11772
+Username=
+Password=
+AddressPrefix=55
+ScriptPrefix=13
+SecretPrefix=212
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=20
 Confirmations=0
 
 [PIVX]
