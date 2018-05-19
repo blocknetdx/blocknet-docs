@@ -181,6 +181,18 @@ port=8334
 rpcport=8336
 ```
 
+```PHR```
+__phore.conf__ `v1.2.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=11771
+rpcport=11772
+```
+
 ```PIVX```
 __pivx.conf__ `v3.0.6`
 ```
