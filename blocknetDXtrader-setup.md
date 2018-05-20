@@ -113,7 +113,7 @@ In each wallet, create a new address and label it something informative, like â€
  
  ![alt text](https://github.com/BlocknetDX/blocknet-docs/blob/master/pictures/labelledaddress.PNG "Logo Title Text 1") 
 
- * Send the funds you want to trade with to the labelled address
+ * In each wallet ensure the funds are in a labelled address
  
  * This needs to be done for all the wallets you want to trade with
  

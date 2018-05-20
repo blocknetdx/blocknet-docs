@@ -97,6 +97,18 @@ port=40404
 rpcport=40405
 ```
 
+```FLO```
+__flo.conf__ `v0.15.0.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=7312
+rpcport=7313
+```
+
 ```HTML```
 __htmlcoin.conf__ `v2.0.3.0`
 ```
