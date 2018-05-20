@@ -98,7 +98,7 @@ rpcport=40405
 ```
 
 ```FLO```
-__flo.conf__ `v0.15.0.1`
+__flo.conf__ `v0.15.0.3`
 ```
 server=1
 listen=1
