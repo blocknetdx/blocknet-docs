@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -174,6 +174,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=210
 FeePerByte=2000
+Confirmations=0
+
+[FLO]
+Title=Florincoin
+Address=
+Ip=127.0.0.1
+Port=7313
+Username=
+Password=
+AddressPrefix=35
+ScriptPrefix=94
+SecretPrefix=163
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=40
+FeePerByte=250
 Confirmations=0
 
 [HTML]
