@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,DASH,DGB,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -108,6 +108,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=15
 FeePerByte=200
+Confirmations=0
+
+[DMD]
+Title=Diamond
+Address=
+Ip=127.0.0.1
+Port=17772
+Username=
+Password=
+AddressPrefix=90
+ScriptPrefix=8
+SecretPrefix=218
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=135
+FeePerByte=55
 Confirmations=0
 
 [DOGE]
