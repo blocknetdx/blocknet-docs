@@ -61,6 +61,20 @@ port=12024
 rpcport=14022
 ```
 
+```DMD```
+__diamond.conf__ `v3.0.1.1`
+```
+server=1 
+listen=1 
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=17771
+rpcport=17772
+```
+
 ```DOGE```
 __dogecoin.conf__ `v1.10.0.0`
 ```
