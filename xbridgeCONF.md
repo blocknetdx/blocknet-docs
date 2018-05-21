@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -64,6 +64,28 @@ BlockTime=600
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
 FeePerByte=30
+Confirmations=0
+
+[CRW]
+Title=Crown
+Address=
+Ip=127.0.0.1
+Port=9341
+Username=
+Password=
+AddressPrefix=0
+ScriptPrefix=28
+SecretPrefix=128
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=55
 Confirmations=0
 
 [DASH]
