@@ -37,6 +37,20 @@ port=8333
 rpcport=8332
 ```
 
+```CRW```
+__crown.conf__ `v0.12.4.1`
+```
+server=1 
+listen=1 
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=9340
+rpcport=9341
+```
+
 ```DASH```
 __dash.conf__ `v0.12.2.3`
 ```
