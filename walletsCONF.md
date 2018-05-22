@@ -245,6 +245,18 @@ port=51472
 rpcport=51473
 ```
 
+```PURA```
+__pura.conf__ `v1.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=44444
+rpcport=55555
+```
+
 ```QTUM```
 __qtum.conf__ `v0.14.15.1`
 ```
