@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -438,6 +438,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=220
+Confirmations=0
+
+[PURA]
+Title=Pura
+Address=
+Ip=127.0.0.1
+Port=55555
+Username=
+Password=
+AddressPrefix=55
+ScriptPrefix=16
+SecretPrefix=150
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=150
+FeePerByte=45
 Confirmations=0
 
 [QTUM]
