@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,HTML,HXX,LBC,LTC,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -242,6 +242,28 @@ BlockTime=40
 FeePerByte=250
 Confirmations=0
 
+[GBX]
+Title=GoByte
+Address=
+Ip=127.0.0.1
+Port=12454
+Username=
+Password=
+AddressPrefix=38
+ScriptPrefix=10
+SecretPrefix=198
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=150
+FeePerByte=45
+Confirmations=0
+
 [HTML]
 Title=HTMLcoin
 Address=
@@ -328,6 +350,28 @@ FeePerByte=200
 MinTxFee=0
 TxVersion=1
 BlockTime=150
+Confirmations=0
+
+[MNX]
+Title=Minexcoin
+Address=
+Ip=127.0.0.1
+Port=17786
+Username=
+Password=
+AddressPrefix=75
+ScriptPrefix=5
+SecretPrefix=128
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=180
+FeePerByte=45
 Confirmations=0
 
 [MONA]
