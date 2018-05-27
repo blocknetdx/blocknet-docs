@@ -137,6 +137,20 @@ port=7312
 rpcport=7313
 ```
 
+```GBX```
+__gobyte.conf__ `v0.12.1.3`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+enableaccounts=1
+staking=0
+port=12455
+rpcport=12454
+```
+
 ```HTML```
 __htmlcoin.conf__ `v2.0.3.0`
 ```
@@ -183,6 +197,18 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=9333
 rpcport=9332
+```
+
+```MNX```
+__minexcoin.conf__ `v1.3.1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8335
+rpcport=17786
 ```
 
 ```MONA```
