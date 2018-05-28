@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -64,6 +64,28 @@ BlockTime=600
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
 FeePerByte=30
+Confirmations=0
+
+[BWK]
+Title=Bulwark
+Address=
+Ip=127.0.0.1
+Port=52541
+Username=
+Password=
+AddressPrefix=85
+ScriptPrefix=18
+SecretPrefix=212
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=90
+FeePerByte=45
 Confirmations=0
 
 [CRW]
