@@ -37,6 +37,20 @@ port=8333
 rpcport=8332
 ```
 
+```BWK```
+__bulwark.conf__ `v1.2.4`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=52543
+rpcport=52541
+```
+
 ```CRW```
 __crown.conf__ `v0.12.4.1`
 ```
