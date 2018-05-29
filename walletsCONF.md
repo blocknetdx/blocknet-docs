@@ -371,6 +371,18 @@ port=14333
 rpcport=14332
 ```
 
+```XZC```
+__zcoin.conf__ `v0.13.6.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8168
+rpcport=8888
+```
+
 ```ZOIN```
 __zoin.conf__ `v0.13.1.6`
 ```
