@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -658,6 +658,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=20
+Confirmations=0
+
+[XZC]
+Title=ZCoin
+Address=
+Ip=127.0.0.1
+Port=8888
+Username=
+Password=
+AddressPrefix=82
+ScriptPrefix=7
+SecretPrefix=210
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=600
+FeePerByte=210
 Confirmations=0
 
 [ZOI]
