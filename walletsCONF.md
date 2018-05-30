@@ -321,6 +321,20 @@ port=8369
 rpcport=8370
 ```
 
+```TRC```
+__terracoin.conf__ `v0.12.1.8`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=13333
+rpcport=13332
+```
+
 ```VIA```
 __viacoin.conf__ `v0.13.3.7`
 ```
