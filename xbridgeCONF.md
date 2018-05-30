@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,VIA,VTC,WGR,XC,XZC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,VIA,VTC,WGR,XC,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -570,6 +570,28 @@ BlockTime=60
 GetNewKeySupported=false
 ImportWithNoScanSupported=false
 FeePerByte=210
+Confirmations=0
+
+[TRC]
+Title=Terracoin
+Address=
+Ip=127.0.0.1
+Port=13332
+Username=
+Password=
+AddressPrefix=0
+ScriptPrefix=5
+SecretPrefix=128
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
+FeePerByte=45
 Confirmations=0
 
 [VIA]
