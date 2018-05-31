@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,VIA,VTC,WGR,XC,XZC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,IOP,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -330,6 +330,28 @@ TxVersion=1
 BlockTime=150
 Confirmations=0
 
+[IOP]
+Title=InternetofPeople
+Address=
+Ip=127.0.0.1
+Port=8337
+Username=
+Password=
+AddressPrefix=117
+ScriptPrefix=174
+SecretPrefix=49
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
+FeePerByte=45
+Confirmations=0
+
 [LBC]
 Title=LBRY Credits
 Address=
@@ -591,6 +613,28 @@ GetNewKeySupported=true
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=120
+FeePerByte=45
+Confirmations=0
+
+[UNB]
+Title=Unbreakablecoin
+Address=
+Ip=127.0.0.1
+Port=9337
+Username=
+Password=
+AddressPrefix=0
+ScriptPrefix=5
+SecretPrefix=128
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=300
 FeePerByte=45
 Confirmations=0
 
