@@ -189,6 +189,18 @@ port=29100
 rpcport=29200
 ```
 
+```IOP```
+__iop.conf__ `v6.1.0`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+port=4877
+rpcport=8337
+```
+
 ```LBC```
 __lbrycrd.conf__ `v0.12.1.0`
 ```
@@ -333,6 +345,18 @@ enableaccounts=1
 staking=0
 port=13333
 rpcport=13332
+```
+
+```UNB```
+__unbreakablecoin.conf__ `v0.10.3.0`
+```
+server=1 
+listen=1 
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+rpcport=9337
+port=9336
 ```
 
 ```VIA```
