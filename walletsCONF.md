@@ -201,6 +201,20 @@ port=4877
 rpcport=8337
 ```
 
+```KLK```
+__klks.conf__ `v2.6.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=51121
+rpcport=51122
+```
+
 ```LBC```
 __lbrycrd.conf__ `v0.12.1.0`
 ```

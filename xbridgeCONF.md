@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,IOP,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,FAIR,FLO,GBX,HTML,HXX,IOP,KLK,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -349,6 +349,28 @@ GetNewKeySupported=true
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=120
+FeePerByte=45
+Confirmations=0
+
+[KLK]
+Title=Kalkulus
+Address=
+Ip=127.0.0.1
+Port=51122
+Username=
+Password=
+AddressPrefix=46
+ScriptPrefix=13
+SecretPrefix=174
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
 FeePerByte=45
 Confirmations=0
 
