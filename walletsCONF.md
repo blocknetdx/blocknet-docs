@@ -189,6 +189,20 @@ port=29100
 rpcport=29200
 ```
 
+```INN```
+__innova.conf__ `v0.12.1.9`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=14520
+rpcport=8818
+```
+
 ```IOP```
 __iop.conf__ `v6.1.0`
 ```
