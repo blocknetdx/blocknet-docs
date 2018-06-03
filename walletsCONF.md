@@ -201,7 +201,7 @@ port=4877
 rpcport=8337
 ```
 
-```KLK```
+```KLKS```
 __klks.conf__ `v2.6.0`
 ```
 server=1
