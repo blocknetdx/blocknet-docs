@@ -17,7 +17,40 @@
   * ```xrGetReply uuid``` - returns the reply by query UUID.
 
 ## Service node side
+* To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
+* xrouter.conf example:
+```
+[Main]
+xrouter=1
+services=myservice1,myservice2
 
-* By default XRouter is turned on. If you want to turn it off, create a file xrouter.conf in blocknetdx data directory with ```xrouter=0``` as contents
-* TBD
+[xrGetBlockCount]
+fee=0.01
+
+[xrGetBlockHash]
+fee=0.01
+
+[xrGetBalance]
+fee=0.1
+
+[xrGetAllBlocks]
+run=0
+
+[myservice1]
+fee=0.1
+type=rpc
+paramsCount=3
+rpcPort=9999
+rpcUser=username
+rpcPassword=password
+
+[myservice2]
+fee=0.01
+type=shell
+paramsCount=3
+cmd="python /home/snode/myservice2.py --additional_param"
+```
+
+* By default XRouter is turned on. If you want to turn it off, set ```Main.xrouter=0```
+* Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 
