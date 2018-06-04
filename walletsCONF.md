@@ -127,6 +127,18 @@ port=31300
 rpcport=33350
 ```
 
+```EMC2```
+__einsteinium.conf__ `v0.13.48.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=41878
+rpcport=41879
+```
+
 ```FAIR```
 __faircoin.conf__ `v2.0.0.0`
 ```
