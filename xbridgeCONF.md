@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -636,6 +636,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
 FeePerByte=660
+Confirmations=0
+
+[SEND]
+Title=SocialSend
+Address=
+Ip=127.0.0.1
+Port=50051
+Username=
+Password=
+AddressPrefix=63
+ScriptPrefix=13
+SecretPrefix=212
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=30
+FeePerByte=45
 Confirmations=0
 
 [SYS]
