@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,VIA,VTC,WGR,XC,XZC,ZOI
+ExchangeWallets=BLOCK,BTC,BWK,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,VIA,VTC,WGR,XC,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -812,6 +812,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=20
+Confirmations=0
+
+[XSN]
+Title=StakeNet
+Address=
+Ip=127.0.0.1
+Port=62584
+Username=
+Password=
+AddressPrefix=76
+ScriptPrefix=16
+SecretPrefix=204
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=45
 Confirmations=0
 
 [XZC]

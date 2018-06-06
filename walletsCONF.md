@@ -463,6 +463,20 @@ port=14333
 rpcport=14332
 ```
 
+```XSN```
+__xsn.conf__ `v1.0.9`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=62583
+rpcport=62584
+```
+
 ```XZC```
 __zcoin.conf__ `v0.13.6.2`
 ```
