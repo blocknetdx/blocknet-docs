@@ -51,6 +51,20 @@ port=52543
 rpcport=52541
 ```
 
+```COLX```
+__colossusXT.conf__ `v1.0.4`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+enableaccounts=1
+staking=0
+port=51572
+rpcport=51573
+```
+
 ```CRW```
 __crown.conf__ `v0.12.4.1`
 ```
