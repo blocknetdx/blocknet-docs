@@ -13,6 +13,20 @@
 
 * This document contains all of the successfully traded coin's currently on the Blocknet DX. As future coin's go through the testing phase and have successful swaps, they will be announced accordingly. After the announcement those configuration parameters will be released on this document.
 
+```BITG```
+__bitcoingreen.conf__ `v1.1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=9334
+rpcport=9335
+```
+
 ```BLOCK```
 __blocknetdx.conf__ `v3.9.22`
 ```
@@ -437,6 +451,18 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=5223
 rpcport=5222
+```
+
+```VSX```
+__vsync.conf__ `v3.8.5.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=65010
+rpcport=65011
 ```
 
 ```VTC```
