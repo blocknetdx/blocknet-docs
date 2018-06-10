@@ -341,6 +341,20 @@ port=8334
 rpcport=8336
 ```
 
+```ORE```
+__galactrum.conf__ `v1.1.6`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=6270
+rpcport=6269
+```
+
 ```PHR```
 __phore.conf__ `v1.2.2`
 ```
