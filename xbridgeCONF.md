@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,VIA,VSX,VTC,WGR,XC,XSN,XZC,ZOI
+ExchangeWallets=BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,VIA,VSX,VTC,WGR,XC,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -592,6 +592,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=600
 FeePerByte=230
+Confirmations=0
+
+[ORE]
+Title=Galactrum
+Address=
+Ip=127.0.0.1
+Port=6269
+Username=
+Password=
+AddressPrefix=38
+ScriptPrefix=16
+SecretPrefix=204
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
+FeePerByte=45
 Confirmations=0
 
 [PHR]
