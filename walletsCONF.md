@@ -455,6 +455,18 @@ rpcport=9337
 port=9336
 ```
 
+```UNO```
+__unobtanium.conf__ `v0.10.1.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallow=127.0.0.1
+port=65534
+rpcport=65535
+```
+
 ```VIA```
 __viacoin.conf__ `v0.13.3.7`
 ```
@@ -465,6 +477,32 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=5223
 rpcport=5222
+```
+
+```VIT```
+__vitae.conf__ `v?`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=8765
+rpcport=8764
+```
+
+```VIVO```
+__vivo.conf__ `v0.12.1.8`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=12845
+rpcport=12846
 ```
 
 ```VSX```
