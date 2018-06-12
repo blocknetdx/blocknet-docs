@@ -479,7 +479,7 @@ port=5223
 rpcport=5222
 ```
 
-```VIT```
+```VITAE```
 __vitae.conf__ `v?`
 ```
 server=1
