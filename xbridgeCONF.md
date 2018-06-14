@@ -17,10 +17,32 @@
 
 ```
 [Main]
-ExchangeWallets=BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XSN,XZC,ZOI
+ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QTUM,SEND,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
+
+[ALQO]
+Title=ALQO
+Address=
+Ip=127.0.0.1
+Port=55000
+Username=
+Password=
+AddressPrefix=23
+ScriptPrefix=16
+SecretPrefix=193
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=250
+Confirmations=0
 
 [BITG]
 Title=BitcoinGreen

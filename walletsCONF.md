@@ -13,6 +13,20 @@
 
 * This document contains all of the successfully traded coin's currently on the Blocknet DX. As future coin's go through the testing phase and have successful swaps, they will be announced accordingly. After the announcement those configuration parameters will be released on this document.
 
+```ALQO```
+__alqo.conf__ `v3.5.0.1`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+enableaccounts=1
+staking=0
+port=55500
+rpcport=55000
+```
+
 ```BITG```
 __bitcoingreen.conf__ `v1.1.0`
 ```
