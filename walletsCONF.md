@@ -405,6 +405,20 @@ port=44444
 rpcport=55555
 ```
 
+```QBIC```
+__qbic.conf__ `v0.12.1.9`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=17195
+rpcport=17196
+```
+
 ```QTUM```
 __qtum.conf__ `v0.14.15.1`
 ```
