@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XSN,XZC,ZOI
+ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -1010,6 +1010,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=20
+Confirmations=0
+
+[XMY]
+Title=Myriad
+Address=
+Ip=127.0.0.1
+Port=10889
+Username=
+Password=
+AddressPrefix=50
+ScriptPrefix=9
+SecretPrefix=178
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=45
 Confirmations=0
 
 [XSN]

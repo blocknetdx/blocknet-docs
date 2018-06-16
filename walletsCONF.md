@@ -583,6 +583,18 @@ port=14333
 rpcport=14332
 ```
 
+```XMY```
+__myriadcoin.conf__ `v0.14.2.5`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=10888
+rpcport=10889
+```
+
 ```XSN```
 __xsn.conf__ `v1.0.9`
 ```
