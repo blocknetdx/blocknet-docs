@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
+ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SUCR,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -768,6 +768,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=30
 FeePerByte=45
+Confirmations=0
+
+[SUCR]
+Title=Sucre
+Address=
+Ip=127.0.0.1
+Port=9339
+Username=
+Password=
+AddressPrefix=63
+ScriptPrefix=125
+SecretPrefix=9
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=150
+FeePerByte=2500
 Confirmations=0
 
 [SYS]
