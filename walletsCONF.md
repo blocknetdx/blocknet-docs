@@ -232,7 +232,7 @@ rpcport=4889
 ```
 
 ```HXX```
-__hexxcoin.conf__ `v4.0.3.5`
+__hexxcoin.conf__ `v4.0.3.8`
 ```
 server=1
 listen=1
@@ -443,6 +443,20 @@ enableaccounts=1
 staking=0
 port=50050
 rpcport=50051
+```
+
+```SUCR```
+__sucr.conf__ `v0.12.2.1`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+enableaccounts=1
+staking=0
+port=9338
+rpcport=9339
 ```
 
 ```SYS```
