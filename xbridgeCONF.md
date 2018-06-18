@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SUCR,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
+ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SUCR,SYS,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -152,6 +152,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=12000000
+Confirmations=0
+
+[CRC]
+Title=CrowdCoin
+Address=
+Ip=127.0.0.1
+Port=12876
+Username=
+Password=
+AddressPrefix=28
+ScriptPrefix=88
+SecretPrefix=0
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
+FeePerByte=45
 Confirmations=0
 
 [CRW]
