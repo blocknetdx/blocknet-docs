@@ -93,6 +93,18 @@ port=51572
 rpcport=51573
 ```
 
+```CRC```
+__crowdcoin.conf__ `v0.12.1.6`
+```
+server=1
+listen=1
+rpcallowip=127.0.0.1
+rpcuser=
+rpcpassword=
+port=12875
+rpcport=12876
+```
+
 ```CRW```
 __crown.conf__ `v0.12.4.1`
 ```
