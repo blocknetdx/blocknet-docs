@@ -93,6 +93,20 @@ port=51572
 rpcport=51573
 ```
 
+```CRAVE```
+__crave.conf__ `v2.5.0.3`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=48882
+rpcport=48883
+```
+
 ```CRC```
 __crowdcoin.conf__ `v0.12.1.6`
 ```
@@ -455,6 +469,18 @@ enableaccounts=1
 staking=0
 port=50050
 rpcport=50051
+```
+
+```SPK```
+__sparks.conf__ `v0.12.3.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8890
+rpcport=8892
 ```
 
 ```SUCR```
