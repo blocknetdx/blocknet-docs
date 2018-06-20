@@ -333,6 +333,18 @@ port=9333
 rpcport=9332
 ```
 
+```LYNX```
+__lynx.conf__ `v0.15.1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=22566
+rpcport=22567
+```
+
 ```MNX```
 __minexcoin.conf__ `v1.3.1.0`
 ```
