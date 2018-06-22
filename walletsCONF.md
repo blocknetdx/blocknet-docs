@@ -521,6 +521,18 @@ port=8369
 rpcport=8370
 ```
 
+```TRB```
+__tribe.conf__ `v1.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=9399
+rpcport=9499
+```
+
 ```TRC```
 __terracoin.conf__ `v0.12.1.8`
 ```
