@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,LYNX,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,SEND,SPK,SUCR,SYS,TRB,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
+ExchangeWallets=ALQO,BITG,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,LBC,LTC,LYNX,MNX,MONA,MUE,NMC,ORE,PHR,PIVX,PURA,QBIC,QTUM,RVN,SEND,SPK,SUCR,SYS,TRB,TRC,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMY,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -812,6 +812,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
 FeePerByte=660
+Confirmations=0
+
+[RVN]
+Title=Ravencoin
+Address=
+Ip=127.0.0.1
+Port=8766
+Username=
+Password=
+AddressPrefix=60
+ScriptPrefix=122
+SecretPrefix=128
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=45
 Confirmations=0
 
 [SEND]
