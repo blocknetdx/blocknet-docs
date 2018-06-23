@@ -469,6 +469,18 @@ port=3888
 rpcport=3889
 ```
 
+```RVN```
+__raven.conf__ `v0.15.99.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8767
+rpcport=8766
+```
+
 ```SEND```
 __send.conf__ `v1.1.0.0`
 ```
