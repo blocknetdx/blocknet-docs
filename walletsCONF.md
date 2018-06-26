@@ -207,6 +207,20 @@ port=41878
 rpcport=41879
 ```
 
+```ENT```
+__eternity.conf__ `v0.12.1.7`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=4855
+rpcport=4854
+```
+
 ```FAIR```
 __faircoin.conf__ `v2.0.0.0`
 ```
@@ -345,6 +359,18 @@ port=22566
 rpcport=22567
 ```
 
+```MGN```
+__mgn.conf__ `v1.0.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=57821
+rpcport=57822
+```
+
 ```MNX```
 __minexcoin.conf__ `v1.3.1.0`
 ```
@@ -391,6 +417,20 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=8334
 rpcport=8336
+```
+
+```OHM```
+__ohmc.conf__ `v2.3.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=52020
+rpcport=52021
 ```
 
 ```ORE```
