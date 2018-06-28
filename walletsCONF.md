@@ -419,6 +419,18 @@ port=8334
 rpcport=8336
 ```
 
+```NYX```
+__nyx.conf__ `v2.0.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=4330
+rpcport=4331
+```
+
 ```OHM```
 __ohmc.conf__ `v2.3.0.0`
 ```
