@@ -23,6 +23,7 @@
 [Main]
 xrouter=1
 services=myservice1,myservice2
+timeout=2
 
 [xrGetBlockCount]
 fee=0.01
@@ -32,6 +33,7 @@ fee=0.01
 
 [xrGetBalance]
 fee=0.1
+timeout=50
 
 [xrGetAllBlocks]
 run=0
@@ -53,4 +55,4 @@ cmd="python /home/snode/myservice2.py --additional_param"
 
 * By default XRouter is turned on. If you want to turn it off, set ```Main.xrouter=0```
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
-
+* By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
