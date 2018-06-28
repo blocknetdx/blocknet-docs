@@ -611,6 +611,18 @@ port=13333
 rpcport=13332
 ```
 
+```UCOM```
+__ucom.conf__ `v0.1.8.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8277
+rpcport=8276
+```
+
 ```UNB```
 __unbreakablecoin.conf__ `v0.10.3.0`
 ```
