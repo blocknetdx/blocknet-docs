@@ -323,6 +323,18 @@ port=51121
 rpcport=51122
 ```
 
+```KREDS```
+__kreds.conf__ `v1.0.0.5`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=3950
+rpcport=3850
+```
+
 ```LBC```
 __lbrycrd.conf__ `v0.12.1.0`
 ```
