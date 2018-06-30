@@ -15,7 +15,8 @@
   * ```xrGetTransactionsBloomFilter currency filter [number] [confirmations]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
   * ```xrGenerateBloomFilter addr1 [addr2 ... addrN] [confirmations]``` - returns hex representation of bloom filter for given addresses.
   * ```xrGetReply uuid``` - returns the reply by query UUID.
-
+  * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
+  
 ## Service node side
 * To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
 * xrouter.conf example:
@@ -35,6 +36,14 @@ fee=0.01
 fee=0.1
 timeout=50
 
+[BTC::xrGetBalance]
+fee=0.5
+timeout=50
+
+[LTC::xrGetBalance]
+fee=0.3
+timeout=30
+
 [xrGetAllBlocks]
 run=0
 
@@ -53,6 +62,7 @@ paramsCount=3
 cmd="python /home/snode/myservice2.py --additional_param"
 ```
 
-* By default XRouter is turned on. If you want to turn it off, set ```Main.xrouter=0```
+* By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf and set ```Main.xrouter=1```
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 * By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
+* Custom services (see:myservice1, myservice2) are not implemented yet
