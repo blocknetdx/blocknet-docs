@@ -747,6 +747,18 @@ port=14333
 rpcport=14332
 ```
 
+```XMCC```
+__monoeci.conf__ `v0.12.2.3`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=24157
+rpcport=24156
+```
+
 ```XMY```
 __myriadcoin.conf__ `v0.14.2.5`
 ```
