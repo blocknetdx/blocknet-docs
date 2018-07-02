@@ -1,6 +1,6 @@
 # XRouter description
 
-## Client side (requires 500block locked input)
+## Client side (requires 500 Block locked input)
 
 * The following client side commands are available via RPC and in blocknetdx-cli:
 
