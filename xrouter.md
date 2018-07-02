@@ -1,7 +1,9 @@
 # XRouter description
 
-## Client side (requires 500 Block locked input)
+## Client side
 
+* The client needs to have at least 200 BLOCK on any account
+* To run XRouter, the wallet must be unlocked 
 * The following client side commands are available via RPC and in blocknetdx-cli:
 
   * ```xrGetBlockCount currency [confirmations]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [confirmations] (here and below confirmations default=3) service nodes and the final result is selected by majority vote
