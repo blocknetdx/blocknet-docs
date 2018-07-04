@@ -41,6 +41,18 @@ port=9334
 rpcport=9335
 ```
 
+```BLAST```
+__blast.conf__ `v1.2.0.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=64640
+rpcport=64639
+```
+
 ```BLOCK```
 __blocknetdx.conf__ `v3.9.22`
 ```
