@@ -443,6 +443,20 @@ port=8334
 rpcport=8336
 ```
 
+```NORT```
+__northern.conf__ `v1.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=6942
+rpcport=6943
+```
+
 ```NYX```
 __nyx.conf__ `v2.0.0.0`
 ```
