@@ -26,6 +26,7 @@
 [Main]
 xrouter=1
 services=myservice1,myservice2
+wallets=BLOCK,SYS,BTC
 timeout=2
 
 [xrGetBlockCount]
@@ -65,6 +66,8 @@ cmd="python /home/snode/myservice2.py --additional_param"
 ```
 
 * By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf and set ```Main.xrouter=1```
+* On the client, you just need to turn on xrouter=1 in xrouter.conf
+* On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 * By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
 * Custom services (see:myservice1, myservice2) are not implemented yet
