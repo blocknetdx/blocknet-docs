@@ -811,6 +811,18 @@ port=10888
 rpcport=10889
 ```
 
+```XN```
+__nodium.conf__ `v3.0.6`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=6250
+rpcport=56000
+```
+
 ```XSN```
 __xsn.conf__ `v1.0.9`
 ```
