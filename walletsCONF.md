@@ -13,6 +13,20 @@
 
 * This document contains all of the successfully traded coin's currently on the Blocknet DX. As future coin's go through the testing phase and have successful swaps, they will be announced accordingly. After the announcement those configuration parameters will be released on this document.
 
+```AEX```
+__aeriumx.conf__ `v2.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=35407
+rpcport=35408
+```
+
 ```ALQO```
 __alqo.conf__ `v3.5.0.1`
 ```
