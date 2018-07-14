@@ -689,6 +689,18 @@ port=8277
 rpcport=8276
 ```
 
+```UFO```
+__ufocoin.conf__ `v0.16.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=9887
+rpcport=9888
+```
+
 ```UNB```
 __unbreakablecoin.conf__ `v0.10.3.0`
 ```
