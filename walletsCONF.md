@@ -549,6 +549,20 @@ port=51472
 rpcport=51473
 ```
 
+```POLIS```
+__polis.conf__ `v1.3.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=24126
+rpcport=24127
+```
+
 ```PURA```
 __pura.conf__ `v1.0.0`
 ```
