@@ -312,7 +312,7 @@ rpcport=4889
 ```
 
 ```HXX```
-__hexxcoin.conf__ `v4.0.3.8`
+__hexxcoin.conf__ `v4.0.4.1`
 ```
 server=1
 listen=1
