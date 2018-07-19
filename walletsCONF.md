@@ -627,6 +627,18 @@ port=50050
 rpcport=50051
 ```
 
+```SIB```
+__sibcoin.conf__ `v0.16.1.3`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=1945
+rpcport=1944
+```
+
 ```SPK```
 __sparks.conf__ `v0.12.3.2`
 ```
