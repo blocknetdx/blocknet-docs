@@ -349,6 +349,20 @@ port=4877
 rpcport=8337
 ```
 
+```JEW```
+__shekel.conf__ `v1.4.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=5500
+rpcport=5501
+```
+
 ```KLKS```
 __klks.conf__ `v2.6.0`
 ```
@@ -649,6 +663,20 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=8890
 rpcport=8892
+```
+
+```STAK```
+__straks.conf__ `v1.14.7.3`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=7575
+rpcport=7574
 ```
 
 ```SUCR```
