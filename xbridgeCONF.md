@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=AEX,ALQO,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,ENT,FAIR,FLO,GBX,HTML,HXX,INN,IOP,KLKS,KREDS,LBC,LTC,LYNX,MGN,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMCC,XMY,XN,XSN,XZC,ZOI
+ExchangeWallets=AEX,ALQO,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,ENT,FAIR,FLO,GBX,HTML,HXX,INN,IOP,JEW,KLKS,KREDS,LBC,LTC,LYNX,MGN,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,STAK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMCC,XMY,XN,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -594,6 +594,28 @@ BlockTime=120
 FeePerByte=45
 Confirmations=0
 
+[JEW]
+Title=Shekel
+Address=
+Ip=127.0.0.1
+Port=5501
+Username=
+Password=
+AddressPrefix=43
+ScriptPrefix=13
+SecretPrefix=212
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=45
+Confirmations=0
+
 [KLKS]
 Title=Kalkulus
 Address=
@@ -1119,6 +1141,28 @@ GetNewKeySupported=true
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=120
+FeePerByte=45
+Confirmations=0
+
+[STAK]
+Title=STRAKS
+Address=
+Ip=127.0.0.1
+Port=7574
+Username=
+Password=
+AddressPrefix=63
+ScriptPrefix=5
+SecretPrefix=204
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
 FeePerByte=45
 Confirmations=0
 
