@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=AEX,ALQO,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,ENT,FAIR,FLO,GBX,HTML,HXX,INN,IOP,JEW,KLKS,KREDS,LBC,LTC,LYNX,MGN,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,STAK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMCC,XMY,XN,XSN,XZC,ZOI
+ExchangeWallets=AEX,ALQO,APR,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DYN,EMC2,ENT,FAIR,FLO,GBX,GIN,HTML,HXX,INN,IOP,JEW,KLKS,KREDS,LBC,LTC,LYNX,MGN,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,STAK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XMCC,XMY,XN,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -64,6 +64,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=60
 FeePerByte=250
+Confirmations=0
+
+[APR]
+Title=APRcoin
+Address=
+Ip=127.0.0.1
+Port=3132
+Username=
+Password=
+AddressPrefix=12
+ScriptPrefix=6
+SecretPrefix=46
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
+FeePerByte=45
 Confirmations=0
 
 [BANQ]
@@ -503,6 +525,28 @@ GetNewKeySupported=true
 ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=150
+FeePerByte=45
+Confirmations=0
+
+[GIN]
+Title=GINcoin
+Address=
+Ip=127.0.0.1
+Port=10211
+Username=
+Password=
+AddressPrefix=38
+ScriptPrefix=10
+SecretPrefix=198
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=120
 FeePerByte=45
 Confirmations=0
 
