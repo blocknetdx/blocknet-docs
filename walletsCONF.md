@@ -41,6 +41,20 @@ port=55500
 rpcport=55000
 ```
 
+```APR```
+__aprcoin.conf__ `v1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=3133
+rpcport=3132
+```
+
 ```BANQ```
 __banq.conf__ `v0.12.1.3`
 ```
@@ -297,6 +311,20 @@ enableaccounts=1
 staking=0
 port=12455
 rpcport=12454
+```
+
+```GIN```
+__gincoin.conf__ `v1.1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=10111
+rpcport=10211
 ```
 
 ```HTML```
