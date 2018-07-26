@@ -465,6 +465,18 @@ port=57821
 rpcport=57822
 ```
 
+```MLM```
+__mktcoin.conf__ `v0.14.3`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=9275
+rpcport=9276
+```
+
 ```MNX```
 __minexcoin.conf__ `v1.3.1.0`
 ```
