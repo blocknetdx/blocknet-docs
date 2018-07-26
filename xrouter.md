@@ -18,6 +18,8 @@
   * ```xrGenerateBloomFilter addr1 [addr2 ... addrN] [confirmations]``` - returns hex representation of bloom filter for given addresses.
   * ```xrGetReply uuid``` - returns the reply by query UUID.
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
+  * ```xrCustomService name param1 param2 ... paramN``` - sends a request to a custom service (see below).
+  
   
 ## Service node side
 * To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
@@ -25,9 +27,10 @@
 ```
 [Main]
 xrouter=1
-services=myservice1,myservice2
 wallets=BLOCK,SYS,BTC
+plugins=plugin1,plugin2
 timeout=2
+wait=30000
 
 [xrGetBlockCount]
 fee=0.01
@@ -49,20 +52,6 @@ timeout=30
 
 [xrGetAllBlocks]
 run=0
-
-[myservice1]
-fee=0.1
-type=rpc
-paramsCount=3
-rpcPort=9999
-rpcUser=username
-rpcPassword=password
-
-[myservice2]
-fee=0.01
-type=shell
-paramsCount=3
-cmd="python /home/snode/myservice2.py --additional_param"
 ```
 
 * By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf and set ```Main.xrouter=1```
@@ -70,4 +59,33 @@ cmd="python /home/snode/myservice2.py --additional_param"
 * On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 * By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
-* Custom services (see:myservice1, myservice2) are not implemented yet
+* 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
+
+## Plugins/custom services
+* Plugin configs must be placed into 'plugins' subdirectory of blocknetdx config directory.
+* Each plugin must have a separate config
+* Plugin filename must end with .conf
+* To turn plugin on, include its name in 'plugins' parameter in xrouter.conf. For example, 'plugins=p1,p2' will load plugins specified by plugins/p1.conf and plugins/p2.conf
+* Parameter 'type' is mandatory. Valid values: 'rpc' and 'shell'
+* RPC plugin config example:
+```
+type=rpc
+paramsCount=1
+paramsType=int
+private::rpcPort=41419
+private::rpcUser=blocknetdxrpc
+private::rpcPassword=mypassword
+rpcCommand=getblockhash
+```
+* This sample plugin runs getblockchash command via RPC (same as xrGetBlockHash)
+* Parameter paramsCount is mandatory
+* Parameter paramsType is manatory for RPC plugins. Currently supported types are 'string' and 'int'. The string must match paramsCount, i.e. is there are two parameters, the string must list types for all of them such as: 'int,string'
+* Parameters rpcPort, rpcUser, rpcPassword and rpcCommand are mandatory
+* Put 'private::' in front of the parameter name in the config to avoid sharing it with client nodes
+* Shell plugin config example:
+```
+type=shell
+paramsCount=0
+private::cmd="/home/snode/test.sh"
+```
+* Parameters paramsCount and cmd are mandatory
