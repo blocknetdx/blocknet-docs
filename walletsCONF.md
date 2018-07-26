@@ -907,6 +907,20 @@ port=14333
 rpcport=14332
 ```
 
+```XLR```
+__solaris.conf__ `v2.8.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=60020
+rpcport=61020
+```
+
 ```XMCC```
 __monoeci.conf__ `v0.12.2.3`
 ```
