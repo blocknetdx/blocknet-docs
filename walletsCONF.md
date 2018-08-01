@@ -467,6 +467,25 @@ port=22566
 rpcport=22567
 ```
 
+```MAC```
+__machinecoin.conf__ `v0.16.1.4`
+
+**NOTE:** You need to use legacy addresses. Make sure your coins are in "M" addresses and not "9".
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=40333
+rpcport=40332
+addresstype=legacy
+changetype=legacy
+```
+
+
 ```MGN```
 __mgn.conf__ `v1.0.0.0`
 ```
