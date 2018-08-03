@@ -251,6 +251,20 @@ port=22556
 rpcport=22555
 ```
 
+```DSR```
+__desire.conf__ `v0.12.2.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=9919
+rpcport=9918
+```
+
 ```DYN```
 __dynamic.conf__ `TBD - awaiting wallet update`
 ```
