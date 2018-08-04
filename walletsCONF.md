@@ -419,6 +419,20 @@ port=5500
 rpcport=5501
 ```
 
+```JIYO```
+__jiyo.conf__ `v1.2.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=6080
+rpcport=6081
+```
+
 ```KLKS```
 __klks.conf__ `v2.6.0`
 ```
