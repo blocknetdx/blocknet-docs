@@ -471,6 +471,20 @@ port=9246
 rpcport=9245
 ```
 
+```LPC```
+__lightpaycoin.conf__ `v1.0.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=39797
+rpcport=39798
+```
+
 ```LTC```
 __litecoin.conf__ `v0.14.2`
 ```
