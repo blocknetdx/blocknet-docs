@@ -420,7 +420,7 @@ rpcport=5501
 ```
 
 ```JIYO```
-__jiyo.conf__ `v1.2.1`
+__jiyo.conf__ `v2.1.0`
 ```
 server=1
 listen=1
