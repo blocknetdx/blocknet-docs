@@ -405,6 +405,18 @@ port=4877
 rpcport=8337
 ```
 
+```IXC```
+__ixcoin.conf__ `v0.14.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+port=8337
+rpcport=8338
+```
+
 ```JEW```
 __shekel.conf__ `v1.4.0`
 ```
