@@ -19,6 +19,8 @@
   * ```xrGetReply uuid``` - returns the reply by query UUID.
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
   * ```xrCustomService name param1 param2 ... paramN``` - sends a request to a custom service (see below).
+  * ```xrUpdateConfigs``` - sends request to update service node configs
+  * ```xrStatus``` - prints XRouter status and various info
   
   
 ## Service node side
@@ -78,10 +80,22 @@ private::rpcPassword=mypassword
 rpcCommand=getblockhash
 ```
 * This sample plugin runs getblockchash command via RPC (same as xrGetBlockHash)
-* Parameter paramsCount is mandatory
-* Parameter paramsType is manatory for RPC plugins. Currently supported types are 'string' and 'int'. The string must match paramsCount, i.e. is there are two parameters, the string must list types for all of them such as: 'int,string'
+* Parameter paramsCount is mandatory. Instead of paramsCount you can specify minParamsCount and maxParamsCount, making the last parameters optional
+* Parameter paramsType is mandatory for RPC plugins. Currently supported types are 'string', 'bool' and 'int'. The string must match maxParamsCount, i.e. is there are two parameters, the string must list types for all of them such as: 'int,string'
 * Parameters rpcPort, rpcUser, rpcPassword and rpcCommand are mandatory
 * Put 'private::' in front of the parameter name in the config to avoid sharing it with client nodes
+* Another sample (call to SYScoin):
+```
+type=rpc
+minParamsCount=2
+maxParamsCount=3
+paramsType=int,int,string
+private::rpcPort=8370
+private::rpcUser=username
+private::rpcPassword=password
+rpcCommand=listassetallocationtransactions
+```
+* In this plugin parameter 3 is optional.
 * Shell plugin config example:
 ```
 type=shell
