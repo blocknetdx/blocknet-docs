@@ -15,7 +15,7 @@
   * ```xrGetBalance currency address``` - [confirmations] returns balance for selected address for selected currency.
   * ```xrGetBalanceUpdate currency address [number] [confirmations]``` - returns balance update for address starting with block number (default: 0) for selected currency.
   * ```xrGetTransactionsBloomFilter currency filter [number] [confirmations]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
-  * ```xrGenerateBloomFilter addr1 [addr2 ... addrN] [confirmations]``` - returns hex representation of bloom filter for given addresses.
+  * ```xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]``` - returns hex representation of bloom filter for given addresses or public keys.
   * ```xrGetReply uuid``` - returns the reply by query UUID.
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
   * ```xrCustomService name param1 param2 ... paramN``` - sends a request to a custom service (see below).
