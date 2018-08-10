@@ -17,7 +17,7 @@
 
 ```
 [Main]
-ExchangeWallets=AEX,ALQO,AMS,APR,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DMD,DOGE,DSR,DYN,EMC2,ENT,FAIR,FLO,GBX,GIN,HTML,HXX,INN,IOP,IXC,JEW,JIYO,KLKS,KREDS,LBC,LPC,LTC,LYNX,MAC,MGN,MLM,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,STAK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WGR,XC,XLR,XMCC,XMY,XN,XSN,XZC,ZOI
+ExchangeWallets=AEX,ALQO,AMS,APR,BANQ,BITG,BLAST,BLOCK,BTC,BWK,COLX,CRAVE,CRC,CRW,DASH,DGB,DIN,DMD,DOGE,DSR,DYN,EMC2,ENT,FAIR,FLO,GBX,GIN,HTML,HXX,INN,IOP,IXC,JEW,JIYO,KLKS,KREDS,LBC,LPC,LTC,LYNX,MAC,MGN,MLM,MNX,MONA,MUE,NMC,NORT,NYX,OHM,ORE,PHR,PIVX,POLIS,PURA,QBIC,QTUM,RVN,SEND,SIB,SPK,STAK,SUCR,SYS,TRB,TRC,UCOM,UFO,UNB,UNO,VIA,VITAE,VIVO,VSX,VTC,WAGE,WGR,XC,XLR,XMCC,XMY,XN,XSN,XZC,ZOI
 FullLog=true
 LogPath=
 ExchangeTax=300
@@ -372,6 +372,28 @@ ImportWithNoScanSupported=true
 MinTxFee=0
 BlockTime=15
 FeePerByte=200
+Confirmations=0
+
+[DIN]
+Title=Dinero
+Address=
+Ip=127.0.0.1
+Port=26286
+Username=
+Password=
+AddressPrefix=30
+ScriptPrefix=13
+SecretPrefix=204
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=90
+FeePerByte=45
 Confirmations=0
 
 [DMD]
@@ -1648,6 +1670,28 @@ ImportWithNoScanSupported=false
 MinTxFee=0
 BlockTime=150
 FeePerByte=220
+Confirmations=0
+
+[WAGE]
+Title=Digiwage
+Address=
+Ip=127.0.0.1
+Port=46002
+Username=
+Password=
+AddressPrefix=30
+ScriptPrefix=90
+SecretPrefix=89
+COIN=100000000
+MinimumAmount=0
+TxVersion=1
+DustAmount=0
+CreateTxMethod=BTC
+GetNewKeySupported=true
+ImportWithNoScanSupported=true
+MinTxFee=0
+BlockTime=60
+FeePerByte=45
 Confirmations=0
 
 [WGR]

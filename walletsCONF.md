@@ -225,6 +225,20 @@ port=12024
 rpcport=14022
 ```
 
+```DIN```
+__dinero.conf__ `v1.0.1.1`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=26285
+rpcport=26286
+```
+
 ```DMD```
 __diamond.conf__ `v3.0.1.1`
 ```
@@ -966,6 +980,20 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=5889
 rpcport=5888
+```
+
+```WAGE```
+__digiwage.conf__ `v1.1.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=46003
+rpcport=46002
 ```
 
 ```WGR```
