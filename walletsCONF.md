@@ -783,7 +783,7 @@ rpcport=8766
 ```
 
 ```SEND```
-__send.conf__ `v1.1.0.0`
+__send.conf__ `v1.2.0.1`
 ```
 server=1
 listen=1
