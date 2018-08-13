@@ -147,6 +147,20 @@ port=52543
 rpcport=52541
 ```
 
+```CARE```
+__carebitcoin.conf__ `v3.0.0.0`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=9192
+rpcport=5520
+```
+
 ```COLX```
 __colossusXT.conf__ `v1.0.4`
 ```
@@ -894,6 +908,20 @@ rpcpassword=
 rpcallowip=127.0.0.1
 port=9887
 rpcport=9888
+```
+
+```ULTRA```
+__ultranatum.conf__ `v1.1.0.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=23654
+rpcport=23655
 ```
 
 ```UNB```
