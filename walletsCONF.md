@@ -161,6 +161,20 @@ port=9192
 rpcport=5520
 ```
 
+```CIV```
+__civitas.conf__ `v1.2.2`
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=18843
+rpcport=28843
+```
+
 ```COLX```
 __colossusXT.conf__ `v1.0.4`
 ```
@@ -341,6 +355,24 @@ rpcuser=
 rpcpassword=
 port=40404
 rpcport=40405
+```
+
+```FJC```
+__fujicoin.conf__ `v0.16.1`
+
+**NOTE:** You need to use legacy addresses.
+```
+server=1
+listen=1
+rpcuser=
+rpcpassword=
+rpcallowip=127.0.0.1
+enableaccounts=1
+staking=0
+port=3777
+rpcport=3776
+addresstype=legacy
+changetype=legacy
 ```
 
 ```FLO```
