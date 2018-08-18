@@ -1007,7 +1007,7 @@ rpcport=5222
 ```
 
 ```VITAE```
-__vitae.conf__ `v?`
+__vitae.conf__ `v4.1.0.1`
 ```
 server=1
 listen=1
