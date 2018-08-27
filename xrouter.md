@@ -128,5 +128,9 @@ private::cmd="/home/snode/test.sh"
 * If there are two nodes with the same unverified domains, the ambiguous call will not be processed
 * The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
 
-
 ## Fee payment system
+* The basic commands (xrGetBlockCount, xrSendTransaction etc) will remain free in the immediate future
+* The fee payment will be introduced for ```xrCustomCall``` commands first
+  * The client creates the transaction, signs it and sends in the packet to the service node
+  * The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
+  * If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
