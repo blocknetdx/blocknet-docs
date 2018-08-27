@@ -18,7 +18,7 @@
   * ```xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]``` - returns hex representation of bloom filter for given addresses or public keys.
   * ```xrGetReply uuid``` - returns the reply by query UUID.
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
-  * ```xrCustomService name param1 param2 ... paramN``` - sends a request to a custom service (see below).
+  * ```xrCustomCall name param1 param2 ... paramN``` - sends a request to a custom service (see below).
   * ```xrUpdateConfigs``` - sends request to update service node configs
   * ```xrStatus``` - prints XRouter status and various info
   
@@ -103,3 +103,30 @@ paramsCount=0
 private::cmd="/home/snode/test.sh"
 ```
 * Parameters paramsCount and cmd are mandatory
+
+## Domain names system
+* Domain names system will be introduced for custom services only at this stage
+* The general syntax to use domains is as follows:
+```xrCustomCall domain/name param1 param2 ... paramN```
+* Without domain specification, the client will look for any node offering plugin called 'name', if there is more than one such node, the ambiguous call will not be handled
+* There are two ways to create domain: verified with a special transaction in the chain and simple self-proclaimed
+
+### Verified 
+* To create a verified domain name, you need to temporarily lock 50 BLOCK on your account:
+  * Create a transaction to yourself with amount = 50 BLOCK and the locking script ```OP_DROP OP_DROP <pubkey> OP_CHECKSIG```
+  * Create a transaction that spends the output of the previous transaction with the following unlocking script: ```<sig> "xrouter-domain" <your_domain_name>```
+  * If nobody else reserved your_domain_name in the same way earlier, your_domain_name is registered
+  * If the domain name is already registered, the transaction has no effect, but you don't lose 50 BLOCK
+  * As long as the outputs of the second transaction remain unspent, the domain name remains yours
+* Command ```xrQueryDomain <domain_name>``` checks if the domain name is registered and returns the snode hash if it is found
+* Command ```xrRegisterDomain <domain_name>``` creates the transactions described above needed to register the domain name
+
+### Simplified domains
+* Add a parameter ```domain=my_domain_name``` to xrouter.conf
+* If there is no other service node with such domain name, the calls will be handled correctly
+* If there is a service node with the same, but verified domain name, the verified name has priority
+* If there are two nodes with the same unverified domains, the ambiguous call will not be processed
+* The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
+
+
+## Fee payment system
