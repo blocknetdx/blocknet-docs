@@ -625,7 +625,7 @@ rpcport=9276
 ```
 
 ```MNX```
-__minexcoin.conf__ `v1.3.1.0`
+__Minexcoin.conf__ `v1.3.1.0`
 ```
 server=1
 listen=1
