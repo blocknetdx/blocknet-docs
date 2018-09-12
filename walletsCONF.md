@@ -176,7 +176,7 @@ rpcport=28843
 ```
 
 ```COLX```
-__colossusXT.conf__ `v1.0.4`
+__ColossusXT.conf__ `v1.0.4`
 ```
 server=1
 listen=1
