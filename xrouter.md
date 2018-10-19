@@ -22,6 +22,30 @@
   * ```xrUpdateConfigs``` - sends request to update service node configs
   * ```xrStatus``` - prints XRouter status and various info
   
+### Client config
+* By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf
+* To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
+* xrouter.conf example:
+```
+[Main]
+xrouter=1
+wait=30000
+confirmations=1
+```
+* ```xrouter=1``` must be present to run XRouter commands
+* 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
+* 'confirmations' parameter is the default number of confirmation
+
+### XRouter fees
+* The fees to run XRouter commands are specified by each service node individually (see below).
+* If the fee to run the selected command is not zero, fee payment transaction is created on the client side and sent to the server
+* The fee payment transaction transfers the required amount of BLOCK from the client's funds to the service node pubkey
+* The transaction is funded and signed on client side and sent as raw hex string in the packet along with the request. The server verifes that the transaction is correct, sends it to blockchain, and replies with the command execution results. If the fee payment transaction is incorrect, the command is not executed on the server.
+
+### Confirmations and consensus
+* The client can specify the required number of confirmations in each command individually or in xrouter.conf
+* If more than 1 confirmation is required, the client will send identical requests to multiple service nodes, wait for replies, and select the result with the majority vote
+* Each service node is paid its respective fee
   
 ## Service node side
 * To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
@@ -61,7 +85,6 @@ run=0
 * On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 * By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
-* 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
 
 ## Plugins/custom services
 * Plugin configs must be placed into 'plugins' subdirectory of blocknetdx config directory.
@@ -104,6 +127,13 @@ private::cmd="/home/snode/test.sh"
 ```
 * Parameters paramsCount and cmd are mandatory
 
+# Future features
+
+## Enhanced confirmations system
+* If the number of confirmations required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
+* The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
+* To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
+
 ## Domain names system
 * Domain names system will be introduced for custom services only at this stage
 * The general syntax to use domains is as follows:
@@ -128,8 +158,7 @@ private::cmd="/home/snode/test.sh"
 * If there are two nodes with the same unverified domains, the ambiguous call will not be processed
 * The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
 
-## Fee payment system
-* The basic commands (xrGetBlockCount, xrSendTransaction etc) will remain free in the immediate future
+## Payment channels for Fee payment system
 * The fee payment will be introduced for ```xrCustomCall``` commands first
   * The client creates the transaction, signs it and sends in the packet to the service node
   * The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
