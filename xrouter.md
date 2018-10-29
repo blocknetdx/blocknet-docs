@@ -23,16 +23,14 @@
   * ```xrStatus``` - prints XRouter status and various info
   
 ### Client config
-* By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf
+* By default XRouter is turned off. If you want to turn it on, you must set ```xrouter=1``` in your blocknetdx.conf
 * To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
 * xrouter.conf example:
 ```
 [Main]
-xrouter=1
 wait=30000
 confirmations=1
 ```
-* ```xrouter=1``` must be present to run XRouter commands
 * 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
 * 'confirmations' parameter is the default number of confirmation
 
@@ -52,7 +50,6 @@ confirmations=1
 * xrouter.conf example:
 ```
 [Main]
-xrouter=1
 wallets=BLOCK,SYS,BTC
 plugins=plugin1,plugin2
 timeout=2
@@ -80,7 +77,7 @@ timeout=30
 run=0
 ```
 
-* By default XRouter is turned off. If you want to turn it on, you must create xrouter.conf and set ```Main.xrouter=1```
+* By default XRouter is turned off. If you want to turn it on, you must set ```xrouter=1``` in blocknetdx.conf
 * On the client, you just need to turn on xrouter=1 in xrouter.conf
 * On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
