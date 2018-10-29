@@ -163,3 +163,18 @@ private::cmd="/home/snode/test.sh"
   * If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
 
 # XRouter packet contents
+* Header has the same format as XBridge packet
+* After that all parameters are variable-length strings (ending with '\0')
+* * ID of your transaction with MIN_BLOCK (currently 200)
+* * Vout number of your transaction with MIN_BLOCK
+* * Query UUID - unique ID for each XRouter query. Replies are fetched by UUID
+* * <currency> - either chain identifier (BTC, BLOCK etc), or plugin name if calling a plugin
+* * <payment tx> - info about payment. See details below
+* * Additional parameters (the number can be arbitrary for plugin calls)
+* * Signature
+* Payment transaction string format
+* * It is one string separated by ';' signs
+* * First part is 'hash' or 'nohash' depending on whether the reply should be hashed
+* * Second part is 'single' or 'channel'. 'channel' means that the payment is done via CLTV channel
+* * Third part is hex-encoded raw transaction if the second part is 'single' or if the channel already exists
+* * If the channle is created, the following info is sent separated by ';': Raw transaction creating the channel; txid of the channel creation transaction; Redeem script; First payment over the channel
