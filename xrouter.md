@@ -130,6 +130,7 @@ private::cmd="/home/snode/test.sh"
 * If the number of confirmations required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
 * The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
 * To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
+* To enable this feature, set ```usehash=1``` in your xrouter.conf
 
 ## Domain names system
 * Domain names system will be introduced for custom services only at this stage
@@ -160,3 +161,5 @@ private::cmd="/home/snode/test.sh"
   * The client creates the transaction, signs it and sends in the packet to the service node
   * The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
   * If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
+
+# XRouter packet contents
