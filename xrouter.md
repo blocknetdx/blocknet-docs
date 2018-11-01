@@ -6,7 +6,7 @@
 * To run XRouter, the wallet must be unlocked 
 * The following client side commands are available via RPC and in blocknetdx-cli:
 
-  * ```xrGetBlockCount currency [confirmations]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [confirmations] (here and below confirmations default=3) service nodes and the final result is selected by majority vote
+  * ```xrGetBlockCount currency [confirmations]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [confirmations] (here and below confirmations default=1) service nodes and the final result is selected by majority vote
   * ```xrGetBlockHash currency number [confirmations]``` - returns block hash by block number in a specified blockchain.
   * ```xrGetBlock currency hash [confirmations]``` - returns block data by block hash in a specified blockchain.
   * ```xrGetTransaction currency txid [confirmations]``` - returns transaction data by transaction id in a specified blockchain.
