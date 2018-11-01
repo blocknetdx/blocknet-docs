@@ -68,13 +68,16 @@ timeout=50
 [BTC::xrGetBalance]
 fee=0.5
 timeout=50
+blocklimit=20
 
 [LTC::xrGetBalance]
 fee=0.3
 timeout=30
+blocklimit=50
 
 [xrGetAllBlocks]
 run=0
+blocklimit=1
 ```
 
 * By default XRouter is turned off. If you want to turn it on, you must set ```xrouter=1``` in blocknetdx.conf
@@ -82,6 +85,7 @@ run=0
 * On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
 * Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
 * By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
+* ```blocklimit``` parameter sets the maximum number of blocks processed by commands xrGetAllBlocks, xrGetAllTransaction, xrGetBalance, xrGetBalanceUpdate, xrGetTransactionsBloomFilter. The default value is 50 (the node will scan up to 50 blocks deep, if ```number``` parameter is more than 50 blocks behind current chain height, the command will return an error). ```blocklimit=0``` is used to remove this limit (scan up to the genesis block if necessary). Use it with caution.
 
 ## Plugins/custom services
 * Plugin configs must be placed into 'plugins' subdirectory of blocknetdx config directory.
