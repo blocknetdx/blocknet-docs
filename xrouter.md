@@ -30,9 +30,17 @@
 [Main]
 wait=30000
 confirmations=1
+maxfee=1
+
+[xrGetBlockCount]
+maxfee=0.1
+
+[BTC::xrGetBlockCount]
+maxfee=0.2
 ```
 * 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
 * 'confirmations' parameter is the default number of confirmation
+* 'maxfee' is the maximum fee you are willing to pay. in [Main] section it is the absolute maximum, and it is possible to set maximum per-command per-chain in other sections. All service nodes that have fees higher than your maxfee will not be queried. The default value is maxfee=0 (so by default only you will be able to use only free calls). Set maxfee=-1 if you don't want any limits.
 
 ### XRouter fees
 * The fees to run XRouter commands are specified by each service node individually (see below).
