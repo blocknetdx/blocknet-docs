@@ -10,8 +10,8 @@
   * ```xrGetBlockHash currency number [confirmations]``` - returns block hash by block number in a specified blockchain.
   * ```xrGetBlock currency hash [confirmations]``` - returns block data by block hash in a specified blockchain.
   * ```xrGetTransaction currency txid [confirmations]``` - returns transaction data by transaction id in a specified blockchain.
-  * ```xrGetAllBlocks currency n [confirmations]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
-  * ```xrGetAllTransactions currency address[:time] [number] [confirmations]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly. If time is specified, only blocks created after <time> are searched.
+  * ```xrGetBlocks currency n [confirmations]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
+  * ```xrGetTransactions currency address[:time] [number] [confirmations]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly. If time is specified, only blocks created after <time> are searched.
   * ```xrGetBalance currency address[:time]``` - [confirmations] returns balance for selected address for selected currency. If time is specified, only blocks created after <time> are searched.
   * ```xrGetBalanceUpdate currency address[:time] [number] [confirmations]``` - returns balance update for address starting with block number (default: 0) for selected currency. If time is specified, only blocks created after <time> are searched.
   * ```xrGetTransactionsBloomFilter currency filter [number] [confirmations]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
