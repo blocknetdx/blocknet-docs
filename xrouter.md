@@ -2,7 +2,7 @@
 
 ## Client side
 
-* The client needs to have at least 200 BLOCK on any account
+* The client needs to have at least 200 BLOCK in a single transaction output
 * To run XRouter, the wallet must be unlocked 
 * The following client side commands are available via RPC and in blocknetdx-cli:
 
@@ -12,7 +12,6 @@
   * ```xrGetTransaction currency txid [confirmations]``` - returns transaction data by transaction id in a specified blockchain.
   * ```xrGetBlocks currency n [confirmations]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
   * ```xrGetTransactions currency address [number] [confirmations]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
-  * ```xrGetBalance currency address``` - [confirmations] returns balance for selected address for selected currency.
   * ```xrGetBalanceUpdate currency address [number] [confirmations]``` - returns balance update for address starting with block number (default: 0) for selected currency.
   * ```xrGetTransactionsBloomFilter currency filter [number] [confirmations]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
   * ```xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]``` - returns hex representation of bloom filter for given addresses or public keys.
@@ -47,6 +46,7 @@ maxfee=0.2
 * If the fee to run the selected command is not zero, fee payment transaction is created on the client side and sent to the server
 * The fee payment transaction transfers the required amount of BLOCK from the client's funds to the service node pubkey
 * The transaction is funded and signed on client side and sent as raw hex string in the packet along with the request. The server verifes that the transaction is correct, sends it to blockchain, and replies with the command execution results. If the fee payment transaction is incorrect, the command is not executed on the server.
+* If you are requesting multiple confirmations, make sure you have the corresponding number of different available transaction outputs. Otherwise you will need to split your funds.
 
 ### Confirmations and consensus
 * The client can specify the required number of confirmations in each command individually or in xrouter.conf
