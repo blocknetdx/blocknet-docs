@@ -6,14 +6,14 @@
 * To run XRouter, the wallet must be unlocked 
 * The following client side commands are available via RPC and in blocknetdx-cli:
 
-  * ```xrGetBlockCount currency [confirmations]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [confirmations] (here and below confirmations default=1) service nodes and the final result is selected by majority vote
-  * ```xrGetBlockHash currency number [confirmations]``` - returns block hash by block number in a specified blockchain.
-  * ```xrGetBlock currency hash [confirmations]``` - returns block data by block hash in a specified blockchain.
-  * ```xrGetTransaction currency txid [confirmations]``` - returns transaction data by transaction id in a specified blockchain.
-  * ```xrGetBlocks currency n [confirmations]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
-  * ```xrGetTransactions currency address [number] [confirmations]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
-  * ```xrGetBalanceUpdate currency address [number] [confirmations]``` - returns balance update for address starting with block number (default: 0) for selected currency.
-  * ```xrGetTransactionsBloomFilter currency filter [number] [confirmations]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
+  * ```xrGetBlockCount currency [servicenode_consensus_number]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [servicenode_consensus_number] (here and below servicenode_consensus_number default=1) service nodes and the final result is selected by majority vote
+  * ```xrGetBlockHash currency number [servicenode_consensus_number]``` - returns block hash by block number in a specified blockchain.
+  * ```xrGetBlock currency hash [servicenode_consensus_number]``` - returns block data by block hash in a specified blockchain.
+  * ```xrGetTransaction currency txid [servicenode_consensus_number]``` - returns transaction data by transaction id in a specified blockchain.
+  * ```xrGetBlocks currency n [servicenode_consensus_number]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
+  * ```xrGetTransactions currency address [number] [servicenode_consensus_number]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
+  * ```xrGetBalanceUpdate currency address [number] [servicenode_consensus_number]``` - returns balance update for address starting with block number (default: 0) for selected currency.
+  * ```xrGetTransactionsBloomFilter currency filter [number] [servicenode_consensus_number]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
   * ```xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]``` - returns hex representation of bloom filter for given addresses or public keys.
   * ```xrGetReply uuid``` - returns the reply by query UUID.
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
@@ -28,7 +28,7 @@
 ```
 [Main]
 wait=30000
-confirmations=1
+consensus_nodes=1
 maxfee=1
 
 [xrGetBlockCount]
@@ -38,7 +38,7 @@ maxfee=0.1
 maxfee=0.2
 ```
 * 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
-* 'confirmations' parameter is the default number of confirmation
+* 'consensus_nodes' parameter is the default number of servicenode_consensus_number
 * 'maxfee' is the maximum fee you are willing to pay. in [Main] section it is the absolute maximum, and it is possible to set maximum per-command per-chain in other sections. All service nodes that have fees higher than your maxfee will not be queried. The default value is maxfee=0 (so by default only you will be able to use only free calls). Set maxfee=-1 if you don't want any limits.
 
 ### XRouter fees
@@ -46,11 +46,11 @@ maxfee=0.2
 * If the fee to run the selected command is not zero, fee payment transaction is created on the client side and sent to the server
 * The fee payment transaction transfers the required amount of BLOCK from the client's funds to the service node pubkey
 * The transaction is funded and signed on client side and sent as raw hex string in the packet along with the request. The server verifes that the transaction is correct, sends it to blockchain, and replies with the command execution results. If the fee payment transaction is incorrect, the command is not executed on the server.
-* If you are requesting multiple confirmations, make sure you have the corresponding number of different available transaction outputs. Otherwise you will need to split your funds.
+* If you are requesting replies from multiple nodes, make sure you have the corresponding number of different available transaction outputs. Otherwise you will need to split your funds.
 
-### Confirmations and consensus
-* The client can specify the required number of confirmations in each command individually or in xrouter.conf
-* If more than 1 confirmation is required, the client will send identical requests to multiple service nodes, wait for replies, and select the result with the majority vote
+### Consensus
+* The client can specify the required number of consensus service nodes in each command individually or in xrouter.conf
+* If more than 1 reply is required, the client will send identical requests to multiple service nodes, wait for replies, and select the result with the majority vote
 * Each service node is paid its respective fee
   
 ## Service node side
@@ -138,8 +138,8 @@ private::cmd="/home/snode/test.sh"
 
 # Future features
 
-## Enhanced confirmations system
-* If the number of confirmations required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
+## Enhanced consensus system
+* If the number of replies required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
 * The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
 * To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
 * To enable this feature, set ```usehash=1``` in your xrouter.conf
