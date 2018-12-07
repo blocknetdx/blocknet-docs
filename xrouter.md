@@ -153,11 +153,10 @@ private::cmd="/home/snode/test.sh"
 
 ### Verified 
 * To create a verified domain name, you need to temporarily lock 50 BLOCK on your account:
-  * Create a transaction to yourself with amount = 50 BLOCK and the locking script ```OP_DROP OP_DROP <pubkey> OP_CHECKSIG```
-  * Create a transaction that spends the output of the previous transaction with the following unlocking script: ```<sig> "xrouter-domain" <your_domain_name>```
+  * Create a transaction to your service node collateral address with amount = 50 BLOCK and an additional output ```OP_RETURN <blocknet://your_domain_name>```
   * If nobody else reserved your_domain_name in the same way earlier, your_domain_name is registered
   * If the domain name is already registered, the transaction has no effect, but you don't lose 50 BLOCK
-  * As long as the outputs of the second transaction remain unspent, the domain name remains yours
+  * As long as the outputs of the transaction remain unspent, the domain name remains yours
 * Command ```xrQueryDomain <domain_name>``` checks if the domain name is registered and returns the snode hash if it is found
 * Command ```xrRegisterDomain <domain_name>``` creates the transactions described above needed to register the domain name
 
@@ -169,10 +168,12 @@ private::cmd="/home/snode/test.sh"
 * The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
 
 ## Payment channels for Fee payment system
-* The fee payment will be introduced for ```xrCustomCall``` commands first
-  * The client creates the transaction, signs it and sends in the packet to the service node
-  * The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
-  * If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
+* The client creates the transaction, signs it and sends in the packet to the service node
+* The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
+* If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
+* Payment is sent to the service node payout address (same as xbridge)
+* Deposit is sent to a different address. Your service node must have the private key to sign transactions from this address and the wallet must be unlocked.
+* Set values in xrouter.conf: ```depositpubkey=<...>``` ```depositaddress=<...>```
 
 # XRouter packet contents
 * Header has the same format as XBridge packet
