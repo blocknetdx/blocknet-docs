@@ -180,6 +180,9 @@ depositaddress=<...>
 * The servicenode must be able to sign transactions with the private key corresponding to this public key and address. The wallet should be unlocked (or unencrypted)
 * The servicenode setup can be done automatically by the command ```xrCreateDepositAddress [<true/false>]```. If the first parameters is 'true', xrouter.conf will be updated automatically. 
 * This account is only used for temporary storage of the deposit, final payment is made to the service node collateral address
+* Command ```xrPaymentChannels``` print info on the currently open payment channels
+* Command ```xrClosePaymentChannel <id>``` closes the payment channel with the given id. Ids can be viewed in the xrPaymentChannels output, they are simple numbers and are local for the node
+* Command ```xrClosePaymentChannels``` closes all payment channels
 
 ### Technical details
 * The client creates the transaction sending ```deposit``` amount to depositpubkey specified in service node config, with the lock script using OP_CHECKLOCKTIMEVERIFY and requiring both the client's and the server's signatures. This transaction is sent to blockchain on client, and the txid is sent to the service node
