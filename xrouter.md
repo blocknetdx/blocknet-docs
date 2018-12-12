@@ -178,6 +178,7 @@ depositpubkey=<...>
 depositaddress=<...>
 ```
 * The servicenode must be able to sign transactions with the private key corresponding to this public key and address. The wallet should be unlocked (or unencrypted)
+* The servicenode setup can be done automatically by the command ```xrCreateDepositAddress [<true/false>]```. If the first parameters is 'true', xrouter.conf will be updated automatically. 
 * This account is only used for temporary storage of the deposit, final payment is made to the service node collateral address
 
 ### Technical details
