@@ -138,27 +138,12 @@ private::cmd="/home/snode/test.sh"
 
 # Future features
 
-## Enhanced consensus system
-* If the number of replies required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
-* The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
-* To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
-* To enable this feature, set ```usehash=1``` in your xrouter.conf
-
 ## Domain names system
 * Domain names system will be introduced for custom services only at this stage
 * The general syntax to use domains is as follows:
 ```xrCustomCall domain/name param1 param2 ... paramN```
 * Without domain specification, the client will look for any node offering plugin called 'name', if there is more than one such node, the ambiguous call will not be handled
 * There are two ways to create domain: verified with a special transaction in the chain and simple self-proclaimed
-
-### Verified 
-* To create a verified domain name, you need to temporarily lock 50 BLOCK on your account:
-  * Create a transaction to your service node collateral address with amount = 50 BLOCK and an additional output ```OP_RETURN <blocknet://your_domain_name>```
-  * If nobody else reserved your_domain_name in the same way earlier, your_domain_name is registered
-  * If the domain name is already registered, the transaction has no effect, but you don't lose 50 BLOCK
-  * As long as the outputs of the transaction remain unspent, the domain name remains yours
-* Command ```xrQueryDomain <domain_name>``` checks if the domain name is registered and returns the snode hash if it is found
-* Command ```xrRegisterDomain <domain_name>``` creates the transactions described above needed to register the domain name
 
 ### Simplified domains
 * Add a parameter ```domain=my_domain_name``` to xrouter.conf
@@ -167,13 +152,44 @@ private::cmd="/home/snode/test.sh"
 * If there are two nodes with the same unverified domains, the ambiguous call will not be processed
 * The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
 
+### Verified 
+* To create a verified domain name, you need to temporarily lock 50 BLOCK on your account:
+  * Create a transaction to your service node collateral address with amount = 50 BLOCK and an additional output ```OP_RETURN <blocknet://your_domain_name>```
+  * Put the transaction hash into xrouter.conf: ```domain_tx=<txhash>```
+  * If nobody else reserved your_domain_name in the same way earlier, your_domain_name is registered
+  * If the domain name is already registered, the transaction has no effect, but you don't lose 50 BLOCK
+  * As long as the outputs of the transaction remain unspent, the domain name remains yours
+* Command ```xrRegisterDomain <domain_name> [<true/false>] [<address>]``` creates the transactions described above needed to register the domain name. If the second parameter is true, your xrouter.conf is updated automatically. The third parameter is the destination address of hte transaction, leave this parameter blank if you want to use your service node collateral address
+* Command ```xrQueryDomain <domain_name>``` checks if the domain name is registered and returns "true" if it is found
+
 ## Payment channels for Fee payment system
-* The client creates the transaction, signs it and sends in the packet to the service node
-* The service node verifies the transaction. If nLockTime is not specified in the transaction, it is send to the chain, and the reply is sent to the client
-* If nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrive from the same client, they will be combined into a single transaction before writing it to blockchain
-* Payment is sent to the service node payout address (same as xbridge)
-* Deposit is sent to a different address. Your service node must have the private key to sign transactions from this address and the wallet must be unlocked.
-* Set values in xrouter.conf: ```depositpubkey=<...>``` ```depositaddress=<...>```
+* To enable payment channels on the client, add these two parameters to xrouter.conf:
+```
+[Main]
+deposit=1.0
+channeldate=100
+```
+* 'deposit' is the amount you send to the service node, payments are taken from it
+* 'channeldate' is the time of life of the channel (in seconds), after that it will be closed, and a new channel will be automatically created for further payments
+* To enable payment channels on service node, add these two parameters to xrouter.conf:
+```
+[Main]
+depositpubkey=<...>
+depositaddress=<...>
+```
+* The servicenode must be able to sign transactions with the private key corresponding to this public key and address. The wallet should be unlocked (or unencrypted)
+* This account is only used for temporary storage of the deposit, final payment is made to the service node collateral address
+
+### Technical details
+* The client creates the transaction sending ```deposit``` amount to depositpubkey specified in service node config, with the lock script using OP_CHECKLOCKTIMEVERIFY and requiring both the client's and the server's signatures. This transaction is sent to blockchain on client, and the txid is sent to the service node
+* For each operation, the client creates a transaction that spends the output of the previous transaction, sending the total number of fees so far to the service node and the remainder back to the client. This transaction is signed by the client and sent to the server in raw format.
+* As nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrives from the same client, it simply replaces the previous transaction (as long as the total fee sent to the service node increases by the fee amount for the current request). Before the deadline, the server signs the transaction with his key as well and sends it to blockchain.
+
+## Enhanced consensus system
+* If the number of replies required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
+* The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
+* To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
+* To enable this feature, set ```usehash=1``` in your xrouter.conf
 
 # XRouter packet contents
 * Header has the same format as XBridge packet
