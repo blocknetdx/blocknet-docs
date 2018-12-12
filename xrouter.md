@@ -19,6 +19,7 @@
   * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
   * ```xrCustomCall name param1 param2 ... paramN``` - sends a request to a custom service (see below).
   * ```xrUpdateConfigs``` - sends request to update service node configs
+  * ```xrReloadConfigs``` - loads xrouter.conf from disk (useful if you changed its contents while the client is running)
   * ```xrStatus``` - prints XRouter status and various info
   
 ### Client config
