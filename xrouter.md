@@ -1,68 +1,132 @@
-# XRouter description
+# XRouter Documentation
 
-## Client side
+* To run XRouter, the wallet must be unlocked
+* All XRouter fees are paid in `BLOCK`
 
-* The client needs to have at least 200 BLOCK in a single transaction output
-* To run XRouter, the wallet must be unlocked 
-* The following client side commands are available via RPC and in blocknetdx-cli:
+The following client side commands are available via RPC and in blocknetdx-cli:
 
-  * ```xrGetBlockCount currency [servicenode_consensus_number]``` - returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [servicenode_consensus_number] (here and below servicenode_consensus_number default=1) service nodes and the final result is selected by majority vote
-  * ```xrGetBlockHash currency number [servicenode_consensus_number]``` - returns block hash by block number in a specified blockchain.
-  * ```xrGetBlock currency hash [servicenode_consensus_number]``` - returns block data by block hash in a specified blockchain.
-  * ```xrGetTransaction currency txid [servicenode_consensus_number]``` - returns transaction data by transaction id in a specified blockchain.
-  * ```xrGetBlocks currency n [servicenode_consensus_number]``` - returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
-  * ```xrGetTransactions currency address [number] [servicenode_consensus_number]``` - returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
-  * ```xrGetBalanceUpdate currency address [number] [servicenode_consensus_number]``` - returns balance update for address starting with block number (default: 0) for selected currency.
-  * ```xrGetTransactionsBloomFilter currency filter [number] [servicenode_consensus_number]``` - returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
-  * ```xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]``` - returns hex representation of bloom filter for given addresses or public keys.
-  * ```xrGetReply uuid``` - returns the reply by query UUID.
-  * ```xrSendTransaction currency transaction``` - sends a raw encoded signed transaction to the specified blockchain.
-  * ```xrCustomCall name param1 param2 ... paramN``` - sends a request to a custom service (see below).
-  * ```xrUpdateConfigs``` - sends request to update service node configs
-  * ```xrReloadConfigs``` - loads xrouter.conf from disk (useful if you changed its contents while the client is running)
-  * ```xrStatus``` - prints XRouter status and various info
-  
+```
+xrGetBlockCount currency [servicenode_consensus_number]
+```
+^ Returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [servicenode_consensus_number] (here and below servicenode_consensus_number default=1) service nodes and the final result determined by majority consensus from service nodes.
+```
+xrGetBlockHash currency number [servicenode_consensus_number]
+```
+^ Returns block hash by block number in a specified blockchain.
+```
+xrGetBlock currency hash [servicenode_consensus_number]
+```
+^ Returns block data by block hash in a specified blockchain.
+```
+xrGetTransaction currency txid [servicenode_consensus_number]
+```
+^ Returns transaction data by transaction id in a specified blockchain.
+```
+xrGetBlocks currency n [servicenode_consensus_number]
+```
+^ Returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
+```
+xrGetTransactions currency address [number] [servicenode_consensus_number]
+```
+^ Returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
+```
+xrGetTxBloomFilter currency filter [number] [servicenode_consensus_number]
+```
+^ Returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
+```
+xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]
+```
+^ Returns hex representation of bloom filter for given addresses or public keys.
+```
+xrGetReply uuid
+```
+^ Returns the reply by query id.
+```
+xrSendTransaction currency transaction
+```
+^ Sends a raw encoded signed transaction to the specified blockchain.
+```
+xrService name param1 param2 ... paramN
+```
+^ Sends a request to a custom service (see below).
+```
+xrUpdateConfigs
+```
+^ Update service node configs
+```
+xrReloadConfigs
+```
+^ Reload `xrouter.conf` from disk (useful if you changed its contents while the client is running)
+```
+xrStatus
+```
+^ Prints XRouter status and various info
+
 ### Client config
-* By default XRouter is turned off. If you want to turn it on, you must set ```xrouter=1``` in your blocknetdx.conf
-* To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
-* xrouter.conf example:
+
+* By default XRouter is turned off. If you want to turn it on, you must set `xrouter=1` in `blocknetdx.conf`
+* To change XRouter settings put `xrouter.conf` in the blocknet wallet's datadir.
+* Sample `xrouter.conf`:
+
 ```
 [Main]
-wait=30000
-consensus_nodes=1
-maxfee=1
+wallets=BLOCK
+timeout=30
+consensus=1
+fee=0
+maxfee=0.5
+clientrequestlimit=50
 
 [xrGetBlockCount]
 maxfee=0.1
+clientrequestlimit=10
 
-[BTC::xrGetBlockCount]
+[SYS::xrGetBlockCount]
+fee=0.1
 maxfee=0.2
 ```
-* 'wait' parameter defines how long the client waits for a reply from the server. Default value is 20000 milliseconds
-* 'consensus_nodes' parameter is the default number of servicenode_consensus_number
-* 'maxfee' is the maximum fee you are willing to pay. in [Main] section it is the absolute maximum, and it is possible to set maximum per-command per-chain in other sections. All service nodes that have fees higher than your maxfee will not be queried. The default value is maxfee=0 (so by default only you will be able to use only free calls). Set maxfee=-1 if you don't want any limits.
+
+* `wallets` wallets that are supported by your xrouter node. This is only required if you are running an xrouter node (service node).
+* `timeout` in seconds defines how long your client waits for a reply from an xrouter node. Default is 30 seconds.
+* `consensus` is the number of service nodes you wish to query for consensus. This can be overridden by specifying `servicenode_consensus_number` in various commands.
+* `fee` this is only used if you're running an XRouter node, see the next section.
+* `maxfee` is the maximum fee you are willing to pay an xrouter node for calls. You can set maximum per-command or per-chain `maxfee` in other sections e.g. `xrGetBlockCount`. Service nodes with fees higher than your specified `maxfee` will not be queried. The default value is 0 (i.e. free calls only).
+* `clientrequestlimit` this is only used if you're running an XRouter node, see the next section.
+
+*Note that all config parameters under subsections (i.e. `[xrGetBlockCount]`) will override top-level [Main] values.*
 
 ### XRouter fees
-* The fees to run XRouter commands are specified by each service node individually (see below).
-* If the fee to run the selected command is not zero, fee payment transaction is created on the client side and sent to the server
-* The fee payment transaction transfers the required amount of BLOCK from the client's funds to the service node pubkey
-* The transaction is funded and signed on client side and sent as raw hex string in the packet along with the request. The server verifes that the transaction is correct, sends it to blockchain, and replies with the command execution results. If the fee payment transaction is incorrect, the command is not executed on the server.
-* If you are requesting replies from multiple nodes, make sure you have the corresponding number of different available transaction outputs. Otherwise you will need to split your funds.
+
+* All fees are paid in `BLOCK`.
+* XRouter nodes set their own fees and you have the option to choose a maximum fee you're willing to pay for each call.
+* It's possible to make free calls if XRouter nodes support free calls.
+* When you make a paid XRouter call the wallet will create a transaction on your behalf and send it to the XRouter node as payment.
+* The transaction is funded and signed on client side and sent as raw hex string in the packet along with the request. The server checks your transaction and sends it to the blockchain. The XRouter node will then reply to your request. If the fee payment transaction is incorrect, the command is not executed on the server.
+* If you are submitting requests to multiple XRouter nodes you'll need multiple utxos available in your wallet. Otherwise you will need to split your funds.
 
 ### Consensus
-* The client can specify the required number of consensus service nodes in each command individually or in xrouter.conf
-* If more than 1 reply is required, the client will send identical requests to multiple service nodes, wait for replies, and select the result with the majority vote
-* Each service node is paid its respective fee
-  
-## Service node side
-* To change XRouter settings, use file ```xrouter.conf``` in blocknetdx config directory.
-* xrouter.conf example:
+
+* The client can specify the required number of `consensus` nodes in each command individually or in `xrouter.conf` [Main] section.
+* If more than 1 reply is required, the client will send identical requests to multiple XRouter nodes, wait for replies, and select the most common result (result with majority consensus).
+* When using the `consensus` (confirmations) parameter, you are paying each XRouter node their respective fee. The only exception is if the XRouter nodes are providing free calls.
+
+## XRouter Node (service node operators)
+
+An XRouter node is a service node on the Blocknet protocol with XRouter turned on. It's possible for XRouter nodes to provide custom blockchain services on Blocknet's p2p network. This allows you to monetize your server and custom services (even non-blockchain services). For example, if you have a fully synced Bitcoin node with txindex on, you can use XRouter to sell transaction information on Bitcoin's blockchain. So if a user doesn't want to download the full chain but they needed to know information about a transaction they could query your XRouter node and you can charge them a fee to do so.
+
+To use XRouter, place a `xrouter.conf` in the blocknetdx config directory (This would sit next to `xbridge.conf`).
+
+Sample `xrouter.conf`:
+
 ```
 [Main]
 wallets=BLOCK,SYS,BTC
 plugins=plugin1,plugin2
-timeout=2
-wait=30000
+timeout=30
+consensus=1
+fee=0
+maxfee=0.5
+clientrequestlimit=50
 
 [xrGetBlockCount]
 fee=0.01
@@ -85,130 +149,62 @@ timeout=30
 blocklimit=50
 
 [xrGetAllBlocks]
-run=0
+disabled=1
 blocklimit=1
 ```
 
-* By default XRouter is turned off. If you want to turn it on, you must set ```xrouter=1``` in blocknetdx.conf
-* On the client, you just need to turn on xrouter=1 in xrouter.conf
-* On the server (service node), you must specify xrouter=1 and the list of wallets in [Main] section. All other parameters are optional
-* Commands listed above are turned on by default. If you want to turn one of them off, set ```run=0``` in its subsection
-* By default after each command with 0 fee, the timeout is 2 seconds (if the client requests the same command within 2 seconds, his ban score will increase). This setting can be overriden by parameter timeout, both at global level (in [Main]) and for each command/currency individually in the corresponding subsection.
-* ```blocklimit``` parameter sets the maximum number of blocks processed by commands xrGetAllBlocks, xrGetAllTransaction, xrGetBalance, xrGetBalanceUpdate, xrGetTransactionsBloomFilter. The default value is 50 (the node will scan up to 50 blocks deep, if ```number``` parameter is more than 50 blocks behind current chain height, the command will return an error). ```blocklimit=0``` is used to remove this limit (scan up to the genesis block if necessary). Use it with caution.
+**Note* All fee payments are in BLOCK at this time**
 
-## Plugins/custom services
-* Plugin configs must be placed into 'plugins' subdirectory of blocknetdx config directory.
+In addition to the config descriptions above, these are specific to XRouter node operators (Service node operators w/ XRouter enabled):
+
+* `wallets` Specify the wallets you'd like to support XRouter calls on. All commands are on by default for all supported wallets listed in `wallets=`. If you want to turn one of them off, set `disabled=1` in its subsection.
+* `fee` Specify the fee you require across all XRouter calls, you may also specify fees for individual calls as you can see in the sample above. The `fee` in the subsection takes precedence over the value in [Main].
+* `blocklimit` parameter sets the maximum number of blocks processed. The default value is 50 (the node will scan up to 50 blocks deep, if the `number` parameter is more than 50 blocks behind the current chain height, the command will return an error). `blocklimit=0` means the XRouter node supports returning any number of blocks.
+
+## Plugins (custom services)
+* Put `private::` in front of a parameter name that **you do not want client nodes to see**
+* Plugin configs must be placed in a `plugins` subdirectory of blocknetdx config directory.
 * Each plugin must have a separate config
-* Plugin filename must end with .conf
-* To turn plugin on, include its name in 'plugins' parameter in xrouter.conf. For example, 'plugins=p1,p2' will load plugins specified by plugins/p1.conf and plugins/p2.conf
-* Parameter 'type' is mandatory. Valid values: 'rpc' and 'shell'
-* RPC plugin config example:
+* Plugin filename must end with `.conf`
+* To turn a plugin on, include its name in `plugins=` parameter in `xrouter.conf`. For example, `plugins=p1,p2` will load two plugins (p1 and p2) with config files `plugins/p1.conf` and `plugins/p2.conf`
+* Parameter `type` is mandatory. Supported plugin type: `rpc`
+
+### Sample RPC plugin:
 ```
 type=rpc
-paramsCount=1
-paramsType=int
-private::rpcPort=41419
-private::rpcUser=blocknetdxrpc
-private::rpcPassword=mypassword
-rpcCommand=getblockhash
+paramscount=1
+paramstype=int
+private::rpcport=41419
+private::rpcuser=user
+private::rpcpassword=pass
+rpccommand=getblockhash
 ```
-* This sample plugin runs getblockchash command via RPC (same as xrGetBlockHash)
-* Parameter paramsCount is mandatory. Instead of paramsCount you can specify minParamsCount and maxParamsCount, making the last parameters optional
-* Parameter paramsType is mandatory for RPC plugins. Currently supported types are 'string', 'bool' and 'int'. The string must match maxParamsCount, i.e. is there are two parameters, the string must list types for all of them such as: 'int,string'
-* Parameters rpcPort, rpcUser, rpcPassword and rpcCommand are mandatory
-* Put 'private::' in front of the parameter name in the config to avoid sharing it with client nodes
-* Another sample (call to SYScoin):
+* This sample plugin runs getblockhash command via RPC (same as `xrGetBlockHash`)
+* Parameter `paramscount` is mandatory. You can also specify `minparamscount` and `maxparamscount` to support optional parameters.
+* Parameter `paramstype` is mandatory for RPC plugins. Currently supported types are `string`, `bool` and `int`. This parameter value must list all the types, e.g. for 4 parameters: `int,string,string,bool`
+* Parameters `rpcport`, `rpcuser`, `rpcpassword` and `rpccommand` are mandatory
+
+### Syscoin sample RPC plugin:
+
+This plugin will expose the custom Syscoin call `listassetallocationtransactions`, allowing you to monetize this Syscoin capability to XRouter users.
 ```
 type=rpc
-minParamsCount=2
-maxParamsCount=3
-paramsType=int,int,string
-private::rpcPort=8370
-private::rpcUser=username
-private::rpcPassword=password
-rpcCommand=listassetallocationtransactions
+minparamscount=2
+maxparamscount=3
+paramstype=int,int,string
+private::rpcport=8370
+private::rpcuser=user
+private::rpcpassword=pass
+rpccommand=listassetallocationtransactions
 ```
+
+# Future features (these are unsupported at this time)
+
+## Shell plugin
 * In this plugin parameter 3 is optional.
-* Shell plugin config example:
 ```
 type=shell
-paramsCount=0
+paramscount=0
 private::cmd="/home/snode/test.sh"
 ```
-* Parameters paramsCount and cmd are mandatory
-
-# Future features
-
-## Domain names system
-* Domain names system will be introduced for custom services only at this stage
-* The general syntax to use domains is as follows:
-```xrCustomCall domain/name param1 param2 ... paramN```
-* Without domain specification, the client will look for any node offering plugin called 'name', if there is more than one such node, the ambiguous call will not be handled
-* There are two ways to create domain: verified with a special transaction in the chain and simple self-proclaimed
-
-### Simplified domains
-* Add a parameter ```domain=my_domain_name``` to xrouter.conf
-* If there is no other service node with such domain name, the calls will be handled correctly
-* If there is a service node with the same, but verified domain name, the verified name has priority
-* If there are two nodes with the same unverified domains, the ambiguous call will not be processed
-* The simplified method does not guarantee that your domain name will work for all users and someone could deliberately make your domain name unusable by creating the same, but this method is free and does not require locking the funds
-
-### Verified 
-* To create a verified domain name, you need to temporarily lock 50 BLOCK on your account:
-  * Create a transaction to your service node collateral address with amount = 50 BLOCK and an additional output ```OP_RETURN <blocknet://your_domain_name>```
-  * Put the transaction hash into xrouter.conf: ```domain_tx=<txhash>```
-  * If nobody else reserved your_domain_name in the same way earlier, your_domain_name is registered
-  * If the domain name is already registered, the transaction has no effect, but you don't lose 50 BLOCK
-  * As long as the outputs of the transaction remain unspent, the domain name remains yours
-* Command ```xrRegisterDomain <domain_name> [<true/false>] [<address>]``` creates the transactions described above needed to register the domain name. If the second parameter is true, your xrouter.conf is updated automatically. The third parameter is the destination address of hte transaction, leave this parameter blank if you want to use your service node collateral address
-* Command ```xrQueryDomain <domain_name>``` checks if the domain name is registered and returns "true" if it is found
-
-## Payment channels for Fee payment system
-* To enable payment channels on the client, add these two parameters to xrouter.conf:
-```
-[Main]
-deposit=1.0
-channeldate=100
-```
-* 'deposit' is the amount you send to the service node, payments are taken from it
-* 'channeldate' is the time of life of the channel (in seconds), after that it will be closed, and a new channel will be automatically created for further payments
-* To enable payment channels on service node, add these two parameters to xrouter.conf:
-```
-[Main]
-depositpubkey=<...>
-depositaddress=<...>
-```
-* The servicenode must be able to sign transactions with the private key corresponding to this public key and address. The wallet should be unlocked (or unencrypted)
-* The servicenode setup can be done automatically by the command ```xrCreateDepositAddress [<true/false>]```. If the first parameters is 'true', xrouter.conf will be updated automatically. 
-* This account is only used for temporary storage of the deposit, final payment is made to the service node collateral address
-* Command ```xrPaymentChannels``` print info on the currently open payment channels
-* Command ```xrClosePaymentChannel <id>``` closes the payment channel with the given id. Ids can be viewed in the xrPaymentChannels output, they are simple numbers and are local for the node
-* Command ```xrClosePaymentChannels``` closes all payment channels
-
-### Technical details
-* The client creates the transaction sending ```deposit``` amount to depositpubkey specified in service node config, with the lock script using OP_CHECKLOCKTIMEVERIFY and requiring both the client's and the server's signatures. This transaction is sent to blockchain on client, and the txid is sent to the service node
-* For each operation, the client creates a transaction that spends the output of the previous transaction, sending the total number of fees so far to the service node and the remainder back to the client. This transaction is signed by the client and sent to the server in raw format.
-* As nLockTime is specified in the transaction, it will be stored in snode's cache until that time. If new transaction arrives from the same client, it simply replaces the previous transaction (as long as the total fee sent to the service node increases by the fee amount for the current request). Before the deadline, the server signs the transaction with his key as well and sends it to blockchain.
-
-## Enhanced consensus system
-* If the number of replies required is more than 1, then instead of the whole reply, the service node sends a hash of the reply.
-* The client gets hashes from all nodes, selects the reply by majority vote, and then requests the full reply from one of the service nodes that are in the majority
-* To request the hash, the client has to pay ```fee/2``` to the respective service node. To get the full reply, the client pays the remaining part of the fee to the selected node only.
-* To enable this feature, set ```usehash=1``` in your xrouter.conf
-
-# XRouter packet contents
-* Header has the same format as XBridge packet
-* After that all parameters are variable-length strings (ending with '\0')
-* * ID of your transaction with MIN_BLOCK (currently 200)
-* * Vout number of your transaction with MIN_BLOCK
-* * Query UUID - unique ID for each XRouter query. Replies are fetched by UUID
-* * <currency> - either chain identifier (BTC, BLOCK etc), or plugin name if calling a plugin
-* * <payment tx> - info about payment. See details below
-* * Additional parameters (the number can be arbitrary for plugin calls)
-* * Signature
-* Payment transaction string format
-* * It is one string separated by ';' signs
-* * First part is 'hash' or 'nohash' depending on whether the reply should be hashed
-* * Second part is 'single' or 'channel'. 'channel' means that the payment is done via CLTV channel
-* * Third part is hex-encoded raw transaction if the second part is 'single' or if the channel already exists
-* * If the channle is created, the following info is sent separated by ';': Raw transaction creating the channel; txid of the channel creation transaction; Redeem script; First payment over the channel
+* Parameters `paramscount` and `cmd` are mandatory
