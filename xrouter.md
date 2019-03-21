@@ -1,9 +1,44 @@
 # XRouter Documentation
 
-* To run XRouter, the wallet must be unlocked
-* All XRouter fees are paid in `BLOCK`
+XRouter allows anyone to provide SPV and custom microservices both free and paid options in `BLOCK`.
 
-The following client side commands are available via RPC and in blocknetdx-cli:
+* All XRouter fees are paid in `BLOCK`
+* To run XRouter, the wallet must be unlocked or unencrypted and :
+  + `xrouter=1` must be specified in `blocknetdx.conf`
+  + `xrouter.conf` must be added to the `datadir`
+
+## XRouter Node Sample list (xwallets)
+
+* XRouter nodes report their supported commands in their `xwallets` field (run in wallet console).
+
+```
+servicenode list
+{
+    "rank" : 2,
+    "txhash" : "3527f3e803195d77dfe6f9c5fffec1a93e7ba8a2f2c124a710cc29cf96072c89",
+    "outidx" : 0,
+    "status" : "ENABLED",
+    "addr" : "yGyvu6uHJ9WLftPgwHeAU5HwmgGmpB3Juh",
+    "version" : 70712,
+    "lastseen" : 1553150037,
+    "activetime" : 0,
+    "lastpaid" : 0,
+    "xwallets" : "BLOCK,BTC,LTC,SYS,xr,xr::BLOCK,xr::BTC,xr::LTC,xr::SYS,xrs::GetBlockHashBTC"
+}
+```
+
+`xrs::GetBlockHashBTC` is a custom service that returns the hash for the specified bitcoin block. Here's an example of fetching the bitcoin genesis block (run in wallet console or use command line `blocknetdx-cli`):
+```
+xrService GetBlockHashBTC 0
+{
+    "reply" : "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+    "uuid" : "371d76b7-554d-409a-bf62-1201610b1e07"
+}
+```
+
+## XRouter Commands
+
+The following client side commands are available via RPC and in `blocknetdx-cli` or wallet console:
 
 ```
 xrGetBlockCount currency [servicenode_consensus_number]
@@ -159,6 +194,7 @@ In addition to the config descriptions above, these are specific to XRouter node
 
 * `wallets` Specify the wallets you'd like to support XRouter calls on. All commands are on by default for all supported wallets listed in `wallets=`. If you want to turn one of them off, set `disabled=1` in its subsection.
 * `fee` Specify the fee you require across all XRouter calls, you may also specify fees for individual calls as you can see in the sample above. The `fee` in the subsection takes precedence over the value in [Main].
+* `clientrequestlimit` is optional and defaults to `-1` (no request limit). This value should be specified in milliseconds (e.g. `clientrequestlimit=50` for 20 per second).
 * `blocklimit` parameter sets the maximum number of blocks processed. The default value is 50 (the node will scan up to 50 blocks deep, if the `number` parameter is more than 50 blocks behind the current chain height, the command will return an error). `blocklimit=0` means the XRouter node supports returning any number of blocks.
 
 ## Plugins (custom services)
@@ -171,40 +207,44 @@ In addition to the config descriptions above, these are specific to XRouter node
 
 ### Sample RPC plugin:
 ```
-type=rpc
-paramscount=1
-paramstype=int
+parameters=int
+fee=0.1
+clientrequestlimit=50
+
+private::type=rpc
 private::rpcport=41419
-private::rpcuser=user
-private::rpcpassword=pass
-rpccommand=getblockhash
+private::rpcuser=test
+private::rpcpassword=testAbc
+private::rpccommand=getblockhash
 ```
+* Designate config entires as `private::` that you do not want to be shared with connecting nodes.
 * This sample plugin runs getblockhash command via RPC (same as `xrGetBlockHash`)
-* Parameter `paramscount` is mandatory. You can also specify `minparamscount` and `maxparamscount` to support optional parameters.
-* Parameter `paramstype` is mandatory for RPC plugins. Currently supported types are `string`, `bool` and `int`. This parameter value must list all the types, e.g. for 4 parameters: `int,string,string,bool`
-* Parameters `rpcport`, `rpcuser`, `rpcpassword` and `rpccommand` are mandatory
+* `parameters` is optional. If it's not specified, the call will default to 0 parameters. Currently supported types are `string`, `bool`, `double`, `int`. This parameter value must list all the types, e.g. for 4 parameters: `int,string,string,bool`
+* `fee` is optional, defaults to `0`. This is the amount of `BLOCK` required to call your plugin.
+* `clientrequestlimit` is optional and defaults to `-1` (no request limit). This value should be specified in milliseconds (e.g. `clientrequestlimit=50` for 20 per second).
+* Config entries `private::rpcport`, `private::rpcuser`, `private::rpcpassword` and `private::rpccommand` are mandatory for `rpc` plugins.
 
 ### Syscoin sample RPC plugin:
 
 This plugin will expose the custom Syscoin call `listassetallocationtransactions`, allowing you to monetize this Syscoin capability to XRouter users.
 ```
-type=rpc
-minparamscount=2
-maxparamscount=3
-paramstype=int,int,string
+parameters=int,int,string
+fee=0.1
+
+private::type=rpc
 private::rpcport=8370
 private::rpcuser=user
 private::rpcpassword=pass
-rpccommand=listassetallocationtransactions
+private::rpccommand=listassetallocationtransactions
 ```
 
 # Future features (these are unsupported at this time)
 
 ## Shell plugin
-* In this plugin parameter 3 is optional.
+* This plugin as 0 parameters.
 ```
-type=shell
-paramscount=0
+parameters=
+private::type=shell
 private::cmd="/home/snode/test.sh"
 ```
-* Parameters `paramscount` and `cmd` are mandatory
+* Parameters `parameters` and `cmd` are mandatory
