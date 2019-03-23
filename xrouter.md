@@ -43,59 +43,67 @@ The following client side commands are available via RPC and in `blocknetdx-cli`
 ```
 xrGetBlockCount currency [servicenode_consensus_number]
 ```
-^ Returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [servicenode_consensus_number] (here and below servicenode_consensus_number default=1) service nodes and the final result determined by majority consensus from service nodes.
+ ^ Returns the current block count (blockchain height) for selected currency. Here and below currency is capitalized code (BTC, LTC, SYS etc). The message is send to [servicenode_consensus_number] (here and below servicenode_consensus_number default=1) service nodes and the final result determined by majority consensus from service nodes.
 ```
 xrGetBlockHash currency number [servicenode_consensus_number]
 ```
-^ Returns block hash by block number in a specified blockchain.
+ ^ Returns block hash by block number in a specified blockchain.
 ```
 xrGetBlock currency hash [servicenode_consensus_number]
 ```
-^ Returns block data by block hash in a specified blockchain.
+ ^ Returns block data by block hash in a specified blockchain.
 ```
 xrGetTransaction currency txid [servicenode_consensus_number]
 ```
-^ Returns transaction data by transaction id in a specified blockchain.
+ ^ Returns transaction data by transaction id in a specified blockchain.
 ```
 xrGetBlocks currency n [servicenode_consensus_number]
 ```
-^ Returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
+ ^ Returns a list of all blocks starting with n for selected currency. Currently no more than 50 last blocks are sent, otherwise error is returned.
 ```
 xrGetTransactions currency address [number] [servicenode_consensus_number]
 ```
-^ Returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
+ ^ Returns all transactions to/from address starting from block [number] for selected currency. number=0 if it is not specified explicitly.
 ```
 xrGetTxBloomFilter currency filter [number] [servicenode_consensus_number]
 ```
-^ Returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
+ ^ Returns transactions fitting Bloom filter starting with block number (default: 0) for selected currency.
 ```
 xrGenerateBloomFilter addr1 [addr2 ... addrN pubkey1 pubkey2]
 ```
-^ Returns hex representation of bloom filter for given addresses or public keys.
-```
-xrGetReply uuid
-```
-^ Returns the reply by query id.
+ ^ Returns hex representation of bloom filter for given addresses or public keys.
 ```
 xrSendTransaction currency transaction
 ```
-^ Sends a raw encoded signed transaction to the specified blockchain.
+ ^ Sends a raw encoded signed transaction to the specified blockchain.
 ```
 xrService name param1 param2 ... paramN
 ```
-^ Sends a request to a custom service (see below).
+ ^ Sends a request to a custom service (see below).
+```
+xrGetReply uuid
+```
+ ^ Returns the reply by query id.
+ ```
+ xrConnect fully_qualitifed_service_name count
+ ```
+ ^ Connects to [count] XRouter Nodes supporting the specified service and downloads their configuration files. The configs are displayed. Example: `xrConnect xrs::GetBestBlockHashBTC 1`
+ ```
+ xrConnectedNodes
+ ```
+ ^ Returns configurations for all nodes connected to in the current session.
 ```
 xrUpdateConfigs
 ```
-^ Update service node configs
+ ^ Update service node configs for connected nodes.
 ```
 xrReloadConfigs
 ```
-^ Reload `xrouter.conf` from disk (useful if you changed its contents while the client is running)
+ ^ Reload `xrouter.conf` and any plugins from disk (useful if you changed its contents while the client is running)
 ```
 xrStatus
 ```
-^ Prints XRouter status and various info
+ ^ Prints XRouter status and various info
 
 ### Client config
 
