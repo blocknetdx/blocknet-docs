@@ -1,5 +1,11 @@
 The Trouble with Centralized Exchanges…
 
+---
+
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im Dokumentationsportal unter [https://docs.blocknet.co](https://docs.blocknet.co).
+
+---
+
 As the Cryptocurrency environment matures, the inherent problems with centralized exchanges present themselves on an almost daily basis and highlight why the need for decentralized exchanges is now more urgent than ever.
 Volume Problems
 On Sunday the 12th of November, during a surge of volume across the cryptocurrency trading platforms, many of the major exchanges experienced delays and technical difficulties as their servers were unable to cope with the massive influx of activity.

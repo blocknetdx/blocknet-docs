@@ -1,5 +1,12 @@
 # Anleitung zum Finden der Präfixe der .conf-Dateien
 
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im [Blockchain-Konfigurationsdateien-Repository](https://github.com/blocknetdx/blockchain-configuration-files).
+
+Konfigurationserstellungshandbuch:
+https://github.com/blocknetdx/blockchain-configuration-files#creating-configuration-files
+
+---
+
 1. Adress-Präfixe:
 
     1. Gehe zu: http://lenschulwitz.com/base58

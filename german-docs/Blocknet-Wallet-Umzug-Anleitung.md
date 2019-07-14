@@ -1,5 +1,9 @@
 **Nötige Schritte zum Umziehen von der alten auf die neue Blocknet-Blockchain**
 
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im Dokumentationsportal unter [https://docs.blocknet.co](https://docs.blocknet.co).
+
+---
+
 -   Als erstes erstelle ein Backup von der Datei wallet.dat (mache 2
     unabhängige Sicherungen)
 

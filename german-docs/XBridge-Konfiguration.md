@@ -1,5 +1,12 @@
 # xbridge.conf
 
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im [Blockchain-Konfigurationsdateien-Repository](https://github.com/blocknetdx/blockchain-configuration-files).
+
+Konfigurationserstellungshandbuch:
+https://github.com/blocknetdx/blockchain-configuration-files#creating-configuration-files
+
+---
+
 * Unter der Überschrift ```[Main]``` passe die Werte nach deinen Bedürfnissen an:
 
   * ```ExchangeWallets=``` Füge hinzu oder entferne die jeweiligen Überschriften der Coin´s (nur die Coins, die du entweder als Service-Node unterstützen willst, oder die du traden möchtest)

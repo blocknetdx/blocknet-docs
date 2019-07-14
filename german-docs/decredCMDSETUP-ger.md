@@ -1,4 +1,14 @@
-# Decred Kommandozeilen Setup für Blocknets DX
+# Decred Kommandozeilen Setup für Block DX
+
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im Dokumentationsportal unter [https://docs.blocknet.co](https://docs.blocknet.co).
+
+Block DX Installationsanleitung:
+https://docs.blocknet.co/blockdx/setup/
+
+Installationsanleitung für XBridge:
+https://docs.blocknet.co/protocol/xbridge/setup/
+
+---
 
 Danke an 86b (Slack) für unzählige Stunden Arbeit an diesem Setup!
 

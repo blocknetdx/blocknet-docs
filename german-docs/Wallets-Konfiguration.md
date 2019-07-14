@@ -1,5 +1,12 @@
 **Blocknet´s freigegebene spezifische coin.conf´s**
 
+Dieses Repo ist jetzt veraltet. Weitere Informationen finden Sie im [Blockchain-Konfigurationsdateien-Repository](https://github.com/blocknetdx/blockchain-configuration-files).
+
+Konfigurationserstellungshandbuch:
+https://github.com/blocknetdx/blockchain-configuration-files#creating-configuration-files
+
+---
+
 * Bei jedem Coin editiere wie folgt für deinen Bedarf
 
     * ```rpcuser=``` füge einen einmaligen Nutzernamen ein
